@@ -332,7 +332,7 @@ last_updated: YYYY-MM-DD
 - [What to watch out for]
 
 **Communication Style:**
-- [Language preference - English / Deutsch / etc.]
+- [Language preference - English / German / etc.]
 - [Tone preference - formal / casual / enthusiastic / etc.]
 - [What you value in communication]
 

@@ -1,16 +1,16 @@
 # FIGMA_MCP.md - Figma MCP Server Best Practices
-*Best Practices für die Nutzung des Figma MCP Servers in Claude Code*
+*Best practices for using the Figma MCP Server in Claude Code*
 
 ---
 
 ## 🎯 Overview
 
-Dieser Guide definiert, wie du mit dem Figma MCP Server arbeitest, um Designs in Code zu übersetzen.
+This guide defines how to work with the Figma MCP Server to translate designs into code.
 
-**Wann relevant:**
-- PRD enthält Figma Designs
-- User Stories referenzieren Figma Screens
-- Du implementierst UI aus Figma
+**When relevant:**
+- PRD contains Figma designs
+- User stories reference Figma screens
+- You're implementing UI from Figma
 
 ---
 

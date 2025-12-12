@@ -1,6 +1,6 @@
 ---
 name: user-context
-description: Guides users through setting up or updating company, product, and team context via interactive questions. Use when user mentions "getting started", "setup", "onboarding", "initialize", "update context", "new job", "team changed", "configure my context", "meine Infos updaten", or "Context ändern".
+description: Guides users through setting up or updating company, product, and team context via interactive questions. Use when user mentions "getting started", "setup", "onboarding", "initialize", "update context", "new job", "team changed", "configure my context", "update my info", or "change context".
 ---
 
 # User Context Setup
@@ -17,7 +17,7 @@ Guides Product Managers through collecting comprehensive context about their com
 **Update Mode (Context Refresh):**
 - User has changed companies, roles, or teams
 - Mentions: "update context", "refresh context", "new job", "team changed"
-- Generic update requests: "meine Infos updaten", "Infos aktualisieren", "Daten ändern"
+- Generic update requests: "update my info", "refresh data", "change context"
 - Existing context needs updating
 
 ## Instructions
@@ -30,7 +30,7 @@ Check if `/user_context/COMPANY_CONTEXT.md` exists and has content:
 
 ### 2. Progressive Question Flow
 
-Ask questions ONE AT A TIME in conversational style. Guide the user through the process. Don't overwhelm with too many questions at once.
+Ask questions ONE AT A TIME in conversational style. Guide the user through the process. Don't overwhelm the user with too many questions at once.
 
 **Core Questions (Must-Have):**
 
@@ -78,24 +78,24 @@ Ask questions ONE AT A TIME in conversational style. Guide the user through the 
    - If solo: "N/A (no dev team)"
 
 9.5. **Team Members & Jira Roles** (Optional - only if Jira is available)
-   - "Soll ich deine Jira Team Members abrufen und ihre Rollen erfassen?"
+   - "Should I fetch your Jira team members and capture their roles?"
    - If yes:
      - Use `jira_search` to find recent tickets (last 30 days)
      - Extract unique comment authors from tickets
-     - For each team member: Ask "Was macht [Name]?" (role/function)
+     - For each team member: Ask "What does [Name] do?" (role/function)
      - Example roles: "Frontend Dev", "Product Designer", "Engineering Lead"
      - Write to COMPANY_CONTEXT.md "Team Members & Jira Roles" section
    - If no Jira access or user skips: Continue without blocking
    - Solo users: Offer to add just themselves
 
 9.75. **Jira Projects & Confluence Spaces** (Optional)
-   - "Welche Jira Projects und Confluence Spaces nutzt du regelmäßig?"
-   - **Jira Projects:** Ask for project keys, komma-separiert
+   - "Which Jira Projects and Confluence Spaces do you use regularly?"
+   - **Jira Projects:** Ask for project keys, comma-separated
      - Example: "PROJ, DEV, SUPPORT"
-     - Explain: "Das sind die Kürzel die in deinen Ticket-Keys vorkommen (z.B. PROJ-123)"
-   - **Confluence Spaces:** Ask for space keys, komma-separiert
+     - Explain: "These are the abbreviations that appear in your ticket keys (e.g., PROJ-123)"
+   - **Confluence Spaces:** Ask for space keys, comma-separated
      - Example: "TEAM, PROD, DEV"
-     - Explain: "Das sind die Space-Keys wo du PRDs & Docs speicherst"
+     - Explain: "These are the space keys where you store PRDs & docs"
    - Write to COMPANY_CONTEXT.md "Tools & Workflow" section
    - If user doesn't know or skips: Continue without blocking
 
@@ -172,13 +172,13 @@ Let's start simple:
 
 **Language preference? (en/de)**"
 
-User: "de"
+User: "en"
 
-Claude: "Super! Ab jetzt auf Deutsch. 🇩🇪
+Claude: "Perfect! English it is. 🇬🇧
 
-**Wie heißt deine Firma und in welcher Branche seid ihr?**
+**What's your company name and industry?**
 
-Beispiel: 'Acme Corp, FinTech'"
+Example: 'Acme Corp, FinTech'"
 
 User: "TechFlow, SaaS for project management"
 

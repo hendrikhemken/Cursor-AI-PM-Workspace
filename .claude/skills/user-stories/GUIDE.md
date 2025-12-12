@@ -6,286 +6,286 @@ INVEST Principles, Best Practices, Good vs. Bad Examples, Common Mistakes.
 
 ## 🎯 INVEST Principles
 
-**Jede User Story MUSS INVEST-compliant sein:**
+**Every User Story MUST be INVEST-compliant:**
 
-### **I - Independent** (Unabhängig)
+### **I - Independent**
 
-**Regel:** Story kann alleine umgesetzt werden, ohne auf andere Stories zu warten.
+**Rule:** Story can be implemented on its own, without waiting for other stories.
 
 **✅ Good:**
 ```
-Story A: "Als User möchte ich mein Profil bearbeiten um meine Daten aktuell zu halten"
-Story B: "Als User möchte ich mein Profilbild hochladen um mich zu präsentieren"
+Story A: "As a user I want to edit my profile to keep my data up to date"
+Story B: "As a user I want to upload a profile picture to present myself"
 
-→ Beide Stories sind unabhängig voneinander
+→ Both stories are independent of each other
 ```
 
 **❌ Bad:**
 ```
-Story A: "Als User möchte ich Schritt 1 der Registrierung machen"
-Story B: "Als User möchte ich Schritt 2 der Registrierung machen"
+Story A: "As a user I want to complete step 1 of registration"
+Story B: "As a user I want to complete step 2 of registration"
 
-→ Story B hängt komplett von Story A ab!
-→ Fix: Eine Story "Als User möchte ich mich registrieren um..."
+→ Story B depends completely on Story A!
+→ Fix: One story "As a user I want to register to..."
 ```
 
-**Ausnahmen:**
-- Technical Dependencies sind OK (aber explizit markieren!)
-- BLOCKED BY relationships in Jira setzen
+**Exceptions:**
+- Technical Dependencies are OK (but mark them explicitly!)
+- Set BLOCKED BY relationships in Jira
 
 ---
 
-### **N - Negotiable** (Verhandelbar)
+### **N - Negotiable**
 
-**Regel:** Details der Umsetzung können noch besprochen werden.
+**Rule:** Implementation details can still be discussed.
 
 **✅ Good:**
 ```
-"Als User möchte ich Benachrichtigungen erhalten um über Updates informiert zu bleiben"
+"As a user I want to receive notifications to stay informed about updates"
 
-→ WIE die Benachrichtigungen aussehen kann noch diskutiert werden
-→ Push? Email? In-App? → Verhandelbar!
+→ HOW the notifications look can still be discussed
+→ Push? Email? In-App? → Negotiable!
 ```
 
 **❌ Bad:**
 ```
-"Als User möchte ich Push-Benachrichtigungen mit rotem Badge und Sound 'ding.mp3' erhalten"
+"As a user I want to receive push notifications with a red badge and sound 'ding.mp3'"
 
-→ Zu spezifisch! Keine Verhandlungsmöglichkeit mehr.
+→ Too specific! No room for negotiation.
 ```
 
 **Rule of Thumb:**
-- Story = **WAS** (verhandelbar)
-- Acceptance Criteria = **WIE** (konkreter, aber immer noch verhandelbar)
-- Implementation = **EXAKT** (nicht verhandelbar)
+- Story = **WHAT** (negotiable)
+- Acceptance Criteria = **HOW** (more concrete, but still negotiable)
+- Implementation = **EXACT** (not negotiable)
 
 ---
 
-### **V - Valuable** (Wertvoll)
+### **V - Valuable**
 
-**Regel:** Story liefert User Value oder Business Value.
+**Rule:** Story delivers User Value or Business Value.
 
 **✅ Good (User Value):**
 ```
-"Als User möchte ich meine Bestellung stornieren um Fehler zu korrigieren"
+"As a user I want to cancel my order to correct mistakes"
 
-→ Clear User Value: User kann Fehler beheben
+→ Clear User Value: User can fix errors
 ```
 
 **✅ Good (Business Value):**
 ```
-"Als Admin möchte ich Analytics sehen um datengetriebene Entscheidungen zu treffen"
+"As an admin I want to see analytics to make data-driven decisions"
 
 → Clear Business Value: Better Decisions
 ```
 
-**❌ Bad (Activity-based, kein Value):**
+**❌ Bad (Activity-based, no Value):**
 ```
-"Als Developer möchte ich eine REST API implementieren"
+"As a developer I want to implement a REST API"
 
-→ Das ist KEIN Value, das ist eine Activity!
-→ Fix: "Als User möchte ich meine Daten exportieren (via API) um sie in anderen Tools zu nutzen"
+→ That's NOT Value, that's an Activity!
+→ Fix: "As a user I want to export my data (via API) to use it in other tools"
 ```
 
 **Technical Stories:**
-- Manchmal gibt es Technical Stories ohne direkten User Value
-- Erlaubt für: Refactoring, Tech Debt, Infrastructure
-- **ABER:** Immer Business Impact erklären! ("Performance +50%", "Maintainability verbessert")
+- Sometimes there are Technical Stories without direct User Value
+- Allowed for: Refactoring, Tech Debt, Infrastructure
+- **BUT:** Always explain Business Impact! ("Performance +50%", "Improved maintainability")
 
 ---
 
-### **E - Estimable** (Schätzbar)
+### **E - Estimable**
 
-**Regel:** Team kann Story Points schätzen.
+**Rule:** Team can estimate Story Points.
 
 **✅ Good:**
 ```
-"Als User möchte ich meine Email-Adresse ändern um bei Anbieterwechsel erreichbar zu bleiben"
+"As a user I want to change my email address to stay reachable when switching providers"
 
 Acceptance Criteria:
-- Given User ist eingeloggt When User ändert Email Then Bestätigungs-Mail
-- Given User klickt Bestätigungs-Link Then Email updated
+- Given user is logged in When user changes email Then confirmation email sent
+- Given user clicks confirmation link Then email updated
 
-→ Team kann schätzen: 3-5 Story Points
+→ Team can estimate: 3-5 Story Points
 ```
 
 **❌ Bad:**
 ```
-"Als User möchte ich eine bessere Experience haben"
+"As a user I want a better experience"
 
-→ Zu vage! Was heißt "besser"?
-→ Team kann nicht schätzen!
+→ Too vague! What does "better" mean?
+→ Team cannot estimate!
 ```
 
-**Wenn nicht schätzbar:**
-- **Spike Story erstellen** (Time-boxed Research)
-- Nach Spike: Echte Stories schreiben
+**If not estimable:**
+- **Create a Spike Story** (Time-boxed Research)
+- After Spike: Write real stories
 
 **Spike Example:**
 ```
-Spike: "Research: Wie integrieren wir Payment Provider X?"
-Time-box: 4 Stunden
+Spike: "Research: How do we integrate Payment Provider X?"
+Time-box: 4 hours
 Output: Technical Approach Doc + Story Points Estimate
 ```
 
 ---
 
-### **S - Small** (Klein)
+### **S - Small**
 
-**Regel:** Story passt in einen Sprint (max 8 Story Points).
+**Rule:** Story fits in one sprint (max 8 Story Points).
 
 **✅ Good:**
 ```
-"Als User möchte ich mein Profilbild hochladen um mich zu präsentieren"
+"As a user I want to upload a profile picture to present myself"
 
-→ 3 Story Points (0.5-1 Tag)
-→ Passt locker in einen Sprint
+→ 3 Story Points (0.5-1 day)
+→ Fits easily in a sprint
 ```
 
 **❌ Bad:**
 ```
-"Als User möchte ich ein vollständiges Social Network nutzen"
+"As a user I want to use a complete social network"
 
-→ Das ist ein EPIC, keine Story!
+→ That's an EPIC, not a Story!
 → 100+ Story Points!
 ```
 
 **Sizing Guide:**
-- **1-2 Points:** Trivial (Stunden)
-- **3-5 Points:** Standard (0.5-2 Tage) ← Sweet Spot!
-- **8 Points:** Maximum (2-3 Tage)
+- **1-2 Points:** Trivial (hours)
+- **3-5 Points:** Standard (0.5-2 days) ← Sweet Spot!
+- **8 Points:** Maximum (2-3 days)
 - **13+ Points:** TOO BIG! Split!
 
-**Wenn zu groß:**
-- Split in kleinere Stories
-- Vertikal splitten (User Value erhalten!)
-- Nicht horizontal (Layer-basiert)
+**If too big:**
+- Split into smaller stories
+- Split vertically (preserve User Value!)
+- Not horizontally (layer-based)
 
 ---
 
-### **T - Testable** (Testbar)
+### **T - Testable**
 
-**Regel:** Klare Acceptance Criteria = testbar.
+**Rule:** Clear Acceptance Criteria = testable.
 
 **✅ Good:**
 ```
 Acceptance Criteria:
-- [ ] Given User uploaded 5MB image When submit Then success
-- [ ] Given User uploaded 20MB image When submit Then "File too large" error
-- [ ] Given User uploaded .exe file When submit Then "Invalid format" error
+- [ ] Given user uploaded 5MB image When submit Then success
+- [ ] Given user uploaded 20MB image When submit Then "File too large" error
+- [ ] Given user uploaded .exe file When submit Then "Invalid format" error
 
-→ 100% testbar! QA weiß exakt was zu testen ist.
+→ 100% testable! QA knows exactly what to test.
 ```
 
 **❌ Bad:**
 ```
 Acceptance Criteria:
-- [ ] Upload soll funktionieren
+- [ ] Upload should work
 
-→ Nicht testbar! WAS heißt "funktionieren"?
-→ Welche Edge Cases?
+→ Not testable! WHAT does "work" mean?
+→ Which edge cases?
 ```
 
 **Given-When-Then Format:**
 ```
-Given [Vorbedingung]
-When [User-Aktion]
-Then [Erwartetes Ergebnis]
+Given [Precondition]
+When [User Action]
+Then [Expected Result]
 ```
 
 ---
 
-## 🚫 Common Mistakes (und wie du sie vermeidest)
+## 🚫 Common Mistakes (and how to avoid them)
 
 ### ❌ Mistake 1: Activity-based Stories
 
 **Bad:**
 ```
-"Als Developer möchte ich eine API bauen"
+"As a developer I want to build an API"
 "Implement User Authentication"
 "Create Database Schema"
 ```
 
 **Why Bad:**
-- Kein User Value
-- Kein Outcome
-- Developer-Sicht, nicht User-Sicht
+- No User Value
+- No Outcome
+- Developer perspective, not User perspective
 
 **Fix:**
 ```
-"Als User möchte ich mich mit Email & Passwort anmelden um sicher auf mein Konto zuzugreifen"
+"As a user I want to log in with email & password to securely access my account"
 
 Technical Notes:
 - Backend: JWT Authentication
-- Database: Users Table mit hashed passwords
+- Database: Users Table with hashed passwords
 - Frontend: Login Form
 ```
 
 ---
 
-### ❌ Mistake 2: Zu große Stories
+### ❌ Mistake 2: Stories too big
 
 **Bad:**
 ```
-"Als User möchte ich alle Social Features nutzen"
+"As a user I want to use all social features"
 
 → 50+ Story Points
-→ Mehrere Sprints
+→ Multiple sprints
 ```
 
 **Fix:**
 ```
-Split in kleinere Stories:
-- Story 1: "Als User möchte ich Freunde hinzufügen"
-- Story 2: "Als User möchte ich Posts erstellen"
-- Story 3: "Als User möchte ich Posts liken"
-- Story 4: "Als User möchte ich kommentieren"
+Split into smaller stories:
+- Story 1: "As a user I want to add friends"
+- Story 2: "As a user I want to create posts"
+- Story 3: "As a user I want to like posts"
+- Story 4: "As a user I want to comment"
 ```
 
 ---
 
-### ❌ Mistake 3: Vage Acceptance Criteria
+### ❌ Mistake 3: Vague Acceptance Criteria
 
 **Bad:**
 ```
 Acceptance Criteria:
-- [ ] Funktion soll gut funktionieren
-- [ ] Performance soll OK sein
-- [ ] User soll zufrieden sein
+- [ ] Feature should work well
+- [ ] Performance should be OK
+- [ ] User should be satisfied
 ```
 
 **Fix:**
 ```
 Acceptance Criteria:
-- [ ] Given User lädt Dashboard When <1000 records Then page loads in <2s
-- [ ] Given User lädt Dashboard When >1000 records Then pagination (50/page)
+- [ ] Given user loads dashboard When <1000 records Then page loads in <2s
+- [ ] Given user loads dashboard When >1000 records Then pagination (50/page)
 - [ ] Given API offline When load Then "Connection Error" + Retry button
 ```
 
 ---
 
-### ❌ Mistake 4: Horizontal Splitting (Layer-basiert)
+### ❌ Mistake 4: Horizontal Splitting (Layer-based)
 
 **Bad:**
 ```
-Story 1: "Frontend für User Registration"
-Story 2: "Backend für User Registration"
-Story 3: "Database für User Registration"
+Story 1: "Frontend for User Registration"
+Story 2: "Backend for User Registration"
+Story 3: "Database for User Registration"
 
-→ Keine Story liefert eigenständigen Value!
-→ User kann erst nutzen wenn alle 3 Stories fertig sind!
+→ No story delivers standalone Value!
+→ User can only use it when all 3 stories are done!
 ```
 
 **Fix (Vertical Splitting):**
 ```
-Story 1: "Als User möchte ich mich registrieren um ein Konto zu erstellen"
-  → Enthält: Frontend + Backend + Database
-  → Liefert kompletten User Value!
+Story 1: "As a user I want to register to create an account"
+  → Includes: Frontend + Backend + Database
+  → Delivers complete User Value!
 ```
 
-**Wenn Story zu groß für vertical split:**
-- MVP-Version erst (Basic Registration)
-- Dann Enhancement-Stories (Social Login, Email Verification, etc.)
+**If story too big for vertical split:**
+- MVP version first (Basic Registration)
+- Then enhancement stories (Social Login, Email Verification, etc.)
 
 ---
 
@@ -293,19 +293,19 @@ Story 1: "Als User möchte ich mich registrieren um ein Konto zu erstellen"
 
 **Bad:**
 ```
-"Als User möchte ich via GraphQL API meine Daten abrufen"
+"As a user I want to retrieve my data via GraphQL API"
 ```
 
 **Why Bad:**
-- Tech Stack ist Implementation Detail
-- Soll verhandelbar sein!
+- Tech Stack is an Implementation Detail
+- Should be negotiable!
 
 **Fix:**
 ```
-Title: "Als User möchte ich meine Daten exportieren um sie in anderen Tools zu nutzen"
+Title: "As a user I want to export my data to use it in other tools"
 
 Technical Notes:
-- Implementation: GraphQL API (oder REST, to be decided)
+- Implementation: GraphQL API (or REST, to be decided)
 ```
 
 ---
@@ -314,19 +314,19 @@ Technical Notes:
 
 **Bad:**
 ```
-Story A: "Als User möchte ich Payments machen"
-Story B: "Als User möchte ich Stripe als Payment Provider nutzen"
+Story A: "As a user I want to make payments"
+Story B: "As a user I want to use Stripe as payment provider"
 
-→ Story A kann nicht umgesetzt werden ohne B!
-→ Aber keine explizite Dependency!
+→ Story A cannot be implemented without B!
+→ But no explicit dependency!
 ```
 
 **Fix:**
 ```
-Story B: "Als User möchte ich Stripe als Payment Provider nutzen"
+Story B: "As a user I want to use Stripe as payment provider"
   → BLOCKS: Story A
 
-Story A: "Als User möchte ich Payments machen"
+Story A: "As a user I want to make payments"
   → BLOCKED BY: Story B
 ```
 
@@ -336,11 +336,11 @@ Story A: "Als User möchte ich Payments machen"
 
 ### 1. User Value First
 
-**Frag immer:** "Welchen Value hat der User davon?"
+**Always ask:** "What value does the user get from this?"
 
 ```
 ❌ "Implement Caching"
-✅ "Als User möchte ich schnelle Ladezeiten (<2s) um nicht zu warten"
+✅ "As a user I want fast load times (<2s) so I don't have to wait"
 
 Technical Notes:
 - Solution: Redis Caching
@@ -348,52 +348,52 @@ Technical Notes:
 
 ---
 
-### 2. Vertikal splitten (nicht horizontal)
+### 2. Split Vertically (not horizontally)
 
 **Vertical Slicing:**
-- Jede Story liefert End-to-End Value
-- Frontend + Backend + Database in einer Story (falls nötig)
+- Every story delivers End-to-End Value
+- Frontend + Backend + Database in one story (if needed)
 
-**Horizontal Slicing (VERMEIDEN):**
-- Story pro Layer (Frontend, Backend, DB)
-- Keine Story liefert eigenständigen Value
+**Horizontal Slicing (AVOID):**
+- Story per Layer (Frontend, Backend, DB)
+- No story delivers standalone Value
 
 ---
 
-### 3. Definition of Done (DoD) definieren
+### 3. Define Definition of Done (DoD)
 
-**Team-weites DoD:**
+**Team-wide DoD:**
 ```
-- [ ] Code geschrieben & reviewed
+- [ ] Code written & reviewed
 - [ ] Unit Tests (>80% Coverage)
-- [ ] Acceptance Criteria erfüllt
-- [ ] Deployed auf Staging
+- [ ] Acceptance Criteria met
+- [ ] Deployed to Staging
 - [ ] QA Sign-off
 - [ ] PO Acceptance
 ```
 
-**Jede Story muss DoD erfüllen um als "Done" zu gelten!**
+**Every story must meet DoD to be considered "Done"!**
 
 ---
 
-### 4. Personas nutzen
+### 4. Use Personas
 
 **Generic:**
 ```
-"Als User möchte ich Notifications erhalten"
+"As a user I want to receive notifications"
 ```
 
-**Mit Persona:**
+**With Persona:**
 ```
-"Als Power User (30-45 Jahre, täglich aktiv) möchte ich konfigurierbare Notifications erhalten um nicht von unwichtigen Updates gestört zu werden"
+"As a Power User (30-45 years old, active daily) I want to receive configurable notifications so I'm not disturbed by unimportant updates"
 
-→ Gibt mehr Context!
-→ Hilft bei Design Decisions!
+→ Gives more context!
+→ Helps with design decisions!
 ```
 
 ---
 
-### 5. Outcome über Output
+### 5. Outcome over Output
 
 **Output-focused (BAD):**
 ```
@@ -410,11 +410,11 @@ Technical Notes:
 
 ---
 
-### 6. Technical Spikes bei Unsicherheit
+### 6. Technical Spikes for Uncertainty
 
-**Wenn Team nicht schätzen kann:**
-- Spike Story erstellen
-- Time-box (z.B. 4 Stunden)
+**When the team cannot estimate:**
+- Create a Spike Story
+- Time-box (e.g., 4 hours)
 - Output: Technical Approach Doc
 
 **Spike Example:**
@@ -429,7 +429,7 @@ Acceptance Criteria:
 Time-box: 4 hours
 ```
 
-**Nach Spike:** Echte Implementation Stories schreiben
+**After Spike:** Write real Implementation Stories
 
 ---
 
@@ -448,28 +448,28 @@ Description:
 ```
 
 **Why Bad:**
-- Activity-based (nicht user-centric)
-- Kein User Value sichtbar
-- Tech Stack im Vordergrund
+- Activity-based (not user-centric)
+- No User Value visible
+- Tech Stack in the foreground
 
 **✅ GOOD:**
 ```
-Title: "Als User möchte ich mich registrieren um ein Konto zu erstellen"
+Title: "As a user I want to register to create an account"
 
 Description:
-Als neuer User möchte ich mich mit Email & Passwort registrieren,
-um meine Daten zu speichern und später wieder darauf zuzugreifen.
+As a new user I want to register with email & password,
+to save my data and access it again later.
 
 Acceptance Criteria:
-- [ ] Given User auf /register When Email + PW eingegeben Then Account erstellt
-- [ ] Given Email bereits existiert When submit Then "Email bereits registriert"
-- [ ] Given Passwort <8 Zeichen When submit Then "Passwort zu kurz"
-- [ ] Given erfolgreiche Registration When submit Then Auto-Login + Redirect zu Dashboard
+- [ ] Given user on /register When email + password entered Then account created
+- [ ] Given email already exists When submit Then "Email already registered"
+- [ ] Given password <8 characters When submit Then "Password too short"
+- [ ] Given successful registration When submit Then auto-login + redirect to dashboard
 
 Technical Notes:
-- Backend: JWT Authentication, bcrypt für Passwords
+- Backend: JWT Authentication, bcrypt for passwords
 - Database: Users Table (email, hashed_password, created_at)
-- Frontend: Registration Form mit Validation
+- Frontend: Registration Form with validation
 
 Story Points: 5
 ```
@@ -488,33 +488,33 @@ Description:
 ```
 
 **Why Bad:**
-- Developer-Sicht
-- Kein User Value
-- Zu vage (welche Daten? Welche Use Cases?)
+- Developer perspective
+- No User Value
+- Too vague (which data? which use cases?)
 
 **✅ GOOD:**
 ```
-Title: "Als User möchte ich meine Daten als CSV exportieren um sie in Excel zu analysieren"
+Title: "As a user I want to export my data as CSV to analyze it in Excel"
 
 Description:
-Als User möchte ich alle meine Daten (Transaktionen der letzten 12 Monate)
-als CSV-File exportieren, um sie in Excel oder anderen Tools zu analysieren.
+As a user I want to export all my data (transactions from the last 12 months)
+as a CSV file to analyze it in Excel or other tools.
 
 Acceptance Criteria:
-- [ ] Given User auf /export When klick "Export CSV" Then Download CSV file
-- [ ] Given 1000+ records When export Then async job + email mit Download-Link
+- [ ] Given user on /export When click "Export CSV" Then download CSV file
+- [ ] Given 1000+ records When export Then async job + email with download link
 - [ ] Given <1000 records When export Then immediate download
 - [ ] Given CSV downloaded When open Then all fields included (date, amount, category, notes)
 
 Technical Notes:
 - Backend: GET /api/export?format=csv
-- Async Job für >1000 records (Bull Queue)
+- Async Job for >1000 records (Bull Queue)
 - CSV Format: date,amount,category,notes
 - Email Template: "Your export is ready!"
 
 Edge Cases:
-- [ ] User hat 0 records → Empty CSV mit Headers
-- [ ] User hat Sonderzeichen in notes → CSV escaping
+- [ ] User has 0 records → Empty CSV with headers
+- [ ] User has special characters in notes → CSV escaping
 
 Story Points: 5
 ```
@@ -533,23 +533,23 @@ Description:
 ```
 
 **Why Bad:**
-- Tech Solution, nicht Problem
-- Kein messbarer Outcome
+- Tech Solution, not Problem
+- No measurable Outcome
 
 **✅ GOOD:**
 ```
-Title: "Als User möchte ich schnelle Ladezeiten (<2s) um nicht zu warten"
+Title: "As a user I want fast load times (<2s) so I don't have to wait"
 
 Description:
-Aktuell: Dashboard lädt in 8-10s bei 1000+ records.
-Target: Dashboard lädt in <2s.
+Current: Dashboard loads in 8-10s with 1000+ records.
+Target: Dashboard loads in <2s.
 
-Problem: N+1 Queries + keine Caching.
+Problem: N+1 Queries + no caching.
 
 Acceptance Criteria:
-- [ ] Given User lädt Dashboard When <1000 records Then page loads in <2s
-- [ ] Given User lädt Dashboard When >1000 records Then page loads in <3s
-- [ ] Given Cache hit When load Then <500ms response time
+- [ ] Given user loads dashboard When <1000 records Then page loads in <2s
+- [ ] Given user loads dashboard When >1000 records Then page loads in <3s
+- [ ] Given cache hit When load Then <500ms response time
 
 Technical Notes:
 - Solution: Redis Caching (TTL: 5 min)
@@ -563,31 +563,31 @@ Story Points: 8
 
 ## 🧪 INVEST Check Cheatsheet
 
-**Vor dem Commit in Jira:**
+**Before committing to Jira:**
 
 ```
-Story: "Als [Rolle] möchte ich [Funktion] um [Nutzen]"
+Story: "As [Role] I want [Feature] to [Benefit]"
 
-✅ Independent? Kann Story alleine umgesetzt werden?
-✅ Negotiable? Details noch verhandelbar?
-✅ Valuable? User oder Business Value klar?
-✅ Estimable? Team kann Story Points schätzen?
+✅ Independent? Can story be implemented on its own?
+✅ Negotiable? Details still negotiable?
+✅ Valuable? User or Business Value clear?
+✅ Estimable? Team can estimate Story Points?
 ✅ Small? Max 8 Story Points?
-✅ Testable? Acceptance Criteria klar & testbar?
+✅ Testable? Acceptance Criteria clear & testable?
 
-Falls NEIN bei einem Punkt → Story überarbeiten!
+If NO to any point → Revise the story!
 ```
 
 ---
 
 ## 📚 Further Reading
 
-### Empfohlene Bücher
+### Recommended Books
 - **"User Story Mapping"** - Jeff Patton
 - **"User Stories Applied"** - Mike Cohn
 - **"The Lean Startup"** - Eric Ries (Outcome-focused Thinking)
 
-### Empfohlene Artikel
+### Recommended Articles
 - Atlassian Guide to User Stories
 - Martin Fowler: UserStory
 - Roman Pichler: 10 Tips for Writing Good User Stories
@@ -598,5 +598,5 @@ Falls NEIN bei einem Punkt → Story überarbeiten!
 
 ---
 
-*User Stories Best Practices Guide für Product-Toolkit*
+*User Stories Best Practices Guide for Product-Toolkit*
 *Hendrik Hemken, 2025*

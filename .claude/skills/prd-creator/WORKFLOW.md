@@ -90,100 +90,100 @@ Want to proceed anyway? (Yes/No)"
 
 **Ask the PM:**
 
-1. **Was bauen wir?** (Feature Name & High-Level Description)
-   - "Beschreib das Feature in 1-2 Sätzen"
-   - Beispiel: "Multi-Video Upload mit Batch-Processing"
+1. **What are we building?** (Feature Name & High-Level Description)
+   - "Describe the feature in 1-2 sentences"
+   - Example: "Multi-Video Upload with Batch-Processing"
 
-2. **Warum bauen wir das?** (Problem Statement)
-   - "Welches Problem lösen wir?"
-   - "Für wen?"
-   - "Was ist der Impact wenn wir es NICHT bauen?"
-   - → Quantitativ (Metrics) + Qualitativ (User Quotes)
+2. **Why are we building this?** (Problem Statement)
+   - "What problem are we solving?"
+   - "For whom?"
+   - "What's the impact if we DON'T build it?"
+   - → Quantitative (Metrics) + Qualitative (User Quotes)
 
-3. **Wer nutzt das?** (User Personas)
-   - Primäre User (1-2 Personas max)
+3. **Who uses this?** (User Personas)
+   - Primary Users (1-2 personas max)
    - Use Cases / User Stories
    - Pain Points
 
-4. **Wie messen wir Erfolg?** (Success Metrics)
+4. **How do we measure success?** (Success Metrics)
    - SMART Metrics (Specific, Measurable, Attainable, Relevant, Time-bound)
    - Baseline vs. Target
-   - Beispiel: "Upload Success Rate von 85% auf 95% in Q1"
+   - Example: "Upload Success Rate from 85% to 95% in Q1"
 
-5. **Was ist Scope?** (In/Out of Scope)
+5. **What's the scope?** (In/Out of Scope)
    - Must-Have Features (P0)
    - Nice-to-Have (P1/P2)
-   - Explizit OUT of Scope (Scope Creep Prevention!)
+   - Explicitly OUT of Scope (Scope Creep Prevention!)
 
-6. **Technische Constraints?**
+6. **Technical Constraints?**
    - API Limits, Legacy Systems, Performance Requirements
-   - Dependencies (andere Features, Teams)
+   - Dependencies (other features, teams)
 
 7. **Confluence & Jira Setup:**
    - **Confluence Space:**
      - Check COMPANY_CONTEXT.md → "Tools & Workflow" → "Confluence Spaces"
      - If found: Use listed spaces (ask which one if multiple)
-     - If empty: Ask "Welcher Confluence Space? (z.B. 'PROD', 'DEV')"
+     - If empty: Ask "Which Confluence Space? (e.g., 'PROD', 'DEV')"
    - **Jira Project:**
      - Check COMPANY_CONTEXT.md → "Tools & Workflow" → "Jira Projects"
      - If found: Use listed projects (ask which one if multiple)
-     - If empty: Ask "Jira Project Key? (z.B. 'PROD', 'DEV')"
-   - **Parent Page:** (Optional) "Parent Page? (falls Teil einer größeren Initiative)"
+     - If empty: Ask "Jira Project Key? (e.g., 'PROD', 'DEV')"
+   - **Parent Page:** (Optional) "Parent Page? (if part of a larger initiative)"
 
 ---
 
 ### Phase 2: PRD Type Selection
 
-**Frag: "Welchen PRD-Typ brauchen wir?"**
+**Ask: "Which PRD type do we need?"**
 
-Basierend auf Context, empfehle einen Typ:
+Based on context, recommend a type:
 
-**1. Lean PRD** ✅ (DEFAULT für Agile Teams)
+**1. Lean PRD** ✅ (DEFAULT for Agile Teams)
 - ✅ Agile/Scrum Environment
-- ✅ Small-Medium Feature (2 Wochen - 3 Monate)
-- ✅ Startup oder kleines Team (2-20 Personen)
-- ✅ MVP oder Early-Stage
-- ✅ Schnelle Iteration gewünscht
-- **Format:** 1-3 Seiten, Focus auf Warum/Was, minimal Wie
+- ✅ Small-Medium Feature (2 weeks - 3 months)
+- ✅ Startup or small team (2-20 people)
+- ✅ MVP or Early-Stage
+- ✅ Fast iteration desired
+- **Format:** 1-3 pages, Focus on Why/What, minimal How
 - **Template:** [TEMPLATES.md](TEMPLATES.md) → Lean PRD
 
-**2. Traditional PRD** (für komplexe/regulierte Projekte)
-- ⚠️ Waterfall oder stark regulierte Industrie (Finance, Healthcare)
-- ⚠️ Large Feature (3+ Monate)
+**2. Traditional PRD** (for complex/regulated projects)
+- ⚠️ Waterfall or highly regulated industry (Finance, Healthcare)
+- ⚠️ Large Feature (3+ months)
 - ⚠️ High Risk, High Investment
 - ⚠️ >50 Stakeholders
 - ⚠️ Compliance/Legal Requirements
-- **Format:** 10-30 Seiten, comprehensive Documentation
+- **Format:** 10-30 pages, comprehensive Documentation
 - **Template:** [TEMPLATES.md](TEMPLATES.md) → Traditional PRD
 
-**3. Amazon PR/FAQ** (für Strategic Initiatives)
+**3. Amazon PR/FAQ** (for Strategic Initiatives)
 - 🚀 Major Strategic Initiative
 - 🚀 Customer Obsession Culture
-- 🚀 Multiple Solution Approaches evaluieren
-- 🚀 Executive-Level Decision nötig
-- **Format:** Press Release + FAQ (5-10 Seiten)
+- 🚀 Evaluating multiple solution approaches
+- 🚀 Executive-Level Decision needed
+- **Format:** Press Release + FAQ (5-10 pages)
 - **Template:** [TEMPLATES.md](TEMPLATES.md) → PR/FAQ
 
-**4. Hybrid Agile PRD** (Balance für Scale-Ups)
-- 🔄 Medium-Large Team (10-50 Personen)
-- 🔄 Complex Feature mit Cross-Functional Collaboration
-- 🔄 Agile Methodik, aber mehr Struktur nötig
+**4. Hybrid Agile PRD** (Balance for Scale-Ups)
+- 🔄 Medium-Large Team (10-50 people)
+- 🔄 Complex Feature with Cross-Functional Collaboration
+- 🔄 Agile methodology, but more structure needed
 - 🔄 Remote/Distributed Teams
-- **Format:** 5-10 Seiten, Living Document
+- **Format:** 5-10 pages, Living Document
 - **Template:** [TEMPLATES.md](TEMPLATES.md) → Hybrid PRD
 
-**💡 Empfehlung aussprechen:**
+**💡 Make a recommendation:**
 ```
-"Basierend auf deinem Context empfehle ich:
-→ Lean PRD (1-3 Seiten)
+"Based on your context I recommend:
+→ Lean PRD (1-3 pages)
 
-Warum:
+Why:
 ✅ Agile Team
-✅ Feature-Scope (2-3 Monate)
-✅ Schnelle Iteration gewünscht
+✅ Feature Scope (2-3 months)
+✅ Fast iteration desired
 
-Alternative wäre Hybrid PRD falls mehr Struktur nötig.
-Was denkst du?"
+Alternative would be Hybrid PRD if more structure needed.
+What do you think?"
 ```
 
 ---
@@ -192,12 +192,12 @@ Was denkst du?"
 
 **Create an 80% draft based on:**
 
-1. **Gesammelten Informationen** aus Phase 1
-2. **Gewähltem Template** aus Phase 2
-3. **Best Practices** aus [GUIDE.md](GUIDE.md)
-4. **Company Context** aus `/user_context/COMPANY_CONTEXT.md`
+1. **Gathered information** from Phase 1
+2. **Chosen Template** from Phase 2
+3. **Best Practices** from [GUIDE.md](GUIDE.md)
+4. **Company Context** from `/user_context/COMPANY_CONTEXT.md`
 
-**Struktur (für Lean PRD - häufigster Fall):**
+**Structure (for Lean PRD - most common case):**
 
 ```markdown
 ---
@@ -221,43 +221,43 @@ epic_link: [JIRA-XXX]
 
 ## 📋 Executive Summary
 
-[2-3 Sätze: Was bauen wir, warum, für wen]
+[2-3 sentences: What are we building, why, for whom]
 
 ---
 
 ## 🎯 Problem Statement
 
-**Problem:** [Spezifisches Problem]
+**Problem:** [Specific Problem]
 
 **Impact:**
-- Quantitativ: [Metrics, Daten]
-- Qualitativ: [User Quotes, Feedback]
+- Quantitative: [Metrics, Data]
+- Qualitative: [User Quotes, Feedback]
 
 **Evidence:**
 - [Metric 1]: Baseline → Target
 - [User Quote]: "..."
 
-**Vision:** [Wie sieht die Welt aus wenn Problem gelöst?]
+**Vision:** [What does the world look like when problem is solved?]
 
 ---
 
 ## 👥 User Personas & Use Cases
 
 ### Primary Persona: [Name]
-- **Role:** [z.B. Content Creator]
-- **Goals:** [Was will der User erreichen?]
-- **Pain Points:** [Aktuelle Frustrationen]
-- **Quote:** "[Direktes Zitat aus Research]"
+- **Role:** [e.g., Content Creator]
+- **Goals:** [What does the user want to achieve?]
+- **Pain Points:** [Current frustrations]
+- **Quote:** "[Direct quote from research]"
 
-### Use Case: [Titel]
-**Als** [User Type]
-**möchte ich** [Aktion]
-**damit** [Benefit]
+### Use Case: [Title]
+**As** [User Type]
+**I want** [Action]
+**to** [Benefit]
 
 **Happy Path:**
-1. [Schritt 1]
-2. [Schritt 2]
-3. [Schritt 3]
+1. [Step 1]
+2. [Step 2]
+3. [Step 3]
 
 ---
 
@@ -265,25 +265,25 @@ epic_link: [JIRA-XXX]
 
 | Metric | Baseline | Target | Timeframe | Method |
 |--------|----------|--------|-----------|--------|
-| [KPI 1] | [Wert] | [Ziel] | Q[X] 202[X] | [Wie messen?] |
-| [KPI 2] | [Wert] | [Ziel] | Q[X] 202[X] | [Wie messen?] |
+| [KPI 1] | [Value] | [Goal] | Q[X] 202[X] | [How to measure?] |
+| [KPI 2] | [Value] | [Goal] | Q[X] 202[X] | [How to measure?] |
 
 ---
 
 ## ⚙️ Features & Requirements
 
 ### Must-Have (P0)
-- ✅ [Feature 1]: [Beschreibung]
-- ✅ [Feature 2]: [Beschreibung]
+- ✅ [Feature 1]: [Description]
+- ✅ [Feature 2]: [Description]
 
 ### Should-Have (P1)
-- 🔵 [Feature 3]: [Beschreibung]
+- 🔵 [Feature 3]: [Description]
 
 ### Nice-to-Have (P2)
-- 🟢 [Feature 4]: [Beschreibung]
+- 🟢 [Feature 4]: [Description]
 
 ### OUT of Scope ❌
-- ❌ [Feature X]: [Warum out of scope?]
+- ❌ [Feature X]: [Why out of scope?]
 
 ---
 
@@ -296,9 +296,9 @@ epic_link: [JIRA-XXX]
 - [System/Team Dependencies]
 
 **Constraints:**
-- Performance: [z.B. "<2s Load Time"]
+- Performance: [e.g., "<2s Load Time"]
 - Security: [Requirements]
-- Scalability: [z.B. "100k concurrent users"]
+- Scalability: [e.g., "100k concurrent users"]
 
 **Assumptions:**
 - [Key Assumptions]
@@ -347,90 +347,90 @@ epic_link: [JIRA-XXX]
 
 **Show the PM the draft:**
 ```
-"Hier ist ein 80%-Draft basierend auf unserem Gespräch.
+"Here's an 80% draft based on our conversation.
 
 Key Highlights:
-✅ Problem Statement mit Metrics
-✅ 2 User Personas mit Use Cases
+✅ Problem Statement with Metrics
+✅ 2 User Personas with Use Cases
 ✅ 4 Success Metrics (SMART)
-✅ Features priorisiert (P0/P1/P2)
-✅ Out of Scope explizit definiert
+✅ Features prioritized (P0/P1/P2)
+✅ Out of Scope explicitly defined
 
-Was fehlt oder muss angepasst werden?"
+What's missing or needs to be adjusted?"
 ```
 
 ---
 
 ### Phase 4: Refinement & Review
 
-**Iteriere mit PM:**
+**Iterate with PM:**
 
 1. **Content Review:**
-   - "Ist das Problem Statement klar?"
-   - "Fehlen wichtige User Personas?"
-   - "Sind die Success Metrics SMART?"
-   - "Stimmt die Priorisierung?"
+   - "Is the Problem Statement clear?"
+   - "Missing important User Personas?"
+   - "Are the Success Metrics SMART?"
+   - "Is the prioritization correct?"
 
 2. **Technical Review:**
-   - "Passen die Technical Constraints?"
-   - "Fehlen Dependencies?"
-   - "Sind Non-Functional Requirements vollständig?"
+   - "Do the Technical Constraints fit?"
+   - "Missing dependencies?"
+   - "Are Non-Functional Requirements complete?"
 
 3. **Stakeholder Alignment:**
-   - "Wer muss das reviewen?"
-   - "Welche Teams sind betroffen?"
-   - "Gibt es Legal/Compliance Considerations?"
+   - "Who needs to review this?"
+   - "Which teams are affected?"
+   - "Are there Legal/Compliance considerations?"
 
 **Quality Gates enforced:**
 
 ✅ **Problem Statement:**
 - Quantitative Evidence? (Metrics)
 - Qualitative Evidence? (User Quotes)
-- Impact Statement? (Was passiert wenn wir es NICHT bauen?)
+- Impact Statement? (What happens if we DON'T build it?)
 
 ✅ **Success Metrics:**
 - SMART? (Specific, Measurable, Attainable, Relevant, Time-bound)
-- Baseline vs. Target definiert?
-- Messbar mit true/false?
+- Baseline vs. Target defined?
+- Measurable with true/false?
 
 ✅ **Scope Clarity:**
-- Must-Have vs. Nice-to-Have klar?
-- OUT of Scope explizit genannt?
+- Must-Have vs. Nice-to-Have clear?
+- OUT of Scope explicitly stated?
 - Scope Creep Prevention?
 
-✅ **User-Zentrierung:**
-- Personas basierend auf echten Usern?
-- User Quotes inkludiert?
-- Use Cases konkret?
+✅ **User-Centricity:**
+- Personas based on real users?
+- User Quotes included?
+- Use Cases concrete?
 
 ---
 
 ### Phase 5: Confluence Publishing
 
-**Wenn PM zufrieden:**
+**When PM is satisfied:**
 
 1. **Create Page in Confluence:**
 
    **→ Use the `confluence_create_page` tool**
 
    **Parameters:**
-   - `space_key`: "[SPACE]" (z.B. "PROD", "DEV")
+   - `space_key`: "[SPACE]" (e.g., "PROD", "DEV")
    - `title`: "[Feature Name] - PRD"
-   - `content`: Markdown content (wird automatisch zu HTML konvertiert)
-   - `parent_id`: [optional] - Parent Page ID falls Teil größerer Initiative
+   - `content`: Markdown content (automatically converted to HTML)
+   - `parent_id`: [optional] - Parent Page ID if part of larger initiative
 
-   **→ Speicher die Page ID** aus der Response für spätere Updates!
+   **→ Save the Page ID** from the Response for later updates!
 
 2. **Add Labels:**
 
-   **→ Use `confluence_add_label` für jedes Label:**
+   **→ Use `confluence_add_label` for each label:**
 
-   - `prd` (immer!)
-   - `feature-[name]` (Feature-spezifisch)
-   - `q[x]-202[x]` (Timeline)
-   - `status-draft` (Status)
+   - `prd` (always!)
+   - `feature-[name]` (feature-specific)
+   - `q[x]-202[x]` (timeline)
+   - `status-draft` (status)
 
-   **Beispiel:**
+   **Example:**
    ```
    → confluence_add_label(page_id, "prd")
    → confluence_add_label(page_id, "feature-multi-upload")
@@ -443,7 +443,7 @@ Was fehlt oder muss angepasst werden?"
    **→ Use the `jira_create_issue` tool**
 
    **Parameters:**
-   - `project_key`: "[PROJ]" (z.B. "PROD")
+   - `project_key`: "[PROJ]" (e.g., "PROD")
    - `issue_type`: "Epic"
    - `summary`: "[Feature Name]"
    - `description`: PRD Link + Summary
@@ -460,24 +460,24 @@ Was fehlt oder muss angepasst werden?"
    See PRD for full details.
    ```
 
-   **→ Speicher den Epic Key** (z.B. "PROD-123") aus der Response!
+   **→ Save the Epic Key** (e.g., "PROD-123") from the Response!
 
 4. **Link PRD ↔ Epic:**
-   - PRD enthält Epic Link
-   - Epic Description enthält PRD Link
+   - PRD contains Epic Link
+   - Epic Description contains PRD Link
 
-**Output für PM:**
+**Output for PM:**
 ```
-✅ PRD erstellt in Confluence!
+✅ PRD created in Confluence!
 
 📄 PRD: https://[company].atlassian.net/wiki/spaces/[SPACE]/pages/[ID]
 🎯 Epic: [JIRA-XXX] (optional)
 
-Nächste Schritte:
-1. PRD mit Stakeholders teilen (Design, Engineering)
-2. Feedback sammeln & iterieren
-3. Status updaten: Draft → In Review → Approved
-4. User Stories aus PRD ableiten (via user-stories Skill)
+Next Steps:
+1. Share PRD with stakeholders (Design, Engineering)
+2. Gather feedback & iterate
+3. Update status: Draft → In Review → Approved
+4. Derive User Stories from PRD (via user-stories Skill)
 ```
 
 ---

@@ -1,17 +1,17 @@
 # PRD → User Stories Workflow
 
-Systematisch Product Requirements Documents (Confluence, Google Docs, Notion) in User Stories umwandeln.
+Systematically convert Product Requirements Documents (Confluence, Google Docs, Notion) into User Stories.
 
 ---
 
 ## 🎯 Workflow Overview
 
 **Input:** Product Requirements Document (PRD)
-**Output:** Serie von User Stories (INVEST-compliant, ready for Jira)
+**Output:** Series of User Stories (INVEST-compliant, ready for Jira)
 
-**Unterstützte Formate:**
-- ✅ Confluence Page (Copy-paste oder URL)
-- ✅ Google Docs (URL oder export)
+**Supported Formats:**
+- ✅ Confluence Page (Copy-paste or URL)
+- ✅ Google Docs (URL or export)
 - ✅ Markdown Files (.md)
 - ✅ Notion Pages (export)
 - ✅ Plain Text / Chat Description
@@ -20,45 +20,45 @@ Systematisch Product Requirements Documents (Confluence, Google Docs, Notion) in
 
 ## 🚀 Workflow (Step-by-Step)
 
-### Phase 1: PRD Input erhalten
+### Phase 1: Receive PRD Input
 
-**Frag den PM:**
+**Ask the PM:**
 
 ```
-"Cool! Lass uns aus dem PRD User Stories machen.
+"Cool! Let's turn the PRD into User Stories.
 
-Wie möchtest du mir das PRD geben?
+How would you like to give me the PRD?
 
-1. Confluence URL (falls accessible)
-2. Copy-paste den Content hier rein
+1. Confluence URL (if accessible)
+2. Copy-paste the content here
 3. Markdown File (.md export)
-4. Screenshot vom PRD
-5. Beschreib es mir einfach im Chat
+4. Screenshot of the PRD
+5. Just describe it to me in chat
 
-Was passt am besten?"
+What works best?"
 ```
 
-**Input-Optionen:**
+**Input Options:**
 
 #### Option 1: Confluence URL
 ```
 User: "https://yourcompany.atlassian.net/wiki/spaces/PROD/pages/123456/Feature-X"
 
-→ WebFetch verwenden (falls public oder authenticated)
-→ Content extrahieren
+→ Use WebFetch (if public or authenticated)
+→ Extract content
 ```
 
 #### Option 2: Copy-Paste
 ```
-User: [Kopiert Confluence Content direkt]
+User: [Copies Confluence content directly]
 
-→ Parse den pasted Content
-→ Handle Confluence-spezifische Formatierung
+→ Parse the pasted content
+→ Handle Confluence-specific formatting
 ```
 
 #### Option 3: Markdown File
 ```
-User: "Hier ist das PRD: /path/to/prd.md"
+User: "Here's the PRD: /path/to/prd.md"
 
 → Read File
 → Parse Markdown Structure
@@ -66,81 +66,81 @@ User: "Hier ist das PRD: /path/to/prd.md"
 
 #### Option 4: Screenshot
 ```
-User: [Screenshot von Confluence Page]
+User: [Screenshot of Confluence Page]
 
-→ OCR / Image-to-Text (Claude kann Bilder lesen!)
-→ Parse extrahierten Text
+→ OCR / Image-to-Text (Claude can read images!)
+→ Parse extracted text
 ```
 
 #### Option 5: Chat Description
 ```
-User: "Das Feature soll... [Beschreibung]"
+User: "The feature should... [description]"
 
-→ Strukturiertes Interview führen
-→ PRD-Struktur im Chat aufbauen
+→ Conduct structured interview
+→ Build PRD structure in chat
 ```
 
 ---
 
-### Phase 2: PRD Analyse & Struktur verstehen
+### Phase 2: PRD Analysis & Understanding Structure
 
-**Was du aus dem PRD extrahieren musst:**
+**What you need to extract from the PRD:**
 
 #### 1. Problem Statement
 ```
-❓ Welches Problem lösen wir?
-❓ Warum ist das wichtig?
-❓ Was ist die Opportunity?
+❓ What problem are we solving?
+❓ Why is this important?
+❓ What's the opportunity?
 ```
 
 #### 2. Target Users
 ```
-❓ Wer sind die User? (Persona)
-❓ Was ist ihr aktueller Pain Point?
-❓ Was ist der erwartete Outcome?
+❓ Who are the users? (Persona)
+❓ What's their current pain point?
+❓ What's the expected outcome?
 ```
 
 #### 3. Features & Requirements
 ```
-❓ Was sind die Must-Have Features?
-❓ Was sind Nice-to-Have Features?
-❓ Was ist explizit OUT OF SCOPE?
+❓ What are the Must-Have features?
+❓ What are Nice-to-Have features?
+❓ What is explicitly OUT OF SCOPE?
 ```
 
 #### 4. Success Criteria
 ```
-❓ Wie messen wir Success? (Metrics)
-❓ Was ist die Definition of Done?
-❓ Welche Acceptance Criteria gibt's?
+❓ How do we measure success? (Metrics)
+❓ What's the Definition of Done?
+❓ What Acceptance Criteria exist?
 ```
 
 #### 5. Constraints & Dependencies
 ```
 ❓ Technical Constraints? (API Limits, Legacy)
 ❓ Time Constraints? (Deadline, Launch Date)
-❓ External Dependencies? (3rd Party APIs, andere Teams)
+❓ External Dependencies? (3rd Party APIs, other teams)
 ```
 
 #### 6. User Journey / Use Cases
 ```
-❓ Was ist der Happy Path?
-❓ Welche Alternative Paths gibt's?
-❓ Welche Edge Cases?
+❓ What's the Happy Path?
+❓ What Alternative Paths exist?
+❓ What Edge Cases?
 ```
 
 ---
 
-### Phase 3: PRD Parsing (Confluence-spezifisch)
+### Phase 3: PRD Parsing (Confluence-specific)
 
-**Confluence-Struktur erkennen:**
+**Recognize Confluence Structure:**
 
-#### Typische PRD-Struktur in Confluence:
+#### Typical PRD Structure in Confluence:
 
 ```markdown
 # [Feature Name]
 
 ## Problem Statement
-[Beschreibung des Problems]
+[Description of the problem]
 
 ## Target Users
 - User Persona 1
@@ -170,15 +170,15 @@ User: "Das Feature soll... [Beschreibung]"
 - Feature X (for later)
 ```
 
-**Deine Aufgabe:**
-1. Parse die Struktur (Headings, Lists, Tables)
-2. Extrahiere Requirements & Features
-3. Identifiziere User Value Points
-4. Map zu potentiellen User Stories
+**Your Task:**
+1. Parse the structure (Headings, Lists, Tables)
+2. Extract Requirements & Features
+3. Identify User Value Points
+4. Map to potential User Stories
 
 ---
 
-### Phase 4: Requirements → User Stories mappen
+### Phase 4: Map Requirements → User Stories
 
 **Mapping Logic:**
 
@@ -189,8 +189,8 @@ PRD Requirement:
 "Users should be able to export their data as CSV"
 
 → Story:
-"Als User möchte ich meine Daten als CSV exportieren
-um sie in Excel zu analysieren"
+"As a user I want to export my data as CSV
+to analyze it in Excel"
 ```
 
 #### 2. User Journey-based Mapping
@@ -204,9 +204,9 @@ PRD User Flow:
 5. System processes
 
 → Stories:
-Story 1: "Als User möchte ich Files hochladen..."
-Story 2: "Als User möchte ich Preview sehen..."
-Story 3: "Als User möchte ich Processing-Status sehen..."
+Story 1: "As a user I want to upload files..."
+Story 2: "As a user I want to see a preview..."
+Story 3: "As a user I want to see processing status..."
 ```
 
 #### 3. Epic vs. Story Decision
@@ -214,33 +214,33 @@ Story 3: "Als User möchte ich Processing-Status sehen..."
 ```
 PRD Feature: "Complete Payment Integration"
 
-→ Zu groß für eine Story!
-→ Create Epic + breakdown in Stories
+→ Too big for one story!
+→ Create Epic + breakdown into Stories
 
 Epic: "Payment Integration"
-├── Story 1: "Als User möchte ich mit Kreditkarte zahlen..."
-├── Story 2: "Als User möchte ich Payment-Status sehen..."
-└── Story 3: "Als User möchte ich Rechnung per Email erhalten..."
+├── Story 1: "As a user I want to pay with credit card..."
+├── Story 2: "As a user I want to see payment status..."
+└── Story 3: "As a user I want to receive invoice via email..."
 ```
 
 ---
 
-### Phase 5: User Stories schreiben
+### Phase 5: Write User Stories
 
-**Für jede identifizierte Story:**
+**For each identified story:**
 
 ```markdown
 # Story Title
 
-**Als** [Persona aus PRD]
-**möchte ich** [Feature/Capability]
-**um** [Business Value / Outcome aus PRD]
+**As** [Persona from PRD]
+**I want** [Feature/Capability]
+**to** [Business Value / Outcome from PRD]
 
 ---
 
 ## Acceptance Criteria
 
-(Extrahiert aus PRD Requirements)
+(Extracted from PRD Requirements)
 
 - [ ] Given [Context] When [Action] Then [Expected Outcome]
 - [ ] Given [Context] When [Action] Then [Outcome]
@@ -250,23 +250,23 @@ Epic: "Payment Integration"
 
 ## Technical Notes
 
-(Extrahiert aus PRD Technical Section)
+(Extracted from PRD Technical Section)
 
 **Frontend:**
-- [UI Components aus PRD]
+- [UI Components from PRD]
 
 **Backend:**
-- [API Requirements aus PRD]
+- [API Requirements from PRD]
 - [3rd Party Integrations]
 
 **Database:**
-- [Data Model aus PRD]
+- [Data Model from PRD]
 
 ---
 
 ## Edge Cases
 
-(Extrahiert aus PRD Use Cases / Edge Cases)
+(Extracted from PRD Use Cases / Edge Cases)
 
 - [ ] Edge Case 1
 - [ ] Edge Case 2
@@ -283,71 +283,71 @@ Epic: "Payment Integration"
 
 ## Story Points
 
-[Estimate basierend auf Complexity aus PRD]
+[Estimate based on Complexity from PRD]
 ```
 
 ---
 
 ### Phase 6: INVEST Check (Quality Gate)
 
-**Für JEDE Story:**
+**For EVERY story:**
 
 ```
-✅ Independent? Kann alleine umgesetzt werden?
-✅ Negotiable? Details noch verhandelbar?
-✅ Valuable? User Value aus PRD klar?
-✅ Estimable? Genug Info zum Schätzen?
+✅ Independent? Can be implemented on its own?
+✅ Negotiable? Details still negotiable?
+✅ Valuable? User Value from PRD clear?
+✅ Estimable? Enough info to estimate?
 ✅ Small? Max 8 Story Points?
-✅ Testable? Acceptance Criteria klar?
+✅ Testable? Acceptance Criteria clear?
 
-Falls NEIN → Story überarbeiten!
+If NO → Revise the story!
 ```
 
 ---
 
 ### Phase 7: Output & Jira Creation
 
-**Output für PM:**
+**Output for PM:**
 
 ```
 📋 PRD Analysis: [PRD Title]
 
-Identifiziert:
-- 🎯 Problem: [Kurze Zusammenfassung]
+Identified:
+- 🎯 Problem: [Brief summary]
 - 👥 Users: [Personas]
-- 📊 Success Metrics: [Metrics aus PRD]
+- 📊 Success Metrics: [Metrics from PRD]
 
-Stories erstellt: 8
+Stories created: 8
 
 Frontend (3):
-- Story 1: Als [User] möchte ich... (3 Points)
-- Story 2: Als [User] möchte ich... (5 Points)
-- Story 3: Als [User] möchte ich... (2 Points)
+- Story 1: As [User] I want... (3 Points)
+- Story 2: As [User] I want... (5 Points)
+- Story 3: As [User] I want... (2 Points)
 
 Backend (3):
-- Story 4: Als [User] möchte ich... (5 Points)
-- Story 5: Als [User] möchte ich... (3 Points)
-- Story 6: Als [User] möchte ich... (8 Points)
+- Story 4: As [User] I want... (5 Points)
+- Story 5: As [User] I want... (3 Points)
+- Story 6: As [User] I want... (8 Points)
 
 QA (2):
-- Story 7: E2E Tests für... (3 Points)
+- Story 7: E2E Tests for... (3 Points)
 - Story 8: Performance Tests... (5 Points)
 
-Total: 34 Story Points (~2 Sprints für 1 Dev)
+Total: 34 Story Points (~2 Sprints for 1 Dev)
 
-Soll ich die Stories in Jira erstellen? (Projekt: PROD)
+Should I create the stories in Jira? (Project: PROD)
 ```
 
-**Wenn User "Ja":**
+**When User says "Yes":**
 → Batch Create via `jira_batch_create_issues`
-→ Optional: Create Epic first (wenn sinnvoll)
+→ Optional: Create Epic first (if appropriate)
 → Link Stories to Epic
 
 ---
 
-## 🔍 Confluence-spezifische Parsing Tips
+## 🔍 Confluence-specific Parsing Tips
 
-### Confluence Markup erkennen
+### Recognize Confluence Markup
 
 **Headings:**
 ```
@@ -388,7 +388,7 @@ System.out.println("Hello");
 
 ### Common Confluence PRD Patterns
 
-**Pattern 1: User Story Format bereits im PRD**
+**Pattern 1: User Story Format already in PRD**
 ```
 Confluence Content:
 "As a user, I want to export data so that I can analyze it"
@@ -405,10 +405,10 @@ Requirements:
 - System shall validate file format
 - System shall show preview
 
-→ Map zu Stories:
-Story 1: "Als User möchte ich Files hochladen (max 10MB)..."
-Story 2: "Als User möchte ich Validation Feedback sehen..."
-Story 3: "Als User möchte ich Preview sehen..."
+→ Map to Stories:
+Story 1: "As a user I want to upload files (max 10MB)..."
+Story 2: "As a user I want to see validation feedback..."
+Story 3: "As a user I want to see a preview..."
 ```
 
 **Pattern 3: Epic-level PRD**
@@ -416,45 +416,45 @@ Story 3: "Als User möchte ich Preview sehen..."
 Confluence Content:
 "Complete Checkout Flow Implementation"
 
-→ Zu groß!
-→ Create Epic + breakdown in Stories (siehe BREAKDOWN.md)
+→ Too big!
+→ Create Epic + breakdown into Stories (see BREAKDOWN.md)
 ```
 
 ---
 
 ## 📊 PRD Quality Check
 
-**Bevor du Stories erstellst:**
+**Before creating stories:**
 
 ```
-✅ PRD ist vollständig?
-   → Problem, Users, Requirements, Success Criteria vorhanden?
+✅ PRD is complete?
+   → Problem, Users, Requirements, Success Criteria present?
 
-✅ Requirements sind klar?
-   → Nicht zu vage ("system should be fast")
+✅ Requirements are clear?
+   → Not too vague ("system should be fast")
 
-✅ User Value erkennbar?
-   → Nicht nur technical specs
+✅ User Value recognizable?
+   → Not just technical specs
 
-✅ Success Metrics definiert?
-   → Wie messen wir Success?
+✅ Success Metrics defined?
+   → How do we measure success?
 
-✅ Scope klar?
-   → Was ist IN, was ist OUT?
+✅ Scope clear?
+   → What's IN, what's OUT?
 ```
 
-**Wenn PRD unvollständig:**
+**If PRD is incomplete:**
 
 ```
-⚠️ "Hey, das PRD ist etwas dünn.
+⚠️ "Hey, the PRD is a bit thin.
 
-Fehlt:
-- Success Metrics (wie messen wir Erfolg?)
-- Edge Cases (was bei Error?)
-- Technical Constraints (API Limits?)
+Missing:
+- Success Metrics (how do we measure success?)
+- Edge Cases (what happens on error?)
+- Technical Constraints (API limits?)
 
-Soll ich trotzdem Stories schreiben
-oder willst du das PRD erst ergänzen?"
+Should I still write stories
+or do you want to complete the PRD first?"
 ```
 
 ---
@@ -466,7 +466,7 @@ oder willst du das PRD erst ergänzen?"
 ```
 Story 1:
 ───────
-Als [User] möchte ich [X] um [Y]
+As [User] I want [X] to [Y]
 
 Acceptance Criteria:
 - [ ] Given... When... Then...
@@ -484,8 +484,8 @@ Story 2:
 ```
 File: /outputs/user-stories/PRD-Feature-X-Stories.md
 
-Enthält:
-- Alle Stories
+Contains:
+- All Stories
 - PRD Reference
 - Story Mapping (PRD Requirement → Story)
 ```
@@ -495,14 +495,14 @@ Enthält:
 ```
 → Batch Create in Jira
 → PRD Link in Story Description
-→ PRD Section als Label/Component
+→ PRD Section as Label/Component
 ```
 
 ---
 
 ## 🚨 Common Pitfalls
 
-### ❌ Pitfall 1: PRD zu vague
+### ❌ Pitfall 1: PRD too vague
 
 **Problem:**
 ```
@@ -511,15 +511,15 @@ PRD: "System should have good UX"
 
 **Fix:**
 ```
-Frag nach:
-- Was ist "good UX" konkret?
-- Welche User Actions?
-- Welche Outcomes?
+Ask:
+- What is "good UX" specifically?
+- Which user actions?
+- Which outcomes?
 ```
 
 ---
 
-### ❌ Pitfall 2: Tech Spec statt User Value
+### ❌ Pitfall 2: Tech Spec instead of User Value
 
 **Problem:**
 ```
@@ -528,12 +528,12 @@ PRD: "Implement REST API with OAuth2"
 
 **Fix:**
 ```
-Frag:
-- Warum brauchen wir das?
-- Was kann der User damit?
-- Was ist der Value?
+Ask:
+- Why do we need this?
+- What can the user do with it?
+- What's the value?
 
-→ Story: "Als User möchte ich sicher auf meine Daten zugreifen (via OAuth2)..."
+→ Story: "As a user I want to securely access my data (via OAuth2)..."
 ```
 
 ---
@@ -548,12 +548,12 @@ PRD: "Complete Social Network Implementation"
 
 **Fix:**
 ```
-→ "Das ist ein EPIC-level PRD!
+→ "This is an EPIC-level PRD!
 
-Soll ich:
-1. Epic erstellen + breakdown in Stories (siehe BREAKDOWN.md)
-2. MVP-Phase identifizieren (was first?)
-3. Nur Core Features für Sprint 1?"
+Should I:
+1. Create Epic + breakdown into Stories (see BREAKDOWN.md)
+2. Identify MVP phase (what's first?)
+3. Focus only on Core Features for Sprint 1?"
 ```
 
 ---
@@ -562,12 +562,12 @@ Soll ich:
 
 **Problem:**
 ```
-PRD hat keine ACs, nur "User can upload file"
+PRD has no ACs, only "User can upload file"
 ```
 
 **Fix:**
 ```
-→ Generate ACs basierend auf Standard Edge Cases:
+→ Generate ACs based on standard edge cases:
 
 - [ ] Given valid file When upload Then success
 - [ ] Given file >10MB When upload Then "Too large" error
@@ -603,8 +603,8 @@ Users can't export their data for external analysis.
 
 ```
 Story 1:
-"Als User möchte ich meine Daten als CSV exportieren
-um sie in Excel zu analysieren"
+"As a user I want to export my data as CSV
+to analyze it in Excel"
 
 Acceptance Criteria:
 - [ ] Given <1000 records When export Then immediate download
@@ -646,11 +646,11 @@ PRD Reference: Confluence Page "Feature: Export Data" → Requirements Section
 **Stories:**
 
 ```
-Story 1: "Als neuer User möchte ich mich registrieren..."
-Story 2: "Als neuer User möchte ich meine Email verifizieren..."
-Story 3: "Als neuer User möchte ich mein Profil vervollständigen..."
-Story 4: "Als neuer User möchte ich Präferenzen setzen..."
-Story 5: "Als neuer User möchte ich personalisiertes Dashboard sehen..."
+Story 1: "As a new user I want to register..."
+Story 2: "As a new user I want to verify my email..."
+Story 3: "As a new user I want to complete my profile..."
+Story 4: "As a new user I want to set preferences..."
+Story 5: "As a new user I want to see a personalized dashboard..."
 
 Total: 5 Stories (~15-20 Story Points)
 ```
@@ -659,22 +659,22 @@ Total: 5 Stories (~15-20 Story Points)
 
 ## 📚 Best Practices
 
-### 1. PRD als Single Source of Truth
+### 1. PRD as Single Source of Truth
 
 ```
-✅ Link jede Story zurück zum PRD
-✅ Quote original Requirements im Story Description
+✅ Link every story back to the PRD
+✅ Quote original Requirements in Story Description
 ✅ Track PRD Changes → update Stories
 ```
 
-### 2. Konversational Parsing
+### 2. Conversational Parsing
 
 ```
-✅ Zeige dem PM was du extrahiert hast
-✅ Frag bei Unklarheiten nach
-✅ Bestätige Interpretation
+✅ Show the PM what you extracted
+✅ Ask when unclear
+✅ Confirm interpretation
 
-❌ NICHT: Blind Stories erstellen ohne Rückfrage
+❌ NOT: Blindly create stories without asking
 ```
 
 ### 3. Incremental Refinement
@@ -684,65 +684,65 @@ Total: 5 Stories (~15-20 Story Points)
 ✅ Second Pass: Refine ACs, Technical Notes
 ✅ Third Pass: INVEST Check, Story Points
 
-❌ NICHT: Perfekte Stories auf Anhieb erwarten
+❌ NOT: Expect perfect stories on first try
 ```
 
 ### 4. PRD Quality Feedback
 
 ```
-✅ Gib Feedback wenn PRD Lücken hat
-✅ Schlage Verbesserungen vor
-✅ Hilf PM bessere PRDs zu schreiben
+✅ Give feedback when PRD has gaps
+✅ Suggest improvements
+✅ Help PM write better PRDs
 
 Example:
-"⚠️ PRD fehlt Success Metrics - wie messen wir Erfolg?
-   Soll ich Standard-Metrics vorschlagen? (Engagement, Conversion, etc.)"
+"⚠️ PRD is missing Success Metrics - how do we measure success?
+   Should I suggest standard metrics? (Engagement, Conversion, etc.)"
 ```
 
 ---
 
 ## 🎨 Tone & Style
 
-**Konversational, nicht robotisch:**
+**Conversational, not robotic:**
 
 ```
-❌ NICHT:
+❌ NOT:
 "PRD parsed. 8 stories extracted. Creating in Jira."
 
-✅ SONDERN:
-"Cool! Ich hab das PRD durchgegangen.
+✅ INSTEAD:
+"Cool! I've gone through the PRD.
 
-Gefunden:
-- Problem: User können Daten nicht exportieren
+Found:
+- Problem: Users can't export data
 - Target: 30% Adoption
 - 3 Must-Have Features, 2 Nice-to-Have
 
-Daraus mache ich 5 Stories (Frontend + Backend + QA).
+I'll create 5 stories from this (Frontend + Backend + QA).
 
-Soll ich loslegen? 🚀"
+Should I get started? 🚀"
 ```
 
 ---
 
 ## 🧪 Testing Checklist
 
-**Vor dem Release an PM:**
+**Before releasing to PM:**
 
 ```
-✅ Alle Stories haben User Value (nicht nur tech specs)
-✅ Alle Stories sind INVEST-compliant
-✅ Acceptance Criteria sind testbar (Given-When-Then)
-✅ Technical Notes sind vorhanden (Frontend/Backend/DB)
-✅ PRD Reference ist verlinkt (traceability)
-✅ Story Points geschätzt (realistic)
-✅ Dependencies identifiziert (if any)
+✅ All stories have User Value (not just tech specs)
+✅ All stories are INVEST-compliant
+✅ Acceptance Criteria are testable (Given-When-Then)
+✅ Technical Notes are present (Frontend/Backend/DB)
+✅ PRD Reference is linked (traceability)
+✅ Story Points estimated (realistic)
+✅ Dependencies identified (if any)
 ```
 
 ---
 
-**PRD → Stories ist eine Kunst. Mit Übung wird's besser. User Value First. INVEST always.**
+**PRD → Stories is an art. With practice, it gets better. User Value First. INVEST always.**
 
 ---
 
-*PRD Workflow für Product-Toolkit User Stories Skill*
+*PRD Workflow for Product-Toolkit User Stories Skill*
 *Hendrik Hemken, 2025*

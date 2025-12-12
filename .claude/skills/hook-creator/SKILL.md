@@ -1,6 +1,6 @@
 ---
 name: hook-creator
-description: Creates Claude Code hooks for tool control, logging, and automation. Use ONLY when user explicitly requests 'Hook erstellen', 'Hook anlegen', 'MCP Tool blocken', or 'Hook für [Tool]'. Covers all hook types (PreToolUse, PostToolUse, UserPromptSubmit, SessionStart, Stop, etc.) with focus on MCP tool blocking and permission control. NOT for general use - requires explicit user request.
+description: Creates Claude Code hooks for tool control, logging, and automation. Use ONLY when user explicitly requests 'create hook', 'new hook', 'block MCP tool', or 'hook for [tool]'. Covers all hook types (PreToolUse, PostToolUse, UserPromptSubmit, SessionStart, Stop, etc.) with focus on MCP tool blocking and permission control. NOT for general use - requires explicit user request.
 ---
 
 # Hook Creator
@@ -8,16 +8,16 @@ description: Creates Claude Code hooks for tool control, logging, and automation
 
 ---
 
-## ⚠️ WICHTIG: Claude Code Neustart erforderlich!
+## ⚠️ IMPORTANT: Claude Code Restart Required!
 
-**Nach jedem Hook-Update MUSS Claude Code neu gestartet werden:**
-- Hooks werden nur beim Startup geladen
-- Änderungen während der Session werden NICHT übernommen
-- **→ Claude Code komplett beenden & neu starten!**
+**After every hook update, Claude Code MUST be restarted:**
+- Hooks are only loaded at startup
+- Changes during the session are NOT applied
+- **→ Completely quit and restart Claude Code!**
 
 **Debugging:**
-- `/hooks` Befehl zeigt registrierte Hooks
-- `claude --debug` für detaillierte Execution Logs
+- `/hooks` command shows registered hooks
+- `claude --debug` for detailed execution logs
 
 ---
 
@@ -25,16 +25,16 @@ description: Creates Claude Code hooks for tool control, logging, and automation
 
 ### 1. Understand User Intent
 
-**Frage ab:**
-- **Was soll der Hook tun?** (Block, Log, Transform, Validate?)
-- **Für welche Tools?** (Specific tool or pattern?)
-- **Wann triggern?** (Before tool call, after, on prompt submit, etc?)
+**Ask:**
+- **What should the hook do?** (Block, Log, Transform, Validate?)
+- **For which tools?** (Specific tool or pattern?)
+- **When to trigger?** (Before tool call, after, on prompt submit, etc?)
 
 ### 2. Choose Hook Event Type
 
-**9 Hook Events verfügbar:**
+**9 Hook Events available:**
 
-| Event | Wann | Use Cases |
+| Event | When | Use Cases |
 |-------|------|-----------|
 | **PreToolUse** | Before tool execution | Block tools, validate params, permission control |
 | **PostToolUse** | After tool success | Log results, validate output, post-process |
@@ -46,7 +46,7 @@ description: Creates Claude Code hooks for tool control, logging, and automation
 | **PreCompact** | Before context compaction | Save state, backup data |
 | **SessionEnd** | On session end | Cleanup, persist state |
 
-**Häufigste Use Cases:**
+**Most common use cases:**
 - **MCP Tool Blocking:** PreToolUse + Permission Decision
 - **Logging:** PostToolUse
 - **Validation:** PreToolUse or PostToolUse
@@ -132,7 +132,7 @@ description: Creates Claude Code hooks for tool control, logging, and automation
         "hooks": [
           {
             "type": "command",
-            "command": "echo '{\"hookSpecificOutput\": {\"hookEventName\": \"PreToolUse\", \"permissionDecision\": \"deny\", \"permissionDecisionReason\": \"⚠️ Jira Delete ist deaktiviert. Bitte manuell in Jira löschen.\"}}'"
+            "command": "echo '{\"hookSpecificOutput\": {\"hookEventName\": \"PreToolUse\", \"permissionDecision\": \"deny\", \"permissionDecisionReason\": \"⚠️ Jira Delete is disabled. Please delete manually in Jira.\"}}'"
           }
         ]
       }
@@ -154,7 +154,7 @@ description: Creates Claude Code hooks for tool control, logging, and automation
         "hooks": [
           {
             "type": "command",
-            "command": "echo '{\"hookSpecificOutput\": {\"hookEventName\": \"PreToolUse\", \"permissionDecision\": \"deny\", \"permissionDecisionReason\": \"Delete-Operationen sind aus Sicherheitsgründen deaktiviert.\"}}'"
+            "command": "echo '{\"hookSpecificOutput\": {\"hookEventName\": \"PreToolUse\", \"permissionDecision\": \"deny\", \"permissionDecisionReason\": \"Delete operations are disabled for security reasons.\"}}'"
           }
         ]
       }
@@ -203,7 +203,7 @@ if [[ "$FILE_PATH" == *".env"* ]] || [[ "$FILE_PATH" == *".git/"* ]]; then
     "hookSpecificOutput": {
       "hookEventName": "PreToolUse",
       "permissionDecision": "deny",
-      "permissionDecisionReason": "⚠️ Schreibzugriff auf sensitive Files blockiert!"
+      "permissionDecisionReason": "⚠️ Write access to sensitive files blocked!"
     }
   }'
   exit 0
@@ -405,12 +405,12 @@ cat .claude/settings.json
 
 ### Step 5: Restart Claude Code
 
-**⚠️ KRITISCH: Hook-Änderungen werden NUR beim Startup geladen!**
+**⚠️ CRITICAL: Hook changes are ONLY loaded at startup!**
 
-**Nach Update:**
+**After update:**
 1. Save settings.json
-2. **Claude Code komplett beenden**
-3. Claude Code neu starten
+2. **Completely quit Claude Code**
+3. Restart Claude Code
 4. Run `/hooks` to verify registration
 
 ### Step 6: Test & Debug
@@ -615,25 +615,25 @@ fi
 
 1. ✅ **Hook config snippet** (copy-pasteable JSON)
 2. ✅ **Where to add** (hooks.json location)
-3. ✅ **Neustart-Reminder:** "⚠️ Claude Code MUSS neu gestartet werden!"
+3. ✅ **Restart reminder:** "⚠️ Claude Code MUST be restarted!"
 4. ✅ **Verification command:** `/hooks` to check registration
 5. ✅ **Test instructions** (how to trigger & verify)
 
 **Template:**
 ```markdown
-## ✅ Hook erstellt!
+## ✅ Hook created!
 
 **Config:**
 ```json
 [Hook JSON]
 ```
 
-**Location:** `~/.claude/settings.json` (user-wide) oder `.claude/settings.json` (project-specific)
+**Location:** `~/.claude/settings.json` (user-wide) or `.claude/settings.json` (project-specific)
 
-**⚠️ WICHTIG: Claude Code MUSS neu gestartet werden!**
+**⚠️ IMPORTANT: Claude Code MUST be restarted!**
 1. Save settings.json
-2. Claude Code komplett beenden
-3. Neu starten
+2. Completely quit Claude Code
+3. Restart
 4. Run `/hooks` to verify
 
 **Test:**
@@ -685,7 +685,7 @@ Before finalizing:
 - 🔥 [Settings Documentation](https://docs.claude.com/en/docs/claude-code/settings.md)
 
 **Complete Reference:**
-- 📚 `reference/hooks-reference.md` - Vollständige Hooks Documentation (nur on-demand laden!)
+- 📚 `reference/hooks-reference.md` - Complete Hooks Documentation (load on-demand only!)
 
 **Project:**
 - `.claude/hooks/` - Project hook scripts

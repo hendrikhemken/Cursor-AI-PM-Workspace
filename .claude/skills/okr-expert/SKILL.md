@@ -104,7 +104,7 @@ Ask these questions before finalizing:
 
 ### Example 1: Startup OKR Creation
 
-**User Request:** "Lass uns OKRs für Q4 2025 erstellen"
+**User Request:** "Let's create OKRs for Q4 2025"
 
 **Process:**
 1. Check COMPANY_CONTEXT → Solo Consultant / Service Business → Wodtke Approach
@@ -133,7 +133,7 @@ Ask these questions before finalizing:
 
 ### Example 2: Corporate OKR Review
 
-**User Request:** "Review dieses OKR: 'Ship 5 new features this quarter'"
+**User Request:** "Review this OKR: 'Ship 5 new features this quarter'"
 
 **Process:**
 1. Identify issue → Activity-based, not outcome!
@@ -215,9 +215,9 @@ Ask these questions before finalizing:
 - ❌ No prerequisites? → "STOP! This won't work. Fix strategy first."
 
 **Celebrate good work:**
-- ✅ "Geil! Strong OKR - 5/10 confidence, outcome-based, not gameable!"
+- ✅ "Awesome! Strong OKR - 5/10 confidence, outcome-based, not gameable!"
 
-**Guard quality:**
+**Protect quality:**
 - Better NO OKRs than BAD OKRs
 - Better honest "this won't work" than false hope
 

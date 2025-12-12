@@ -1,39 +1,39 @@
-# Confluence Workflows für PRDs
+# Confluence Workflows for PRDs
 *Confluence MCP Integration - Page Creation, Updates & Jira Linking*
 
 ---
 
-## 🛠️ Verfügbare MCP Tools
+## 🛠️ Available MCP Tools
 
 **Confluence Page Management:**
-- `confluence_create_page` - Neue Page erstellen
-- `confluence_update_page` - Bestehende Page updaten
-- `confluence_get_page` - Page Content lesen
-- `confluence_get_page_children` - Child Pages abrufen
-- `confluence_search` - Pages suchen
-- `confluence_add_label` - Labels hinzufügen
-- `confluence_add_comment` - Kommentar hinzufügen
-- `confluence_delete_page` - Page löschen (VORSICHT!)
+- `confluence_create_page` - Create new page
+- `confluence_update_page` - Update existing page
+- `confluence_get_page` - Read page content
+- `confluence_get_page_children` - Get child pages
+- `confluence_search` - Search pages
+- `confluence_add_label` - Add labels
+- `confluence_add_comment` - Add comment
+- `confluence_delete_page` - Delete page (CAUTION!)
 
 **Jira Integration:**
-- `jira_create_issue` - Epic/Story erstellen
-- `jira_update_issue` - Issue updaten
-- `jira_search` - Issues suchen
+- `jira_create_issue` - Create Epic/Story
+- `jira_update_issue` - Update issue
+- `jira_search` - Search issues
 
-**Alle Tools sind native MCP Tools** - direkt nutzbar, keine Python-Skripte nötig!
+**All tools are native MCP Tools** - directly usable, no Python scripts needed!
 
 ---
 
-## 📝 Workflow 1: Neues PRD erstellen
+## 📝 Workflow 1: Create New PRD
 
-### Schritt 1: Markdown Draft vorbereiten
+### Step 1: Prepare Markdown Draft
 
-**Input vom PM:**
-- Space Key (z.B. "PROD", "DEV", "TEAM")
-- Title (z.B. "Multi-Video Upload - PRD")
-- Parent Page ID (optional, falls Teil einer größeren Initiative)
+**Input from PM:**
+- Space Key (e.g., "PROD", "DEV", "TEAM")
+- Title (e.g., "Multi-Video Upload - PRD")
+- Parent Page ID (optional, if part of a larger initiative)
 
-**Markdown vorbereiten:**
+**Prepare Markdown:**
 ```markdown
 # Multi-Video Upload - PRD
 
@@ -50,9 +50,9 @@
 
 ---
 
-### Schritt 2: Markdown → Confluence HTML Conversion
+### Step 2: Markdown → Confluence HTML Conversion
 
-**Wichtig:** Confluence nutzt Storage Format (HTML), nicht Markdown!
+**Important:** Confluence uses Storage Format (HTML), not Markdown!
 
 **Conversion Rules:**
 
@@ -66,21 +66,21 @@
 | Code Block | `<ac:structured-macro ac:name="code">...</ac:structured-macro>` |
 | Table | `<table>...</table>` |
 
-**✅ MCP Tool konvertiert automatisch** Markdown → HTML!
+**✅ MCP Tool converts automatically** Markdown → HTML!
 
-**Tipp:** Schreibe in Markdown, das Tool handled die Conversion.
+**Tip:** Write in Markdown, the tool handles the conversion.
 
 ---
 
-### Schritt 3: Confluence Page erstellen
+### Step 3: Create Confluence Page
 
 **→ Use the `confluence_create_page` tool**
 
 **Parameters:**
-- `space_key`: "PROD" (der Confluence Space Key)
+- `space_key`: "PROD" (the Confluence Space Key)
 - `title`: "Multi-Video Upload - PRD"
-- `content`: Markdown content (wird automatisch zu HTML konvertiert)
-- `parent_id`: "123456789" (optional - wenn Teil einer Page Hierarchy)
+- `content`: Markdown content (automatically converted to HTML)
+- `parent_id`: "123456789" (optional - if part of a page hierarchy)
 
 **Example Content:**
 ```markdown
@@ -102,23 +102,23 @@ satisfaction.
 [... rest of PRD content ...]
 ```
 
-**Response enthält:**
-- `id`: Page ID (für future updates - wichtig speichern!)
+**Response contains:**
+- `id`: Page ID (for future updates - important to save!)
 - `title`: Page Title
-- `_links.webui`: URL zum Teilen mit Team
+- `_links.webui`: URL to share with team
 
-**→ Speicher die Page ID** für spätere Updates!
+**→ Save the Page ID** for later updates!
 
 ---
 
-### Schritt 4: Labels hinzufügen
+### Step 4: Add Labels
 
-**→ Use `confluence_add_label` für jedes Label**
+**→ Use `confluence_add_label` for each label**
 
-**Empfohlene Labels:**
+**Recommended Labels:**
 
-**Kategorie Labels:**
-- `prd` (immer!)
+**Category Labels:**
+- `prd` (always!)
 
 **Timeline Labels:**
 - `q1-2025`, `q2-2025`, `q3-2025`, `q4-2025`
@@ -132,7 +132,7 @@ satisfaction.
 **Team Labels:**
 - `team-platform`, `team-growth`, `team-infra`
 
-**Beispiel Label-Set:**
+**Example Label Set:**
 ```
 → confluence_add_label(page_id, "prd")
 → confluence_add_label(page_id, "q2-2025")
@@ -143,9 +143,9 @@ satisfaction.
 
 ---
 
-### Schritt 5: Epic in Jira erstellen & verlinken
+### Step 5: Create Epic in Jira & Link
 
-**Optional: Epic in Jira anlegen**
+**Optional: Create Epic in Jira**
 
 **→ Use `jira_create_issue` tool**
 
@@ -153,7 +153,7 @@ satisfaction.
 - `project_key`: "PROD"
 - `issue_type`: "Epic"
 - `summary`: "Multi-Video Upload"
-- `description`: Link zum PRD + Summary
+- `description`: Link to PRD + Summary
 - `additional_fields`: Labels, etc.
 
 **Epic Description Example:**
@@ -172,20 +172,20 @@ videos simultaneously.
 See PRD for full details.
 ```
 
-**→ Response enthält:**
-- `key`: Epic Key (z.B. "PROD-123")
+**→ Response contains:**
+- `key`: Epic Key (e.g., "PROD-123")
 
 ---
 
-### Schritt 6: PRD updaten mit Epic Link
+### Step 6: Update PRD with Epic Link
 
 **→ Use `confluence_update_page` tool**
 
 **Parameters:**
-- `page_id`: Die Page ID aus Schritt 3
-- `title`: "Multi-Video Upload - PRD" (kann gleich bleiben)
-- `content`: Updated content mit Epic Link
-- `version_comment`: "Added Epic Link" (wichtig für Changelog!)
+- `page_id`: The Page ID from Step 3
+- `title`: "Multi-Video Upload - PRD" (can stay the same)
+- `content`: Updated content with Epic Link
+- `version_comment`: "Added Epic Link" (important for Changelog!)
 
 **Updated Content Example:**
 ```markdown
@@ -199,14 +199,14 @@ See PRD for full details.
 [... rest of content ...]
 ```
 
-**→ Version Comment dokumentiert Changes** (erscheint im Page History)
+**→ Version Comment documents changes** (appears in Page History)
 
 ---
 
-### Schritt 7: Output für PM
+### Step 7: Output for PM
 
 ```
-✅ PRD erfolgreich in Confluence erstellt!
+✅ PRD successfully created in Confluence!
 
 📄 PRD: https://company.atlassian.net/wiki/spaces/PROD/pages/987654321
 🎯 Epic: PROD-123 (https://company.atlassian.net/browse/PROD-123)
@@ -218,57 +218,57 @@ Labels:
 - status-draft
 - team-platform
 
-Nächste Schritte:
-1. PRD mit Stakeholders teilen (Design, Engineering)
-2. Feedback sammeln & iterieren
-3. Status updaten: Draft → In Review → Approved
-4. User Stories aus PRD ableiten (via user-stories Skill)
+Next Steps:
+1. Share PRD with stakeholders (Design, Engineering)
+2. Gather feedback & iterate
+3. Update status: Draft → In Review → Approved
+4. Derive User Stories from PRD (via user-stories skill)
 ```
 
 ---
 
-## 🔄 Workflow 2: Bestehendes PRD updaten
+## 🔄 Workflow 2: Update Existing PRD
 
-### Use Case: Stakeholder Feedback einarbeiten
+### Use Case: Incorporate Stakeholder Feedback
 
-**Schritt 1: Page lesen**
+**Step 1: Read Page**
 
 **→ Use `confluence_get_page` tool**
 
 **Parameters:**
 - `page_id`: "987654321"
-- `convert_to_markdown`: true (für einfacheres Editing)
-- `include_metadata`: true (für Labels, Version, etc.)
+- `convert_to_markdown`: true (for easier editing)
+- `include_metadata`: true (for labels, version, etc.)
 
-**Response enthält:**
-- `markdown`: Page content als Markdown
-- `version.number`: Current version (z.B. 3)
-- `metadata.labels`: Aktuelle Labels
+**Response contains:**
+- `markdown`: Page content as Markdown
+- `version.number`: Current version (e.g., 3)
+- `metadata.labels`: Current labels
 
 ---
 
-**Schritt 2: Content updaten**
+**Step 2: Update Content**
 
 **→ Use `confluence_update_page` tool**
 
 **Parameters:**
 - `page_id`: "987654321"
-- `title`: "Multi-Video Upload - PRD" (kann gleich bleiben)
-- `content`: Updated content mit Stakeholder Feedback
+- `title`: "Multi-Video Upload - PRD" (can stay the same)
+- `content`: Updated content with stakeholder feedback
 - `version_comment`: "Added Design Feedback: Updated wireframes, clarified edge cases"
 
 **Important:**
-- `version_comment` dokumentiert Changes (Changelog!)
+- `version_comment` documents changes (Changelog!)
 - Version Number auto-increments
-- Page History tracked automatisch
+- Page History tracked automatically
 
 ---
 
-## 🔍 Workflow 3: PRD suchen (wenn Page ID unbekannt)
+## 🔍 Workflow 3: Search PRD (when Page ID unknown)
 
-### Use Case: User sagt "Update das Multi-Upload PRD"
+### Use Case: User says "Update the Multi-Upload PRD"
 
-**Schritt 1: Suchen**
+**Step 1: Search**
 
 **→ Use `confluence_search` tool**
 
@@ -276,31 +276,31 @@ Nächste Schritte:
 - `query`: "Multi-Video Upload PRD"
 - `limit`: 5 (max results)
 
-**Response enthält:**
-- `results`: Array von gefundenen Pages
+**Response contains:**
+- `results`: Array of found pages
   - `id`: Page ID
   - `title`: Page Title
   - `space.key`: Space Key
   - `url`: Page URL
 
-**Schritt 2: PM fragen welche Page gemeint**
+**Step 2: Ask PM which page is meant**
 
 ```
-Ich habe 2 PRDs gefunden:
+I found 2 PRDs:
 
 1. Multi-Video Upload - PRD (PROD Space)
 2. Video Upload Optimization - PRD (TECH Space)
 
-Welche möchtest du updaten?
+Which one do you want to update?
 ```
 
 ---
 
-## 🏗️ Workflow 4: Hierarchische Struktur (Parent/Child Pages)
+## 🏗️ Workflow 4: Hierarchical Structure (Parent/Child Pages)
 
-### Use Case: PRD mit Sub-Pages (z.B. Design Spec, Tech Spec)
+### Use Case: PRD with Sub-Pages (e.g., Design Spec, Tech Spec)
 
-**Struktur:**
+**Structure:**
 ```
 📄 Multi-Video Upload - PRD (Parent)
   ├─ 🎨 Design Spec (Child)
@@ -308,20 +308,20 @@ Welche möchtest du updaten?
   └─ 📊 User Research Findings (Child)
 ```
 
-**Parent Page erstellen:**
+**Create Parent Page:**
 
-**→ Use `confluence_create_page` für Parent**
+**→ Use `confluence_create_page` for Parent**
 
 **Parameters:**
 - `space_key`: "PROD"
 - `title`: "Multi-Video Upload - PRD"
 - `content`: [PRD Content]
 
-**→ Speicher die `parent_id` aus der Response!**
+**→ Save the `parent_id` from the Response!**
 
-**Child Pages erstellen:**
+**Create Child Pages:**
 
-**→ Use `confluence_create_page` für jedes Child**
+**→ Use `confluence_create_page` for each Child**
 
 **Design Spec:**
 - `space_key`: "PROD"
@@ -335,27 +335,27 @@ Welche möchtest du updaten?
 - `content`: [Tech Content]
 - `parent_id`: [Parent Page ID from above]
 
-**Vorteil:**
-- Hierarchische Organization
-- PRD bleibt "Landing Page"
-- Details in Sub-Pages
-- Navigation einfacher
+**Benefit:**
+- Hierarchical organization
+- PRD remains "Landing Page"
+- Details in sub-pages
+- Navigation easier
 
 ---
 
-## 📊 Workflow 5: Child Pages abrufen
+## 📊 Workflow 5: Get Child Pages
 
-### Use Case: "Zeig mir alle Sub-Docs zum PRD"
+### Use Case: "Show me all sub-docs for the PRD"
 
 **→ Use `confluence_get_page_children` tool**
 
 **Parameters:**
 - `parent_id`: "987654321"
-- `include_content`: false (nur Titles, keine Full Content)
+- `include_content`: false (only titles, no full content)
 - `limit`: 25 (max results)
 
-**Response enthält:**
-- `results`: Array von Child Pages
+**Response contains:**
+- `results`: Array of child pages
   - `id`: Page ID
   - `title`: Page Title
 
@@ -368,9 +368,9 @@ Found 2 child pages:
 
 ---
 
-## 💬 Workflow 6: Kommentare hinzufügen
+## 💬 Workflow 6: Add Comments
 
-### Use Case: Stakeholder Feedback als Kommentar
+### Use Case: Stakeholder Feedback as Comment
 
 **→ Use `confluence_add_comment` tool**
 
@@ -390,11 +390,11 @@ The proposed upload architecture looks good, but we need to clarify:
 Please add to Technical Considerations section.
 ```
 
-**Wann nutzen:**
-- Stakeholder Feedback dokumentieren
-- Open Questions tracken
-- Review Comments
-- @Mentions für Notifications
+**When to use:**
+- Document stakeholder feedback
+- Track open questions
+- Review comments
+- @Mentions for notifications
 
 ---
 
@@ -418,17 +418,17 @@ https://company.atlassian.net/wiki/spaces/PROD/pages/987654321
 See PRD for full details, metrics, and requirements.
 ```
 
-**Vorteil:**
+**Benefit:**
 - Single Source of Truth (PRD in Confluence)
 - Easy Navigation (Jira → PRD, PRD → Jira)
-- Context für Developers
-- PRD bleibt "Landing Page" für Feature
+- Context for Developers
+- PRD remains "Landing Page" for feature
 
 ---
 
 ## 📁 Confluence Space Organization
 
-### Empfohlene Struktur
+### Recommended Structure
 
 ```
 📁 PROD (Space)
@@ -444,31 +444,31 @@ See PRD for full details, metrics, and requirements.
       └─ [Tech Docs]
 ```
 
-**Warum:**
-- Klare Hierarchie
-- Easy Discovery
-- Consistent Naming
-- Team weiß wo was liegt
+**Why:**
+- Clear hierarchy
+- Easy discovery
+- Consistent naming
+- Team knows where things are
 
 ---
 
 ## 🚨 Common Mistakes & How to Avoid
 
-### Mistake 1: Version Comment fehlt
+### Mistake 1: Missing Version Comment
 
 **Problem:**
 ```
-→ confluence_update_page ohne version_comment
+→ confluence_update_page without version_comment
 ```
 
 **Impact:**
-- Kein Changelog
-- Unklar was geändert wurde
-- Schlechte Nachvollziehbarkeit
+- No changelog
+- Unclear what was changed
+- Poor traceability
 
 **Solution:**
 ```
-→ IMMER version_comment nutzen:
+→ ALWAYS use version_comment:
   "Added Success Metrics section per stakeholder feedback"
   "Updated wireframes based on Design review"
   "Clarified edge cases from Engineering feedback"
@@ -476,20 +476,20 @@ See PRD for full details, metrics, and requirements.
 
 ---
 
-### Mistake 2: Labels vergessen
+### Mistake 2: Forgetting Labels
 
 **Problem:**
-PRD ohne Labels → schwer zu finden, kategorisieren
+PRD without labels → hard to find, categorize
 
 **Solution:**
-Immer mindestens:
+Always add at minimum:
 - `prd`
 - `status-[x]` (draft/in-review/approved)
 - `q[x]-202[x]` (timeline)
 
 ---
 
-### Mistake 3: Jira Link fehlt oder broken
+### Mistake 3: Missing or Broken Jira Link
 
 **Problem:**
 ```markdown
@@ -497,67 +497,67 @@ Immer mindestens:
 ```
 
 **Impact:**
-- Kein Clickable Link
-- Schlechte UX
+- No clickable link
+- Poor UX
 
 **Solution:**
 ```markdown
 **Epic:** [PROD-123](https://company.atlassian.net/browse/PROD-123)
 ```
 
-**→ Immer full URL mit Markdown Link!**
+**→ Always use full URL with Markdown link!**
 
 ---
 
-### Mistake 4: Space Key falsch oder nicht existiert
+### Mistake 4: Wrong or Non-existent Space Key
 
 **Problem:**
 ```
-→ confluence_create_page mit space_key="PRODUKTMANAGEMENT"
-→ Space existiert nicht → ERROR
+→ confluence_create_page with space_key="PRODUKTMANAGEMENT"
+→ Space doesn't exist → ERROR
 ```
 
 **Solution:**
-1. Frag PM: "Welcher Space? (z.B. 'PROD', 'DEV')"
-2. Bei Unsicherheit: Search existing Pages zum Identifizieren
-3. Confirm bevor du createst
+1. Ask PM: "Which space? (e.g., 'PROD', 'DEV')"
+2. When unsure: Search existing pages to identify
+3. Confirm before creating
 
 ---
 
-### Mistake 5: Page ID verloren
+### Mistake 5: Lost Page ID
 
 **Problem:**
 ```
-→ confluence_create_page aufgerufen
-→ Page ID NICHT gespeichert
-→ Später: "Wie war nochmal die Page ID?" 😱
+→ confluence_create_page called
+→ Page ID NOT saved
+→ Later: "What was that Page ID again?" 😱
 ```
 
 **Solution:**
 ```
-→ IMMER Page ID aus Response speichern!
-→ Output an PM: "Page ID: 987654321 (für future updates)"
+→ ALWAYS save Page ID from Response!
+→ Output to PM: "Page ID: 987654321 (for future updates)"
 ```
 
 ---
 
 ## 💡 Pro Tips
 
-### Tip 1: Nutze Version History
+### Tip 1: Use Version History
 
-Confluence tracked automatisch Versions.
+Confluence automatically tracks versions.
 
 **Check Version History:**
 → Page → "..." Menu → "Page History"
 
-**Restore alte Version:**
-→ Page History → "Restore" bei gewünschter Version
+**Restore old version:**
+→ Page History → "Restore" at desired version
 
-**→ Deshalb sind version_comments so wichtig!**
+**→ That's why version_comments are so important!**
 
 ---
 
-### Tip 2: @Mentions für Notifications
+### Tip 2: @Mentions for Notifications
 
 **In Comments:**
 ```markdown
@@ -566,13 +566,13 @@ Confluence tracked automatisch Versions.
 ```
 
 **Impact:**
-- Email Notification an Mentioned Person
+- Email Notification to mentioned person
 - Increases Visibility
 - Faster Feedback Loop
 
 ---
 
-### Tip 3: Confluence Macros für Rich Content
+### Tip 3: Confluence Macros for Rich Content
 
 **Table of Contents:**
 ```html
@@ -594,11 +594,11 @@ Confluence tracked automatisch Versions.
 </ac:structured-macro>
 ```
 
-**→ Frag mich wenn du spezifische Macros brauchst!**
+**→ Ask me if you need specific macros!**
 
 ---
 
-### Tip 4: Search nutzt CQL (Confluence Query Language)
+### Tip 4: Search Uses CQL (Confluence Query Language)
 
 **Advanced Search Examples:**
 
@@ -614,18 +614,18 @@ query: 'space="PROD" AND label="prd" AND label="q2-2025"'
 
 **Common CQL Patterns:**
 - `title ~ "Upload"` → Title contains "Upload"
-- `label = "prd"` → Has Label "prd"
+- `label = "prd"` → Has label "prd"
 - `space = "PROD"` → In Space PROD
-- `created >= "2025-01-01"` → Created after Date
+- `created >= "2025-01-01"` → Created after date
 - `type = "page"` → Only Pages (not Blog Posts)
 
-**→ CQL ist powerful für Complex Queries!**
+**→ CQL is powerful for complex queries!**
 
 ---
 
-### Tip 5: Markdown wird automatisch konvertiert
+### Tip 5: Markdown is Automatically Converted
 
-**Du schreibst:**
+**You write:**
 ```markdown
 # Heading
 **Bold** and *italic*
@@ -633,7 +633,7 @@ query: 'space="PROD" AND label="prd" AND label="q2-2025"'
 [Links](https://example.com)
 ```
 
-**MCP Tool konvertiert automatisch zu:**
+**MCP Tool automatically converts to:**
 ```html
 <h1>Heading</h1>
 <p><strong>Bold</strong> and <em>italic</em></p>
@@ -641,25 +641,25 @@ query: 'space="PROD" AND label="prd" AND label="q2-2025"'
 <p><a href="https://example.com">Links</a></p>
 ```
 
-**→ Schreib einfach Markdown, das Tool handled den Rest!**
+**→ Just write Markdown, the tool handles the rest!**
 
 ---
 
 ## 📋 Confluence PRD Checklist
 
-**Bevor du publishst:**
+**Before publishing:**
 
 - [ ] **Title:** Clear & Descriptive (Feature Name - PRD)
-- [ ] **Space:** Richtig gewählt (z.B. PROD, DEV)
-- [ ] **Parent Page:** Gesetzt (falls Teil größerer Initiative)
-- [ ] **Content:** Vollständig & formatiert
-- [ ] **Labels:** Mindestens `prd`, `status-[x]`, `q[x]-202[x]`
-- [ ] **Epic Link:** In PRD inkludiert (Jira Epic URL)
-- [ ] **Jira Epic:** Erstellt & verlinkt zurück zum PRD
-- [ ] **Version Comment:** Beschreibt Changes (bei Updates)
+- [ ] **Space:** Correctly chosen (e.g., PROD, DEV)
+- [ ] **Parent Page:** Set (if part of larger initiative)
+- [ ] **Content:** Complete & formatted
+- [ ] **Labels:** At minimum `prd`, `status-[x]`, `q[x]-202[x]`
+- [ ] **Epic Link:** Included in PRD (Jira Epic URL)
+- [ ] **Jira Epic:** Created & linked back to PRD
+- [ ] **Version Comment:** Describes changes (on updates)
 - [ ] **Status Badge:** Draft / In Review / Approved (optional)
-- [ ] **Stakeholders:** Notified (via @Mentions oder Share)
-- [ ] **Page ID:** Gespeichert für future updates
+- [ ] **Stakeholders:** Notified (via @Mentions or Share)
+- [ ] **Page ID:** Saved for future updates
 
 ---
 
@@ -670,27 +670,27 @@ query: 'space="PROD" AND label="prd" AND label="q2-2025"'
 1. **Prepare Markdown Content** (PRD draft)
 2. **→ confluence_create_page** (space_key, title, content)
 3. **→ Save Page ID** from response
-4. **→ confluence_add_label** (multiple calls für alle Labels)
-5. **→ jira_create_issue** (Epic mit PRD Link) [optional]
+4. **→ confluence_add_label** (multiple calls for all labels)
+5. **→ jira_create_issue** (Epic with PRD Link) [optional]
 6. **→ confluence_update_page** (add Epic Link to PRD)
 7. **→ Output URL & Page ID** to PM
-8. **→ Notify Stakeholders** (share URL oder @mentions)
+8. **→ Notify Stakeholders** (share URL or @mentions)
 
-**Das war's! PRD ist live, verlinkt, labeled & ready. 🚀**
+**That's it! PRD is live, linked, labeled & ready. 🚀**
 
 ---
 
-**Du bist jetzt bereit, PRDs in Confluence wie ein Pro zu managen!**
+**You're now ready to manage PRDs in Confluence like a pro!**
 
 **Key Takeaways:**
-- ✅ MCP Tools sind native
-- ✅ Markdown wird automatisch konvertiert
-- ✅ Page ID immer speichern
-- ✅ Version Comments sind Pflicht
-- ✅ Labels für Discoverability
+- ✅ MCP Tools are native
+- ✅ Markdown is automatically converted
+- ✅ Always save Page ID
+- ✅ Version Comments are mandatory
+- ✅ Labels for discoverability
 - ✅ Two-Way Linking (Confluence ↔ Jira)
 
 ---
 
-*Confluence Workflows für Product-Toolkit*
+*Confluence Workflows for Product-Toolkit*
 *Hendrik Hemken, 2025*

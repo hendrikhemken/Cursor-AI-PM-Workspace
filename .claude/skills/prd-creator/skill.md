@@ -5,7 +5,7 @@ allowed-tools: mcp__MCP_DOCKER__confluence_create_page, mcp__MCP_DOCKER__conflue
 ---
 
 # PRD Creator
-*Modern Feature-Level Product Requirements Documents für Confluence*
+*Modern Feature-Level Product Requirements Documents for Confluence*
 
 The PRD Creator helps Product Managers create modern, lean PRDs in Confluence that serve as "Feature Documents" and integrate seamlessly with Jira Epics.
 
@@ -107,34 +107,34 @@ I have 80% of context already! Just need:
 
 ## ⚠️ Critical: PRD ≠ Epic!
 
-**WICHTIG:** PRDs und Epics sind NICHT dasselbe!
+**IMPORTANT:** PRDs and Epics are NOT the same thing!
 
 **PRD:**
-- 📄 **Dokumentations-Artefakt** (Confluence)
-- **Was & Warum:** Problem, Lösung, Kontext, Rationale
-- **Strategisches Alignment:** Goals, Metrics, User Research
-- **Living Document:** Wird über Zeit aktualisiert
+- 📄 **Documentation Artifact** (Confluence)
+- **What & Why:** Problem, solution, context, rationale
+- **Strategic Alignment:** Goals, metrics, user research
+- **Living Document:** Updated over time
 
 **Epic:**
 - 🎯 **Work Container** (Jira)
-- **Organisationseinheit:** Gruppiert User Stories
-- **Tracking:** Status, Progress, Sprint Assignment
-- **Agile Artifact:** Teil des Backlogs
+- **Organizational Unit:** Groups user stories
+- **Tracking:** Status, progress, sprint assignment
+- **Agile Artifact:** Part of the backlog
 
-**Beziehung:**
+**Relationship:**
 ```
 PRD (Confluence) ←→ Epic (Jira)
      ↓                    ↓
-"Warum & Was"      "Arbeit & Tracking"
+"Why & What"       "Work & Tracking"
      ↓                    ↓
-Context liefern     Stories organisieren
+Provide context    Organize stories
 ```
 
-**In der Praxis:**
-- ✅ **1 PRD = 1 Epic** (häufigster Fall)
-- ✅ PRD als "Landing Page" für Epic
-- ✅ Epic verlinkt zum PRD
-- ✅ PRD bleibt Single Source of Truth für Kontext
+**In practice:**
+- ✅ **1 PRD = 1 Epic** (most common case)
+- ✅ PRD as "landing page" for Epic
+- ✅ Epic links to PRD
+- ✅ PRD remains single source of truth for context
 
 ---
 
@@ -142,37 +142,37 @@ Context liefern     Stories organisieren
 
 ### DO ✅
 
-1. **Start mit Lean PRD** (1-3 Seiten) – nur erweitern wenn nötig
-2. **Data-Driven** – Metrics > Meinungen
-3. **User-Zentriert** – Echte Quotes, echte Personas
-4. **Visual-First** – Screenshots, Wireframes, Diagramme
-5. **Living Document** – Update regelmäßig (nicht "in Stein gemeißelt")
-6. **Collaborative** – Early Input von Design/Engineering
-7. **Spezifisch** – "Load Time <2s" statt "schnell"
-8. **Out of Scope explizit** – verhindert Scope Creep
+1. **Start with Lean PRD** (1-3 pages) – only expand when needed
+2. **Data-Driven** – Metrics > Opinions
+3. **User-Centered** – Real quotes, real personas
+4. **Visual-First** – Screenshots, wireframes, diagrams
+5. **Living Document** – Update regularly (not "set in stone")
+6. **Collaborative** – Early input from Design/Engineering
+7. **Specific** – "Load time <2s" instead of "fast"
+8. **Out of Scope explicit** – Prevents scope creep
 
 ### DON'T ❌
 
-1. ❌ **Keine 150-Seiten-Monster** (Waterfall-Relic)
-2. ❌ **Nicht zu vage** ("Produkt soll gut sein")
-3. ❌ **Nicht isoliert schreiben** (keine Stakeholder-Überraschungen)
-4. ❌ **Nicht statisch** (muss evolvieren)
-5. ❌ **Nicht zu technisch** (PRD ≠ Implementation Spec)
-6. ❌ **Nicht ohne Metrics** (wie misst du Erfolg?)
-7. ❌ **Nicht Activity-based** ("Build API" ≠ User Value)
-8. ❌ **Nicht alle Features gleichzeitig** (Feature-Level, nicht Product-Level!)
+1. ❌ **No 150-page monsters** (Waterfall relic)
+2. ❌ **Not too vague** ("Product should be good")
+3. ❌ **Don't write in isolation** (no stakeholder surprises)
+4. ❌ **Not static** (must evolve)
+5. ❌ **Not too technical** (PRD ≠ Implementation Spec)
+6. ❌ **Not without metrics** (how do you measure success?)
+7. ❌ **Not activity-based** ("Build API" ≠ User Value)
+8. ❌ **Not all features at once** (Feature-level, not Product-level!)
 
 ---
 
 ## 🎨 Tone & Style
 
-- **Deutsch & Duzen** (wie im Haupt-CLAUDE.md)
-- **Enthusiastisch aber kritisch:**
-  - ✅ "Super Problem Statement! Hast du Metrics dazu?"
-  - ⚠️ "Das Success Metric ist zu vage – können wir spezifischer werden?"
-  - ❌ "Stop! Das ist zu groß für ein PRD – lass uns Features splitten."
-- **Pragmatisch:** KISS Prinzip, Start Simple
-- **Show don't tell:** Beispiele zeigen, nicht nur erklären
+- **Friendly & Professional**
+- **Enthusiastic but critical:**
+  - ✅ "Great Problem Statement! Do you have metrics for that?"
+  - ⚠️ "That success metric is too vague – can we be more specific?"
+  - ❌ "Stop! That's too big for one PRD – let's split features."
+- **Pragmatic:** KISS principle, start simple
+- **Show don't tell:** Show examples, don't just explain
 
 ---
 
@@ -191,20 +191,20 @@ Context liefern     Stories organisieren
 
 ## 🎨 Working with Figma Designs
 
-**Wenn PRD Figma-Designs referenziert:**
+**When PRD references Figma designs:**
 
-→ **Siehe [`/best-practices/FIGMA_MCP.md`](/best-practices/FIGMA_MCP.md)** für vollständigen Workflow & Best Practices
+→ **See [`/best-practices/FIGMA_MCP.md`](/best-practices/FIGMA_MCP.md)** for complete workflow & best practices
 
 **Quick Reference:**
-- Use `get_design_context` für Code-Generation aus Figma
-- Use `get_screenshot` für visuelle Referenz
-- Work on specific frames (nicht ganze Pages!)
+- Use `get_design_context` for code generation from Figma
+- Use `get_screenshot` for visual reference
+- Work on specific frames (not whole pages!)
 - Follow Required Workflow: Context → Screenshot → Assets → Implement → Validate
 
-**Typischer Use Case:**
-- PRD enthält Figma-Link zu Design Mockups
-- Use Figma MCP Server um Design Context zu extrahieren
-- Reference Designs in "Related Links" Section des PRDs
+**Typical Use Case:**
+- PRD contains Figma link to design mockups
+- Use Figma MCP Server to extract design context
+- Reference designs in "Related Links" section of PRD
 
 ---
 
@@ -212,33 +212,33 @@ Context liefern     Stories organisieren
 
 **Coach the PM, don't just write docs:**
 
-❌ **NICHT:**
+❌ **NOT:**
 ```
-User: "Schreib ein PRD für Feature X"
-Claude: "OK, hier ist ein PRD." [100 Zeilen Output]
-```
-
-✅ **SONDERN:**
-```
-User: "Schreib ein PRD für Feature X"
-Claude: "Cool! Lass uns ein modernes Lean PRD für Feature X erstellen.
-
-Erstmal Context:
-- Was ist das Problem das Feature X löst?
-- Für welche User?
-- Wie messen wir Erfolg?
-
-Dann erstelle ich einen 80%-Draft (AI-assisted),
-den wir zusammen verfeinern, und publiziere ihn
-direkt in Confluence mit Jira Epic Link.
-
-Los geht's - erzähl mir vom Problem!"
+User: "Write a PRD for Feature X"
+Claude: "OK, here's a PRD." [100 lines output]
 ```
 
-**Während des Workflows:**
-- 🤔 "Dieses Success Metric ist vage – können wir konkret werden?"
-- ⚠️ "Scope ist zu groß – sollen wir in Phases splitten?"
-- ✅ "Perfekt! User-zentriert, data-driven, SMART Metrics!"
+✅ **INSTEAD:**
+```
+User: "Write a PRD for Feature X"
+Claude: "Cool! Let's create a modern Lean PRD for Feature X.
+
+First, context:
+- What's the problem Feature X solves?
+- For which users?
+- How do we measure success?
+
+Then I'll create an 80% draft (AI-assisted),
+we'll refine it together, and I'll publish it
+directly to Confluence with Jira Epic link.
+
+Let's go - tell me about the problem!"
+```
+
+**During the workflow:**
+- 🤔 "This success metric is vague – can we be specific?"
+- ⚠️ "Scope is too big – should we split into phases?"
+- ✅ "Perfect! User-centered, data-driven, SMART metrics!"
 
 ---
 
@@ -246,5 +246,5 @@ Los geht's - erzähl mir vom Problem!"
 
 ---
 
-*PRD Creator Skill für Product-Toolkit*
+*PRD Creator Skill for Product-Toolkit*
 *Hendrik Hemken, 2025*

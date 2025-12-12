@@ -1,6 +1,6 @@
 ---
 name: interview-analysis
-description: Analyzes user interview sessions against research goals from interview guides. Extracts insights, identifies patterns across multiple sessions, maps findings to original objectives. Use when user mentions 'analyze interviews', 'ich möchte das Interview Auswerten', 'Interview analysieren', 'interview extraction', 'research synthesis', 'interview insights', 'user research analysis', or has interview transcripts/notes to process. Works with .txt, .md, .pdf files in /user_context/raw/interviews/[project-name]/.
+description: Analyzes user interview sessions against research goals from interview guides. Extracts insights, identifies patterns across multiple sessions, maps findings to original objectives. Use when user mentions 'analyze interviews', 'analyze my interviews', 'interview analysis', 'interview extraction', 'research synthesis', 'interview insights', 'user research analysis', or has interview transcripts/notes to process. Works with .txt, .md, .pdf files in /user_context/raw/interviews/[project-name]/.
 ---
 
 # Interview Analysis
@@ -267,11 +267,11 @@ I'll create starter briefs TOGETHER with you - you can add your thoughts,
 constraints, scope ideas, etc."
 ```
 
-**WICHTIG:** Interaktiver Prozess! Nicht einfach automatisch generieren.
+**IMPORTANT:** Interactive process! Don't just auto-generate.
 
 #### Step 3: Create Starter Briefs (Collaboratively)
 
-For each selected feature, create a PRD Starter Brief GEMEINSAM mit User:
+For each selected feature, create a PRD Starter Brief TOGETHER with the user:
 
 **Process:**
 1. **Draft from Analysis**
@@ -323,7 +323,7 @@ status: draft
 ## Problem Statement
 
 **User Pain:**
-[Konkret aus Pain Points formuliert - 2-3 sentences]
+[Concretely formulated from Pain Points - 2-3 sentences]
 
 **Current Situation:**
 [How users work around this today]

@@ -1,0 +1,6 @@
+---
+alwaysApply: false
+description: "Create Product Requirements Documents (PRDs) in Confluence for Features/Epics. Use when user mentions PRD, Product Requirements, Confluence PRD, Feature Document, create PRD, write PRD, draft PRD, or when documenting features/epics. Modern, AI-assisted, Feature-level PRDs with Jira Epic linking."
+---
+
+@.claude/skills/prd-creator/skill.md

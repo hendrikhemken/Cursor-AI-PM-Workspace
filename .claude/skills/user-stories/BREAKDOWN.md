@@ -1,35 +1,35 @@
 # Epic Breakdown Guide
 
-Systematischer Ansatz: EPIC → User Stories (Frontend/Backend/System)
+Systematic Approach: EPIC → User Stories (Frontend/Backend/System)
 
 ---
 
 ## 🎯 Breakdown Philosophy
 
-**Grundprinzip:**
-- **Vertikal splitten** (User Value erhalten)
-- **NICHT horizontal** (nicht nach Layer: Frontend/Backend/DB)
-- **End-to-End Value** (jede Story kann deployed werden)
+**Core Principle:**
+- **Split vertically** (preserve User Value)
+- **NOT horizontally** (not by layer: Frontend/Backend/DB)
+- **End-to-End Value** (every story can be deployed)
 
-**Aber:** Wenn Stories zu groß werden, in System-Komponenten aufteilen.
+**But:** When stories become too big, split into system components.
 
 ---
 
 ## 🚀 Breakdown Process (Step-by-Step)
 
-### Phase 1: Epic verstehen (Discovery)
+### Phase 1: Understand the Epic (Discovery)
 
-**Frag den PM:**
+**Ask the PM:**
 
 1. **Problem/Opportunity**
-   - Was ist das Problem?
-   - Welche Opportunity?
-   - Warum jetzt?
+   - What's the problem?
+   - What's the opportunity?
+   - Why now?
 
 2. **User Context**
-   - Wer sind die User? (Persona)
-   - Was ist der Use Case?
-   - Was ist der erwartete Outcome?
+   - Who are the users? (Persona)
+   - What's the use case?
+   - What's the expected outcome?
 
 3. **Constraints**
    - Technical Constraints? (API Limits, Legacy Systems)
@@ -37,25 +37,25 @@ Systematischer Ansatz: EPIC → User Stories (Frontend/Backend/System)
    - Resource Constraints? (Team Size, Budget)
 
 4. **Success Criteria**
-   - Welche Metrics verbessern wir?
-   - Wie messen wir Success?
-   - Was ist die Definition of Done?
+   - Which metrics are we improving?
+   - How do we measure success?
+   - What's the Definition of Done?
 
 **Output:**
 ```
 Epic: [Name]
-Problem: [Beschreibung]
+Problem: [Description]
 User: [Persona]
-Outcome: [Erwarteter Impact]
-Constraints: [Liste]
+Outcome: [Expected Impact]
+Constraints: [List]
 Success Criteria: [Metrics]
 ```
 
 ---
 
-### Phase 2: User Journey mappen
+### Phase 2: Map the User Journey
 
-**Schritt 1: Happy Path identifizieren**
+**Step 1: Identify the Happy Path**
 
 ```
 User Journey (Happy Path):
@@ -68,35 +68,35 @@ User Journey (Happy Path):
 3. User does [Action 3]
    → System shows [Result 3]
 
-Outcome: [User erreicht Ziel]
+Outcome: [User achieves goal]
 ```
 
-**Schritt 2: Alternative Paths & Edge Cases**
+**Step 2: Alternative Paths & Edge Cases**
 
 ```
 Alternative Paths:
-- Was wenn User Error macht?
-- Was wenn API offline?
-- Was wenn keine Daten vorhanden?
-- Was wenn Permission fehlt?
+- What if user makes an error?
+- What if API is offline?
+- What if no data is present?
+- What if permission is missing?
 ```
 
-**Schritt 3: User Value Points identifizieren**
+**Step 3: Identify User Value Points**
 
 ```
 Value Points:
-- [Schritt 1]: User kann [X] machen → Value: [Y]
-- [Schritt 2]: User kann [X] machen → Value: [Y]
-- [Schritt 3]: User kann [X] machen → Value: [Y]
+- [Step 1]: User can do [X] → Value: [Y]
+- [Step 2]: User can do [X] → Value: [Y]
+- [Step 3]: User can do [X] → Value: [Y]
 
-→ Jeder Value Point = potentielle Story!
+→ Each Value Point = potential story!
 ```
 
 ---
 
-### Phase 3: System-Komponenten identifizieren
+### Phase 3: Identify System Components
 
-**Für jeden Value Point → System-Komponenten:**
+**For each Value Point → System Components:**
 
 **Frontend:**
 - UI Components (Buttons, Forms, Screens)
@@ -126,44 +126,44 @@ Value Points:
 
 ---
 
-### Phase 4: Stories extrahieren
+### Phase 4: Extract Stories
 
-**Approach 1: Vertikal (Standard)**
+**Approach 1: Vertical (Standard)**
 
 ```
-Story: "Als [User] möchte ich [X] um [Y]"
+Story: "As [User] I want [X] to [Y]"
 
 Scope:
 - Frontend: [Component A, Component B]
 - Backend: [API Endpoint, Business Logic]
 - Database: [Schema Change]
 
-→ Story liefert End-to-End Value!
+→ Story delivers End-to-End Value!
 ```
 
-**Approach 2: Horizontal (nur wenn Vertical zu groß)**
+**Approach 2: Horizontal (only when Vertical is too big)**
 
 ```
-Story 1 (MVP): "Als [User] möchte ich [X] um [Y]" (Basic Version)
-  → Frontend + Backend + DB (aber minimal)
+Story 1 (MVP): "As [User] I want [X] to [Y]" (Basic Version)
+  → Frontend + Backend + DB (but minimal)
 
-Story 2 (Enhancement): "Als [User] möchte ich [X erweitert] um [Y]"
-  → Erweitert Story 1
+Story 2 (Enhancement): "As [User] I want [X extended] to [Y]"
+  → Extends Story 1
 
-Story 3 (Enhancement): "Als [User] möchte ich [X optimiert] um [Y]"
-  → Optimiert Story 1
+Story 3 (Enhancement): "As [User] I want [X optimized] to [Y]"
+  → Optimizes Story 1
 ```
 
-**Approach 3: System-Komponenten (nur bei sehr großen EPICs)**
+**Approach 3: System Components (only for very large EPICs)**
 
 ```
-Story 1: "Als [User] möchte ich [X] um [Y]" (Frontend Focus)
+Story 1: "As [User] I want [X] to [Y]" (Frontend Focus)
   → Frontend + Mock Backend
 
-Story 2: "Als [User] möchte ich [X] um [Y]" (Backend Integration)
+Story 2: "As [User] I want [X] to [Y]" (Backend Integration)
   → Real Backend API + Integration
 
-Story 3: "Als [User] möchte ich [X optimiert] um [Y]" (Performance)
+Story 3: "As [User] I want [X optimized] to [Y]" (Performance)
   → Caching, Optimization
 ```
 
@@ -174,16 +174,16 @@ Story 3: "Als [User] möchte ich [X optimiert] um [Y]" (Performance)
 **Dependency Types:**
 
 1. **Hard Dependency (BLOCKS)**
-   - Story A muss fertig sein bevor Story B starten kann
-   - Beispiel: API muss existieren bevor Frontend integriert
+   - Story A must be done before Story B can start
+   - Example: API must exist before Frontend integrates
 
 2. **Soft Dependency (RELATES TO)**
-   - Stories hängen zusammen, aber keine harte Blockierung
-   - Beispiel: Login & Registration (ähnliche Flows)
+   - Stories are related but no hard block
+   - Example: Login & Registration (similar flows)
 
 3. **Technical Dependency**
-   - Infrastructure/Tech-Stack muss ready sein
-   - Beispiel: Stripe Integration muss setup sein
+   - Infrastructure/Tech-Stack must be ready
+   - Example: Stripe Integration must be set up
 
 **Dependency Mapping:**
 
@@ -213,7 +213,7 @@ Sprint 1:
 
 Sprint 2:
 - Story B (depends on A)
-- Story C (depends on A, parallel zu B)
+- Story C (depends on A, parallel to B)
 
 Sprint 3:
 - Story D (depends on B)
@@ -230,19 +230,19 @@ Sprint 3:
 **Breakdown:**
 
 ```
-Story 1: "Als User möchte ich mich registrieren um ein Konto zu erstellen"
+Story 1: "As a user I want to register to create an account"
   → CREATE (3 Points)
 
-Story 2: "Als User möchte ich mein Profil bearbeiten um meine Daten aktuell zu halten"
+Story 2: "As a user I want to edit my profile to keep my data up to date"
   → UPDATE (3 Points)
 
-Story 3: "Als User möchte ich mein Profilbild hochladen um mich zu präsentieren"
+Story 3: "As a user I want to upload a profile picture to present myself"
   → UPDATE + File Upload (5 Points)
 
-Story 4: "Als User möchte ich mein Konto löschen um nicht mehr Teil der Plattform zu sein"
+Story 4: "As a user I want to delete my account to no longer be part of the platform"
   → DELETE (3 Points)
 
-Story 5: "Als User möchte ich mein Profil sehen um meine Daten zu überprüfen"
+Story 5: "As a user I want to view my profile to check my data"
   → READ (2 Points)
 ```
 
@@ -257,22 +257,22 @@ Story 5: "Als User möchte ich mein Profil sehen um meine Daten zu überprüfen"
 **Breakdown:**
 
 ```
-Story 1 (MVP): "Als User möchte ich ein Produkt in den Warenkorb legen um es später zu kaufen"
+Story 1 (MVP): "As a user I want to add a product to my cart to buy it later"
   → Cart Management (3 Points)
 
-Story 2: "Als User möchte ich meinen Warenkorb sehen um zu prüfen was ich kaufe"
+Story 2: "As a user I want to view my cart to check what I'm buying"
   → Cart View (2 Points)
 
-Story 3: "Als User möchte ich meine Lieferadresse eingeben um das Produkt zu erhalten"
+Story 3: "As a user I want to enter my shipping address to receive the product"
   → Address Form (3 Points)
 
-Story 4: "Als User möchte ich mit Kreditkarte zahlen um den Kauf abzuschließen"
+Story 4: "As a user I want to pay with credit card to complete the purchase"
   → Payment Integration (Stripe) (8 Points)
 
-Story 5: "Als User möchte ich eine Bestellbestätigung per Email erhalten um meinen Kauf zu bestätigen"
+Story 5: "As a user I want to receive an order confirmation email to confirm my purchase"
   → Email Integration (5 Points)
 
-Story 6: "Als User möchte ich meine Bestellhistorie sehen um vergangene Käufe einzusehen"
+Story 6: "As a user I want to view my order history to see past purchases"
   → Order History (3 Points)
 ```
 
@@ -291,22 +291,22 @@ Story 6: "Als User möchte ich meine Bestellhistorie sehen um vergangene Käufe 
 **Breakdown:**
 
 ```
-Story 1 (Technical): "Slack OAuth Setup um User zu authentifizieren"
+Story 1 (Technical): "Slack OAuth Setup to authenticate users"
   → OAuth Flow (5 Points)
 
-Story 2: "Als User möchte ich Slack Workspace verbinden um Notifications zu erhalten"
+Story 2: "As a user I want to connect my Slack workspace to receive notifications"
   → Connection Flow (3 Points)
   → BLOCKED BY Story 1
 
-Story 3: "Als User möchte ich Notifications in Slack erhalten um Updates zu bekommen"
+Story 3: "As a user I want to receive notifications in Slack to get updates"
   → Send Notifications (5 Points)
   → BLOCKED BY Story 2
 
-Story 4: "Als User möchte ich wählen welche Notifications ich erhalte um nicht gestört zu werden"
+Story 4: "As a user I want to choose which notifications I receive so I'm not disturbed"
   → Notification Settings (3 Points)
   → BLOCKED BY Story 3
 
-Story 5: "Als User möchte ich Slack disconnecten um keine Notifications mehr zu erhalten"
+Story 5: "As a user I want to disconnect Slack to stop receiving notifications"
   → Disconnect Flow (2 Points)
 ```
 
@@ -321,16 +321,16 @@ Story 5: "Als User möchte ich Slack disconnecten um keine Notifications mehr zu
 **Breakdown:**
 
 ```
-Story 1 (Technical): "Als User möchte ich schnelle Ladezeiten (<2s) um nicht zu warten"
+Story 1 (Technical): "As a user I want fast load times (<2s) so I don't have to wait"
   → Implement Caching (Redis) (8 Points)
 
-Story 2 (Technical): "Als User möchte ich große Datenmengen sehen ohne Performance-Probleme"
+Story 2 (Technical): "As a user I want to see large amounts of data without performance issues"
   → Implement Pagination (3 Points)
 
-Story 3 (Technical): "Als Developer möchte ich N+1 Queries eliminieren um DB-Load zu reduzieren"
+Story 3 (Technical): "As a developer I want to eliminate N+1 queries to reduce DB load"
   → Fix N+1 Queries (5 Points)
 
-Story 4 (Technical): "Als User möchte ich optimierte Bilder sehen um Ladezeiten zu verbessern"
+Story 4 (Technical): "As a user I want to see optimized images to improve load times"
   → Image Optimization (CDN) (5 Points)
 ```
 
@@ -338,7 +338,7 @@ Story 4 (Technical): "Als User möchte ich optimierte Bilder sehen um Ladezeiten
 
 ---
 
-## 🛠️ System-Komponenten Breakdown
+## 🛠️ System Component Breakdown
 
 ### Frontend Stories
 
@@ -347,7 +347,7 @@ Story 4 (Technical): "Als User möchte ich optimierte Bilder sehen um Ladezeiten
 **Breakdown:**
 
 ```
-Story: "Als User möchte ich [UI Feature] um [Nutzen]"
+Story: "As a user I want [UI Feature] to [Benefit]"
 
 Components:
 - UI Component(s): [Button, Form, Modal]
@@ -371,7 +371,7 @@ Technical Notes:
 **Breakdown:**
 
 ```
-Story: "Als User möchte ich [Feature] um [Nutzen]"
+Story: "As a user I want [Feature] to [Benefit]"
 
 Backend Components:
 - API Endpoint: POST /api/... (REST or GraphQL)
@@ -395,7 +395,7 @@ Technical Notes:
 **Breakdown:**
 
 ```
-Story (Technical): "Database Migration: [Beschreibung]"
+Story (Technical): "Database Migration: [Description]"
 
 Changes:
 - New Tables: [users, orders]
@@ -421,7 +421,7 @@ Rollback Plan:
 **Breakdown:**
 
 ```
-Story (QA): "Als QA möchte ich [Feature] testen um Qualität sicherzustellen"
+Story (QA): "As QA I want to test [Feature] to ensure quality"
 
 Test Coverage:
 - Unit Tests: [Functions, Components]
@@ -437,32 +437,32 @@ Acceptance Criteria:
 
 ---
 
-## 📊 Story Sizing nach Komponenten
+## 📊 Story Sizing by Components
 
 ### Frontend (UI-focused)
 
-| Size | Beschreibung | Beispiel |
-|------|--------------|----------|
-| **2** | Simple UI Change | Text ändern, Button hinzufügen |
+| Size | Description | Example |
+|------|-------------|---------|
+| **2** | Simple UI Change | Change text, add button |
 | **3** | New Component | Simple Form, Modal |
 | **5** | Complex Component | Multi-step Form, Chart |
-| **8** | Feature + State Mgmt | Dashboard mit API Integration |
+| **8** | Feature + State Mgmt | Dashboard with API Integration |
 
 ### Backend (API-focused)
 
-| Size | Beschreibung | Beispiel |
-|------|--------------|----------|
+| Size | Description | Example |
+|------|-------------|---------|
 | **2** | Simple Endpoint | GET /api/users |
-| **3** | CRUD Endpoint | POST /api/users mit Validation |
+| **3** | CRUD Endpoint | POST /api/users with Validation |
 | **5** | Complex Logic | Payment Processing, Business Rules |
 | **8** | 3rd Party Integration | Stripe, Twilio, Complex APIs |
 
 ### Fullstack (End-to-End)
 
-| Size | Beschreibung | Beispiel |
-|------|--------------|----------|
+| Size | Description | Example |
+|------|-------------|---------|
 | **5** | Simple Feature | Login Form (Frontend + Backend + DB) |
-| **8** | Standard Feature | Registration Flow mit Email Verification |
+| **8** | Standard Feature | Registration Flow with Email Verification |
 | **13** | Complex Feature | **TOO BIG! Split!** |
 
 ---
@@ -471,29 +471,29 @@ Acceptance Criteria:
 
 ### Strategy 1: MVP → Enhancement
 
-**Wenn Story zu groß:**
+**When story is too big:**
 
 ```
-Story 1 (MVP): "Als User möchte ich [Basic X] um [Y]"
-  → Minimal funktionsfähige Version (5 Points)
+Story 1 (MVP): "As a user I want [Basic X] to [Y]"
+  → Minimal functional version (5 Points)
 
-Story 2 (Enhancement): "Als User möchte ich [X erweitert] um [besseres Y]"
+Story 2 (Enhancement): "As a user I want [X extended] to [better Y]"
   → Enhanced Version (3 Points)
 
-Story 3 (Optimization): "Als User möchte ich [X optimiert] um [noch besseres Y]"
+Story 3 (Optimization): "As a user I want [X optimized] to [even better Y]"
   → Optimized Version (3 Points)
 ```
 
 **Example:**
 
 ```
-Story 1: "Als User möchte ich Suchergebnisse sehen um Produkte zu finden"
+Story 1: "As a user I want to see search results to find products"
   → Basic Search (Text-Match) (5 Points)
 
-Story 2: "Als User möchte ich Filter nutzen um Suchergebnisse zu verfeinern"
+Story 2: "As a user I want to use filters to refine search results"
   → Add Filters (Category, Price) (5 Points)
 
-Story 3: "Als User möchte ich intelligente Suggestions sehen um schneller zu finden"
+Story 3: "As a user I want to see intelligent suggestions to find things faster"
   → Add Auto-Complete (3 Points)
 ```
 
@@ -501,29 +501,29 @@ Story 3: "Als User möchte ich intelligente Suggestions sehen um schneller zu fi
 
 ### Strategy 2: Path-based Splitting
 
-**Wenn komplexe User Journey:**
+**When user journey is complex:**
 
 ```
-Story 1: "Als User möchte ich [Happy Path] um [Y]"
+Story 1: "As a user I want [Happy Path] to [Y]"
   → Happy Path (3 Points)
 
-Story 2: "Als User möchte ich [Edge Case 1] um [Y]"
+Story 2: "As a user I want [Edge Case 1] to [Y]"
   → Edge Case 1 (2 Points)
 
-Story 3: "Als User möchte ich [Edge Case 2] um [Y]"
+Story 3: "As a user I want [Edge Case 2] to [Y]"
   → Edge Case 2 (2 Points)
 ```
 
 **Example:**
 
 ```
-Story 1: "Als User möchte ich mich mit Email/PW anmelden um Zugang zu erhalten"
+Story 1: "As a user I want to log in with email/password to get access"
   → Happy Path (3 Points)
 
-Story 2: "Als User möchte ich 'Passwort vergessen' nutzen um wieder Zugang zu bekommen"
+Story 2: "As a user I want to use 'Forgot Password' to regain access"
   → Reset Password Flow (5 Points)
 
-Story 3: "Als User möchte ich Social Login nutzen um schneller Zugang zu erhalten"
+Story 3: "As a user I want to use Social Login to get faster access"
   → Google/Facebook Login (8 Points)
 ```
 
@@ -531,43 +531,43 @@ Story 3: "Als User möchte ich Social Login nutzen um schneller Zugang zu erhalt
 
 ### Strategy 3: Component-based Splitting
 
-**Nur bei sehr großen EPICs:**
+**Only for very large EPICs:**
 
 ```
-Story 1: "Als User möchte ich [X] um [Y]" (Frontend)
+Story 1: "As a user I want [X] to [Y]" (Frontend)
   → UI + Mock Data (3 Points)
 
-Story 2: "Als User möchte ich [X] um [Y]" (Backend Integration)
+Story 2: "As a user I want [X] to [Y]" (Backend Integration)
   → Real API Integration (5 Points)
 
-Story 3: "Als User möchte ich [X optimiert] um [Y]" (Performance)
+Story 3: "As a user I want [X optimized] to [Y]" (Performance)
   → Caching, Optimization (3 Points)
 ```
 
-**⚠️ Achtung:** Nur verwenden wenn Vertical Splitting nicht möglich!
+**⚠️ Caution:** Only use when Vertical Splitting is not possible!
 
 ---
 
 ## ✅ Breakdown Checklist
 
-**Vor dem Finalisieren:**
+**Before finalizing:**
 
 ```
-✅ Jede Story hat klaren User Value
-✅ Jede Story ist INVEST-compliant
-✅ Story Points geschätzt (max 8 Points)
-✅ Dependencies identifiziert & markiert
-✅ Acceptance Criteria definiert (Given-When-Then)
-✅ Technical Notes hinzugefügt
-✅ Labels & Components gesetzt
-✅ Epic Link gesetzt
+✅ Every story has clear User Value
+✅ Every story is INVEST-compliant
+✅ Story Points estimated (max 8 Points)
+✅ Dependencies identified & marked
+✅ Acceptance Criteria defined (Given-When-Then)
+✅ Technical Notes added
+✅ Labels & Components set
+✅ Epic Link set
 ```
 
 ---
 
 ## 🚀 Jira Batch Creation
 
-**Nach Breakdown → Jira:**
+**After Breakdown → Jira:**
 
 ```javascript
 // Batch Create via jira_batch_create_issues
@@ -575,7 +575,7 @@ Story 3: "Als User möchte ich [X optimiert] um [Y]" (Performance)
   "issues": [
     {
       "project_key": "PROD",
-      "summary": "Als User möchte ich...",
+      "summary": "As a user I want...",
       "issue_type": "Story",
       "description": "...",
       "assignee": "user@example.com",
@@ -590,33 +590,33 @@ Story 3: "Als User möchte ich [X optimiert] um [Y]" (Performance)
 }
 ```
 
-**Output für PM:**
+**Output for PM:**
 
 ```
 ✅ Created 8 Stories in Jira (Epic: PROD-100)
 
 Frontend (3 Stories):
-- PROD-123: Als User möchte ich... (3 Points)
-- PROD-124: Als User möchte ich... (5 Points)
-- PROD-125: Als User möchte ich... (2 Points)
+- PROD-123: As a user I want... (3 Points)
+- PROD-124: As a user I want... (5 Points)
+- PROD-125: As a user I want... (2 Points)
 
 Backend (3 Stories):
-- PROD-126: API Endpoint für... (5 Points)
-- PROD-127: Integration mit... (8 Points)
+- PROD-126: API Endpoint for... (5 Points)
+- PROD-127: Integration with... (8 Points)
 - PROD-128: Validation... (3 Points)
 
 QA (2 Stories):
 - PROD-129: E2E Tests (3 Points)
 - PROD-130: Performance Tests (5 Points)
 
-Total: 34 Story Points (~2 Sprints für 1 Dev)
+Total: 34 Story Points (~2 Sprints for 1 Dev)
 ```
 
 ---
 
-**Breakdown ist eine Kunst. Mit Übung wird's besser. INVEST always.**
+**Breakdown is an art. With practice, it gets better. INVEST always.**
 
 ---
 
-*Epic Breakdown Guide für Product-Toolkit*
+*Epic Breakdown Guide for Product-Toolkit*
 *Hendrik Hemken, 2025*

@@ -7,25 +7,25 @@
 
 | Template | Use Case | Length | Effort | Audience |
 |----------|----------|--------|--------|----------|
-| **Lean PRD** | Agile Teams, MVP, Fast Iteration | 1-3 Seiten | 1-2 Tage | Small-Medium Teams |
-| **Traditional PRD** | Waterfall, Regulated Industries | 10-30 Seiten | 2-6 Wochen | Large Enterprises |
-| **Amazon PR/FAQ** | Strategic Initiatives, Executive Decisions | 5-10 Seiten | 4-8 Wochen | Leadership, Customer-Obsessed Orgs |
-| **Hybrid Agile PRD** | Scale-Ups, Cross-Functional Teams | 5-10 Seiten | 1-2 Wochen | Medium-Large Teams (10-50) |
+| **Lean PRD** | Agile Teams, MVP, Fast Iteration | 1-3 Pages | 1-2 Days | Small-Medium Teams |
+| **Traditional PRD** | Waterfall, Regulated Industries | 10-30 Pages | 2-6 Weeks | Large Enterprises |
+| **Amazon PR/FAQ** | Strategic Initiatives, Executive Decisions | 5-10 Pages | 4-8 Weeks | Leadership, Customer-Obsessed Orgs |
+| **Hybrid Agile PRD** | Scale-Ups, Cross-Functional Teams | 5-10 Pages | 1-2 Weeks | Medium-Large Teams (10-50) |
 
 ---
 
 ## Template 1: Lean PRD ✅ (DEFAULT)
 
-**Wann nutzen:**
+**When to use:**
 - ✅ Agile/Scrum Environment
-- ✅ Small-Medium Feature (2 Wochen - 3 Monate)
-- ✅ Startup oder kleines Team (2-20 Personen)
-- ✅ MVP oder Early-Stage
-- ✅ Schnelle Iteration gewünscht
+- ✅ Small-Medium Feature (2 weeks - 3 months)
+- ✅ Startup or small team (2-20 people)
+- ✅ MVP or Early-Stage
+- ✅ Fast iteration desired
 
-**Länge:** 1-3 Seiten
-**Erstellungszeit:** 1-2 Tage (mit 3-5 Iterations)
-**Review Stakeholders:** 5-10 Personen
+**Length:** 1-3 pages
+**Creation time:** 1-2 days (with 3-5 iterations)
+**Review Stakeholders:** 5-10 people
 
 ---
 
@@ -53,25 +53,25 @@ epic_link: [JIRA-XXX]
 
 ## 📋 Executive Summary
 
-[1-2 Absätze: Was bauen wir, warum, für wen]
+[1-2 paragraphs: What are we building, why, for whom]
 
-**TL;DR:** [15-Wörter-Zusammenfassung]
+**TL;DR:** [15-word summary]
 
 ---
 
 ## 🎯 Problem Statement
 
 **Problem:**
-[Spezifisches Problem in 2-3 Sätzen]
+[Specific problem in 2-3 sentences]
 
 **Impact:**
-- **Quantitativ:** [Metrics/Daten]
-  - Beispiel: "35% User brechen Upload ab → 20k DAU verloren"
-- **Qualitativ:** [User Quotes]
-  - Beispiel: "Ich kann keine Videos gleichzeitig hochladen!" - User Quote
+- **Quantitative:** [Metrics/Data]
+  - Example: "35% of users abandon upload → 20k DAU lost"
+- **Qualitative:** [User Quotes]
+  - Example: "I can't upload multiple videos at once!" - User Quote
 
 **Vision:**
-[Wie sieht die Welt aus wenn Problem gelöst?]
+[What does the world look like when problem is solved?]
 
 ---
 
@@ -81,22 +81,22 @@ epic_link: [JIRA-XXX]
 
 | Attribute | Details |
 |-----------|---------|
-| **Role** | [z.B. Content Creator] |
-| **Goals** | [Was will erreicht werden?] |
-| **Pain Points** | [Aktuelle Frustrationen] |
+| **Role** | [e.g., Content Creator] |
+| **Goals** | [What do they want to achieve?] |
+| **Pain Points** | [Current frustrations] |
 | **Tech Proficiency** | [Low/Medium/High] |
-| **Quote** | "[Direktes Zitat aus Research]" |
+| **Quote** | "[Direct quote from research]" |
 
-### Use Case: [Titel]
+### Use Case: [Title]
 
-**Als** [User Type]
-**möchte ich** [Aktion]
-**damit** [Benefit]
+**As** [User Type]
+**I want** [Action]
+**to** [Benefit]
 
 **Happy Path:**
-1. [Schritt 1]
-2. [Schritt 2]
-3. [Schritt 3]
+1. [Step 1]
+2. [Step 2]
+3. [Step 3]
 
 **Edge Cases:**
 - [Edge Case 1]
@@ -108,11 +108,11 @@ epic_link: [JIRA-XXX]
 
 | Metric | Baseline | Target | Timeframe | Method |
 |--------|----------|--------|-----------|--------|
-| [KPI 1] | [Aktuell] | [Ziel] | Q[X] 202[X] | [Wie messen?] |
-| [KPI 2] | [Aktuell] | [Ziel] | Q[X] 202[X] | [Wie messen?] |
-| [KPI 3] | [Aktuell] | [Ziel] | Q[X] 202[X] | [Wie messen?] |
+| [KPI 1] | [Current] | [Goal] | Q[X] 202[X] | [How to measure?] |
+| [KPI 2] | [Current] | [Goal] | Q[X] 202[X] | [How to measure?] |
+| [KPI 3] | [Current] | [Goal] | Q[X] 202[X] | [How to measure?] |
 
-**Beispiel:**
+**Example:**
 | Metric | Baseline | Target | Timeframe | Method |
 |--------|----------|--------|-----------|--------|
 | Upload Success Rate | 85% | 95% | Q2 2025 | Analytics Dashboard |
@@ -124,20 +124,20 @@ epic_link: [JIRA-XXX]
 ## ⚙️ Features & Requirements
 
 ### Must-Have (P0) ✅
-- **[Feature 1]:** [Beschreibung]
-  - Acceptance Criteria: [Specific, testbar]
-- **[Feature 2]:** [Beschreibung]
-  - Acceptance Criteria: [Specific, testbar]
+- **[Feature 1]:** [Description]
+  - Acceptance Criteria: [Specific, testable]
+- **[Feature 2]:** [Description]
+  - Acceptance Criteria: [Specific, testable]
 
 ### Should-Have (P1) 🔵
-- **[Feature 3]:** [Beschreibung]
+- **[Feature 3]:** [Description]
 
 ### Nice-to-Have (P2) 🟢
-- **[Feature 4]:** [Beschreibung]
+- **[Feature 4]:** [Description]
 
 ### OUT of Scope ❌
-- ❌ **[Feature X]:** [Warum out of scope?]
-- ❌ **[Feature Y]:** [Warum out of scope?]
+- ❌ **[Feature X]:** [Why out of scope?]
+- ❌ **[Feature Y]:** [Why out of scope?]
 
 ---
 
@@ -150,9 +150,9 @@ epic_link: [JIRA-XXX]
 - [System/Team Dependencies]
 
 **Constraints:**
-- **Performance:** [z.B. "<2s Load Time für 95% User"]
+- **Performance:** [e.g., "<2s Load Time for 95% users"]
 - **Security:** [Requirements]
-- **Scalability:** [z.B. "100k concurrent users"]
+- **Scalability:** [e.g., "100k concurrent users"]
 - **Accessibility:** [WCAG 2.1 compliance]
 
 **Assumptions:**
@@ -214,16 +214,16 @@ epic_link: [JIRA-XXX]
 
 ## Template 2: Traditional PRD
 
-**Wann nutzen:**
-- ⚠️ Waterfall oder stark regulierte Industrie (Finance, Healthcare, Government)
-- ⚠️ Large Feature (3+ Monate)
+**When to use:**
+- ⚠️ Waterfall or highly regulated industry (Finance, Healthcare, Government)
+- ⚠️ Large Feature (3+ months)
 - ⚠️ High Risk, High Investment
 - ⚠️ >50 Stakeholders
 - ⚠️ Compliance/Legal Requirements
 
-**Länge:** 10-30 Seiten
-**Erstellungszeit:** 2-6 Wochen
-**Review Stakeholders:** 20-50+ Personen
+**Length:** 10-30 pages
+**Creation time:** 2-6 weeks
+**Review Stakeholders:** 20-50+ people
 
 ---
 
@@ -282,10 +282,10 @@ approval_required: [Legal, Compliance, Security, Executive]
 ## 1. Executive Summary
 
 **Purpose:**
-[High-Level Overview: Was, Warum, Für Wen, Wann]
+[High-Level Overview: What, Why, For Whom, When]
 
 **Strategic Alignment:**
-[Wie alignt dies mit Company Strategy/OKRs?]
+[How does this align with Company Strategy/OKRs?]
 
 **Business Impact:**
 - **Revenue Opportunity:** [€X Million]
@@ -306,16 +306,16 @@ approval_required: [Legal, Compliance, Security, Executive]
 ## 2. Background & Strategic Context
 
 ### Company Strategy
-[Wie passt dieses Produkt in die Gesamt-Company-Strategy?]
+[How does this product fit into overall company strategy?]
 
 ### Market Opportunity
 [Market Size, Growth Rate, Trends]
 
 ### Competitive Landscape
-[Wer sind die Competitors? Was machen sie?]
+[Who are the competitors? What do they do?]
 
 ### Strategic Rationale
-[Warum jetzt? Warum wir?]
+[Why now? Why us?]
 
 ---
 
@@ -396,7 +396,7 @@ approval_required: [Legal, Compliance, Security, Executive]
 ## 6. Product Vision & Objectives
 
 ### Vision Statement
-[Inspiring Vision: Wie sieht die Welt aus in 3-5 Jahren?]
+[Inspiring Vision: What does the world look like in 3-5 years?]
 
 ### Product Objectives
 
@@ -768,16 +768,16 @@ approval_required: [Legal, Compliance, Security, Executive]
 
 ## Template 3: Amazon PR/FAQ
 
-**Wann nutzen:**
+**When to use:**
 - 🚀 Major Strategic Initiative
 - 🚀 Customer Obsession Culture
-- 🚀 Multiple Solution Approaches evaluieren
-- 🚀 Executive-Level Decision nötig
-- 🚀 Significant Investment erforderlich
+- 🚀 Evaluating multiple solution approaches
+- 🚀 Executive-Level Decision needed
+- 🚀 Significant Investment required
 
-**Länge:** 5-10 Seiten
-**Erstellungszeit:** 4-8 Wochen (10+ Drafts typisch!)
-**Review Process:** 5+ Review Meetings mit Stakeholders
+**Length:** 5-10 pages
+**Creation time:** 4-8 weeks (10+ drafts typical!)
+**Review Process:** 5+ review meetings with stakeholders
 
 ---
 
@@ -1126,16 +1126,16 @@ Out of Scope (for now):
 
 ## Template 4: Hybrid Agile PRD
 
-**Wann nutzen:**
-- 🔄 Medium-Large Team (10-50 Personen)
-- 🔄 Complex Feature mit Cross-Functional Collaboration
-- 🔄 Agile Methodik, aber mehr Struktur nötig
+**When to use:**
+- 🔄 Medium-Large Team (10-50 people)
+- 🔄 Complex Feature with Cross-Functional Collaboration
+- 🔄 Agile methodology, but more structure needed
 - 🔄 Remote/Distributed Teams
-- 🔄 Balance zwischen Speed und Clarity
+- 🔄 Balance between Speed and Clarity
 
-**Länge:** 5-10 Seiten
-**Erstellungszeit:** 1-2 Wochen
-**Review Stakeholders:** 10-20 Personen
+**Length:** 5-10 pages
+**Creation time:** 1-2 weeks
+**Review Stakeholders:** 10-20 people
 
 ---
 
@@ -1180,12 +1180,12 @@ sprint: [Current Sprint]
 
 ### Vision Statement
 
-[1-2 Sätze: Wie sieht Erfolg aus?]
+[1-2 sentences: What does success look like?]
 
 ### Problem Statement
 
 **Problem:**
-[Spezifisches Problem]
+[Specific Problem]
 
 **Who Has This Problem:**
 - [User Type 1] ([X% of users])
@@ -1196,7 +1196,7 @@ sprint: [Current Sprint]
 - Qualitative: [User Quotes]
 
 **Current Workarounds:**
-[Was machen User aktuell? Warum funktioniert das nicht?]
+[What do users do currently? Why doesn't it work?]
 
 ---
 
@@ -1254,9 +1254,9 @@ sprint: [Current Sprint]
 #### Story 1: [JIRA-XXX] - [Title]
 
 **User Story:**
-Als [User Type]
-möchte ich [Aktion]
-damit [Benefit]
+As [User Type]
+I want [Action]
+to [Benefit]
 
 **Acceptance Criteria:**
 - [ ] Given [Context] When [Action] Then [Outcome]
@@ -1485,9 +1485,9 @@ START → Small Team (<10)?
 
 **When in Doubt:**
 → Start with **Lean PRD** ✅
-→ Add structure if needed (KISS Prinzip!)
+→ Add structure if needed (KISS Principle!)
 
 ---
 
-*PRD Templates für Product-Toolkit*
+*PRD Templates for Product-Toolkit*
 *Hendrik Hemken, 2025*

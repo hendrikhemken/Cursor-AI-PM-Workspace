@@ -3,74 +3,74 @@
 
 ---
 
-## 🎯 Die PRD-Evolution (2010 → 2025)
+## 🎯 The PRD Evolution (2010 → 2025)
 
 ### Traditional PRD (Waterfall, pre-2010)
 
 ❌ **Old School:**
-- 📚 37-150 Seiten Dokumentation
-- 🔒 Upfront definiert, dann "eingefroren"
-- 📦 **Product-Level** Scope (ganzes Produkt)
-- 🚢 One-Shot Delivery, keine Iteration
-- 📄 Statisches Dokument
-- 🤐 PM schreibt allein → "Clean Handover"
+- 📚 37-150 pages of documentation
+- 🔒 Upfront defined, then "frozen"
+- 📦 **Product-Level** Scope (entire product)
+- 🚢 One-Shot Delivery, no iteration
+- 📄 Static document
+- 🤐 PM writes alone → "Clean Handover"
 
-**Probleme:**
-- Zu lang, niemand liest es
-- Änderungen = kostspielig
-- Spec ≠ Realität nach 6 Monaten
-- Ineffizient in Agile Teams
+**Problems:**
+- Too long, nobody reads it
+- Changes = costly
+- Spec ≠ Reality after 6 months
+- Inefficient in Agile Teams
 
 ---
 
 ### Modern PRD (Agile, 2025)
 
 ✅ **New School:**
-- 📄 1-10 Seiten (je nach Typ)
-- 🔄 Living Document, kontinuierlich aktualisiert
-- ⚡ **Feature-Level** Scope (ein Feature/Epic)
-- 🚀 Iterativ, Feedback Loops
+- 📄 1-10 pages (depending on type)
+- 🔄 Living Document, continuously updated
+- ⚡ **Feature-Level** Scope (one feature/epic)
+- 🚀 Iterative, Feedback Loops
 - 📊 Data-Driven, Metrics-Heavy
-- 🤝 Kollaborativ (PM + Design + Engineering)
+- 🤝 Collaborative (PM + Design + Engineering)
 
-**Vorteile:**
-- Lean & agil
-- Schneller Time-to-Market
-- Aligned mit Sprints
-- Team-owned, nicht PM-owned
+**Benefits:**
+- Lean & agile
+- Faster Time-to-Market
+- Aligned with Sprints
+- Team-owned, not PM-owned
 
 ---
 
-## ✅ Was macht ein gutes PRD aus? (Quality Criteria)
+## ✅ What Makes a Good PRD? (Quality Criteria)
 
-### 1. Klarheit & Präzision
+### 1. Clarity & Precision
 
-**❌ NICHT:**
-- "Die App soll schnell sein"
-- "Nutzer brauchen bessere Tools"
-- "Performance verbessern"
+**❌ NOT:**
+- "The app should be fast"
+- "Users need better tools"
+- "Improve performance"
 
-**✅ SONDERN:**
-- "Die App lädt in <2 Sekunden auf 3G für 95% der Nutzer"
-- "40% der Creator brechen Posts ab weil sie Clips nicht nach Upload trimmen können"
-- "Page Load Time von 4.2s auf <2s reduzieren bis Q2"
+**✅ INSTEAD:**
+- "The app loads in <2 seconds on 3G for 95% of users"
+- "40% of creators abandon posts because they can't trim clips after upload"
+- "Reduce page load time from 4.2s to <2s by Q2"
 
 **Goldilocks Rule:**
-- 🚫 Zu vage → Engineers wissen nicht was bauen
-- 🚫 Zu spezifisch → kein Raum für Lösungsfindung
-- ✅ Genau richtig → Richtung + Flexibilität
+- 🚫 Too vague → Engineers don't know what to build
+- 🚫 Too specific → No room for solution finding
+- ✅ Just right → Direction + Flexibility
 
 ---
 
-### 2. Strategisches Alignment
+### 2. Strategic Alignment
 
-**PRD muss beantworten:**
-- ❓ **Warum** bauen wir das? (Business Goal)
-- ❓ **Für wen**? (User Segment)
-- ❓ **Was** ist der Impact? (Metrics)
-- ❓ **Wie** passt es in Roadmap? (Strategic Fit)
+**PRD must answer:**
+- ❓ **Why** are we building this? (Business Goal)
+- ❓ **For whom**? (User Segment)
+- ❓ **What** is the impact? (Metrics)
+- ❓ **How** does it fit the roadmap? (Strategic Fit)
 
-**Verlinke:**
+**Link to:**
 - Company OKRs
 - Product Roadmap
 - User Research
@@ -78,70 +78,70 @@
 
 ---
 
-### 3. User-Zentrierung
+### 3. User-Centricity
 
-**Basiert auf ECHTEN Daten:**
-- ✅ **Quantitativ:** Metrics, Behavior Data, Analytics
-- ✅ **Qualitativ:** User Quotes, Interviews, Feedback
+**Based on REAL data:**
+- ✅ **Quantitative:** Metrics, Behavior Data, Analytics
+- ✅ **Qualitative:** User Quotes, Interviews, Feedback
 
-**❌ Schlecht:**
+**❌ Bad:**
 ```
-"Nutzer wollen schnellere Uploads."
+"Users want faster uploads."
 ```
 
-**✅ Gut:**
+**✅ Good:**
 ```
-Problem: Upload Success Rate bei 85% statt branchenüblichen 95%
+Problem: Upload Success Rate at 85% instead of industry standard 95%
 
 Impact:
-- Quantitativ: 15% der Uploads scheitern = 20k DAU verloren
-- Qualitativ: "Ich versuche es 3x, dann gebe ich auf. Zu langsam!" - Creator Interview #47
+- Quantitative: 15% of uploads fail = 20k DAU lost
+- Qualitative: "I try 3x, then I give up. Too slow!" - Creator Interview #47
 
-Vision: Upload Success Rate auf 95% in Q2, durchschnittliche Upload-Zeit von 45s auf <15s.
+Vision: Upload Success Rate to 95% in Q2, average upload time from 45s to <15s.
 ```
 
 ---
 
-### 4. Spezifische Success Metrics (SMART)
+### 4. Specific Success Metrics (SMART)
 
 **SMART = Specific, Measurable, Attainable, Relevant, Time-bound**
 
-**❌ Vage Metrics:**
-- "Engagement verbessern"
-- "User Experience erhöhen"
-- "Mehr Features"
+**❌ Vague Metrics:**
+- "Improve engagement"
+- "Increase user experience"
+- "More features"
 
 **✅ SMART Metrics:**
-- "Daily Active Users von 50k auf 75k bis Q3"
-- "NPS Score von 42 auf >70 bis Ende Jahr"
-- "Upload Success Rate von 85% auf 95% in 2 Monaten"
+- "Daily Active Users from 50k to 75k by Q3"
+- "NPS Score from 42 to >70 by end of year"
+- "Upload Success Rate from 85% to 95% in 2 months"
 
 **Format:**
 
-| Metric | Baseline | Target | Timeframe | Messmethode |
-|--------|----------|--------|-----------|-------------|
+| Metric | Baseline | Target | Timeframe | Measurement Method |
+|--------|----------|--------|-----------|-------------------|
 | Upload Success Rate | 85% | 95% | Q2 2025 | Analytics Dashboard |
 | Avg Upload Time | 45s | <15s | Q2 2025 | Performance Monitoring |
 | NPS | 42 | >70 | Q3 2025 | Quarterly Survey |
 
-**Test:** Kann die Frage "Haben wir das erreicht?" mit true/false beantwortet werden?
+**Test:** Can the question "Did we achieve this?" be answered with true/false?
 
 ---
 
-### 5. Motiviert das Team
+### 5. Motivates the Team
 
-**Gutes PRD:**
-- 🎯 Zeigt klaren Impact
-- 💡 Überzeugende Narrative
-- 📊 Beweist gründliche Vorarbeit
-- 🔥 Macht Team excited zum Bauen
+**Good PRD:**
+- 🎯 Shows clear impact
+- 💡 Compelling narrative
+- 📊 Proves thorough preparation
+- 🔥 Makes team excited to build
 
-**Schlechtes PRD:**
-- 😴 "Pflichtübung", nobody cares
+**Bad PRD:**
+- 😴 "Mandatory exercise", nobody cares
 - 🤷 "Build this because I said so"
-- 📋 Seelenlose Feature-Liste
+- 📋 Soulless feature list
 
-**Remember:** PRD ist nicht nur Spec – es ist Sales-Pitch an dein eigenes Team!
+**Remember:** PRD is not just spec – it's a sales pitch to your own team!
 
 ---
 
@@ -149,53 +149,53 @@ Vision: Upload Success Rate auf 95% in Q2, durchschnittliche Upload-Zeit von 45s
 
 ### DO ✅
 
-**1. Schreibe spezifisch, nicht vage**
+**1. Write specifically, not vaguely**
 ```
-❌ "Feature soll einfach zu bedienen sein"
-✅ "Onboarding completed in ≤3 Schritten für 90% der Nutzer"
+❌ "Feature should be easy to use"
+✅ "Onboarding completed in ≤3 steps for 90% of users"
 
-❌ "Performance verbessern"
+❌ "Improve performance"
 ✅ "API Response Time <200ms (95th percentile)"
 ```
 
-**2. Nutze echte Kundenzitate**
+**2. Use real customer quotes**
 ```
-✅ "Ich tippe 'Sneakers' und bekomme Yoga-Matten! WTF?" - User Interview #23
-✅ "Die Suche findet nichts obwohl der Content existiert." - Support Ticket #4521
-```
-
-**3. Zeige Beweise (Data + Quotes)**
-```
-✅ Problem: Search fails bei 35% der Nutzer
-   Impact: 20% Churn Rate unter High-Value Users in Q4
-   Evidence - Quantitativ: 28k monatliche "Keine Ergebnisse"-Anfragen trotz existierender Inhalte
-   Evidence - Qualitativ: "Ich tippe Sneakers und bekomme Yoga-Matten!" - User Quote
+✅ "I type 'Sneakers' and get yoga mats! WTF?" - User Interview #23
+✅ "Search finds nothing even though the content exists." - Support Ticket #4521
 ```
 
-**4. Priorisiere gnadenlos (MoSCoW)**
-- **Must-Have (P0):** Ohne geht es nicht
-- **Should-Have (P1):** Wichtig, aber nicht kritisch
+**3. Show evidence (Data + Quotes)**
+```
+✅ Problem: Search fails for 35% of users
+   Impact: 20% Churn Rate among High-Value Users in Q4
+   Evidence - Quantitative: 28k monthly "No results" queries despite existing content
+   Evidence - Qualitative: "I type Sneakers and get yoga mats!" - User Quote
+```
+
+**4. Prioritize ruthlessly (MoSCoW)**
+- **Must-Have (P0):** Can't ship without it
+- **Should-Have (P1):** Important, but not critical
 - **Could-Have (P2):** Nice-to-Have
-- **Won't-Have:** Explizit OUT of Scope
+- **Won't-Have:** Explicitly OUT of Scope
 
-**5. Definiere OUT of Scope explizit**
+**5. Define OUT of Scope explicitly**
 ```
-❌ Schweigen zu Features die nicht gebaut werden
+❌ Silence about features not being built
 ✅ OUT of Scope:
    - ❌ Mobile App (Phase 2, Q3)
    - ❌ Video Editing (Not validated with users yet)
    - ❌ Social Sharing (Too complex for MVP, revisit Q4)
 ```
 
-**6. Nutze Visuals statt nur Text**
-- 📸 Screenshots mit Annotations
+**6. Use Visuals instead of just text**
+- 📸 Screenshots with Annotations
 - 🎨 Wireframes, Mockups
-- 📊 Diagramme (User Flows, Architecture)
+- 📊 Diagrams (User Flows, Architecture)
 - 📈 Charts (Metrics, Trends)
 
-**Regel:** Diagram > Paragraph
+**Rule:** Diagram > Paragraph
 
-**7. Starte mit Collaboration (nicht solo)**
+**7. Start with Collaboration (not solo)**
 ```
 ✅ Workflow:
 1. Private First Draft (TBDs ok)
@@ -206,148 +206,148 @@ Vision: Upload Success Rate auf 95% in Q2, durchschnittliche Upload-Zeit von 45s
 6. Finalize
 
 ❌ Workflow:
-1. PM schreibt PRD allein
-2. "Hier, build this!"
-3. Surprise! Niemand happy.
+1. PM writes PRD alone
+2. "Here, build this!"
+3. Surprise! Nobody happy.
 ```
 
-**8. Templates nutzen (Konsistenz)**
-- Standardisiert Prozess
-- Stellt sicher nichts vergessen wird
-- Spart Zeit
+**8. Use Templates (Consistency)**
+- Standardizes process
+- Ensures nothing is forgotten
+- Saves time
 
 ---
 
 ### DON'T ❌
 
-**1. Zu vage oder generisch**
+**1. Too vague or generic**
 ```
-❌ "Produkt sollte einfach zu bedienen sein"
-❌ "Schnelle Performance"
-❌ "User Experience verbessern"
-```
-
-**2. Stakeholder nicht früh einbeziehen**
-```
-❌ PRD allein schreiben → dann um Approval bitten
-✅ Collaborative Creation von Anfang an
+❌ "Product should be easy to use"
+❌ "Fast performance"
+❌ "Improve user experience"
 ```
 
-Sonst: Late Disagreements, Costly Changes, Missed Deadlines
+**2. Don't involve stakeholders early**
+```
+❌ Write PRD alone → then ask for approval
+✅ Collaborative Creation from the start
+```
+
+Otherwise: Late Disagreements, Costly Changes, Missed Deadlines
 
 **3. Feature Overload (Scope Creep)**
 ```
-❌ Alle Features gleichzeitig bauen
+❌ Build all features at once
 ✅ MVP → Phase 2 → Phase 3
 ✅ P0 Must-Haves → P1 Should-Haves → P2 Nice-to-Haves
 ```
 
-**4. Technische Details überspringen**
+**4. Skip Technical Details**
 ```
 ❌ "Too high-level to avoid confusing stakeholders"
 ✅ Include APIs, Integrations, Data Management, Security
 ```
 
-Engineers brauchen Details!
+Engineers need details!
 
-**5. Success Metrics nicht definieren**
+**5. Don't define Success Metrics**
 ```
-❌ "Engagement erhöhen" (vage)
-✅ "NPS Score >70" oder "60% Checkout Completion für 3 Monate" (SMART)
+❌ "Increase engagement" (vague)
+✅ "NPS Score >70" or "60% Checkout Completion for 3 months" (SMART)
 ```
 
-**6. Edge Cases nicht planen**
+**6. Don't plan Edge Cases**
 ```
-❌ Nur "Happy Path" dokumentieren
+❌ Only document "Happy Path"
 ✅ Error States, Unexpected Inputs, Failure Scenarios
 ```
 
-Real-World Users sind nicht Happy Path!
+Real-World Users are not Happy Path!
 
-**7. Statische Dokumentation (Waterfall Relic)**
+**7. Static Documentation (Waterfall Relic)**
 ```
-❌ PRD nach Signoff "in Stein gemeißelt"
-✅ Living Document mit regelmäßigen Updates
+❌ PRD "set in stone" after signoff
+✅ Living Document with regular updates
 ```
 
-In Agile: Requirements evolvieren IMMER!
+In Agile: Requirements ALWAYS evolve!
 
-**8. Activity-Based statt Outcome-Based**
+**8. Activity-Based instead of Outcome-Based**
 ```
 ❌ "Build API endpoint for X"
 ❌ "Create dashboard with 5 charts"
-✅ "Als User möchte ich meine Daten exportieren, damit ich externe Analysen fahren kann"
-✅ "Als Admin möchte ich Performance-Bottlenecks in <5 Minuten identifizieren, damit ich schnell reagieren kann"
+✅ "As a user I want to export my data so I can run external analyses"
+✅ "As an admin I want to identify performance bottlenecks in <5 minutes so I can react quickly"
 ```
 
 ---
 
 ## 🌍 Remote/Distributed Teams: Special Considerations
 
-### 1. Documentation ist nicht-verhandelbar
+### 1. Documentation is non-negotiable
 
-**Warum:**
-- 🌍 Time Zones → keine synchrone Communication
-- 📝 Details verloren ohne Docs
-- 🔄 Investment upfront spart exponential Time später
+**Why:**
+- 🌍 Time Zones → no synchronous communication
+- 📝 Details lost without docs
+- 🔄 Investment upfront saves exponential time later
 
 **Best Practice:**
-> "In Remote Teams: Über-dokumentieren > Unter-dokumentieren"
+> "In Remote Teams: Over-document > Under-document"
 
 ---
 
 ### 2. Visualization > Text
 
-**Warum:**
+**Why:**
 - 🌐 Across Cultures & Languages
-- 🎨 "Showing wins Telling"
+- 🎨 "Showing beats Telling"
 
 **Use:**
-- Screenshots mit Annotations
+- Screenshots with Annotations
 - Realistic Mock-Ups
-- Multi-Page Workflows mit Arrows
-- Live Demos während Video Calls
-- Miro Diagrams mit color-coded Sticky Notes
+- Multi-Page Workflows with Arrows
+- Live Demos during Video Calls
+- Miro Diagrams with color-coded Sticky Notes
 
 ---
 
 ### 3. Verification Protocols
 
 **Problem:**
-Kulturelle Faktoren → People hesitant, Uncertainty zu expressen
+Cultural factors → People hesitant to express uncertainty
 
-**Beispiel:**
-- Indien, Japan: "Yes, I understand" = Politeness, NOT Confirmation
+**Example:**
+- India, Japan: "Yes, I understand" = Politeness, NOT Confirmation
 
-**Lösung:**
-1. Frag jedes Team-Member **individuell**: "Verstehst du die Acceptance Criteria?"
-2. Follow Up mit **Clarifying Questions** to Verify TRUE Understanding
-3. Für complex Tasks: Frag **twice** during Discussions
+**Solution:**
+1. Ask each team member **individually**: "Do you understand the Acceptance Criteria?"
+2. Follow up with **Clarifying Questions** to verify TRUE understanding
+3. For complex tasks: Ask **twice** during discussions
 
 ---
 
 ### 4. Time Zone Management
 
 **Do:**
-- ✅ Plan "Tomorrow" at End of Each Workday
-- ✅ Morning Hours (Overlap Time) für Meetings/Discussions
-- ✅ Avoid Last-Minute Actions (Links break, Files corrupt, no Time to Fix)
+- ✅ Plan "Tomorrow" at end of each workday
+- ✅ Morning hours (Overlap Time) for Meetings/Discussions
+- ✅ Avoid last-minute actions (Links break, Files corrupt, no time to fix)
 
 **Example:**
-- U.S. West Coast ↔ India: nur 2.5 Stunden Overlap!
-- U.S. West Coast ↔ Poland: 2 Stunden Overlap!
+- U.S. West Coast ↔ India: only 2.5 hours overlap!
+- U.S. West Coast ↔ Poland: 2 hours overlap!
 
 ---
 
-### 5. Kulturelle Awareness
+### 5. Cultural Awareness
 
 **Communication Styles:**
-- **Direct** (U.S., Germany): Address Problems directly
-- **Indirect** (India, Japan): Use Hints
+- **Direct** (U.S., Germany): Address problems directly
+- **Indirect** (India, Japan): Use hints
 
-**Lösung:**
-- Create Safe Spaces für honest Feedback
-- Regular Check-Ins mit Open-Ended Questions
+**Solution:**
+- Create Safe Spaces for honest feedback
+- Regular Check-Ins with Open-Ended Questions
 - Build Trust & Psychological Safety
 
 ---
@@ -396,7 +396,7 @@ Kulturelle Faktoren → People hesitant, Uncertainty zu expressen
 ### What HUMANS are GREAT at
 
 ✅ **People Stuff:**
-- Empathy & Creativity für Customer Connections
+- Empathy & Creativity for Customer Connections
 - Understanding and Acting on Nuance
 - Aligning Opinionated Stakeholders
 - Unblocking Blockers
@@ -415,22 +415,22 @@ Kulturelle Faktoren → People hesitant, Uncertainty zu expressen
 
 ### Best Practice: AI + Human Collaboration
 
-**❌ NICHT:**
-- AI schreibt PRD komplett allein
-- Copy-Paste ohne Review
+**❌ NOT:**
+- AI writes PRD completely alone
+- Copy-Paste without review
 - "Good enough" mentality
 
-**✅ SONDERN:**
-- AI erstellt **80% Draft** (Structure, Content)
+**✅ INSTEAD:**
+- AI creates **80% Draft** (Structure, Content)
 - Human **refines 20%** (Strategy, Nuance, Stakeholder Fit)
 - **Collaborative Review** (Cross-Functional Input)
-- **Iteration** (mehrere Drafts)
+- **Iteration** (multiple drafts)
 
 **Process:**
-1. PM gibt Context (Problem, Users, Goals)
-2. AI generiert Draft PRD
-3. PM reviewt & verfeinert
-4. Stakeholders geben Feedback
+1. PM provides Context (Problem, Users, Goals)
+2. AI generates Draft PRD
+3. PM reviews & refines
+4. Stakeholders give feedback
 5. Iterate
 6. Ship
 
@@ -443,212 +443,212 @@ Kulturelle Faktoren → People hesitant, Uncertainty zu expressen
 **✅ Problem Statement:**
 - [ ] Quantitative Evidence? (Metrics, Data)
 - [ ] Qualitative Evidence? (User Quotes, Feedback)
-- [ ] Impact Statement? (Was passiert wenn wir es NICHT bauen?)
+- [ ] Impact Statement? (What happens if we DON'T build it?)
 - [ ] Clear "Why"? (Business Rationale)
 
 **✅ Success Metrics:**
 - [ ] SMART? (Specific, Measurable, Attainable, Relevant, Time-bound)
-- [ ] Baseline vs. Target definiert?
-- [ ] Messbar mit true/false?
-- [ ] 3-5 Key Metrics (nicht 20!)
+- [ ] Baseline vs. Target defined?
+- [ ] Measurable with true/false?
+- [ ] 3-5 Key Metrics (not 20!)
 
-**✅ User-Zentrierung:**
-- [ ] Personas basierend auf echten Usern?
-- [ ] User Quotes inkludiert?
-- [ ] Use Cases konkret & testbar?
+**✅ User-Centricity:**
+- [ ] Personas based on real users?
+- [ ] User Quotes included?
+- [ ] Use Cases concrete & testable?
 
 **✅ Scope Clarity:**
-- [ ] Must-Have vs. Nice-to-Have klar getrennt?
-- [ ] OUT of Scope explizit genannt?
-- [ ] Scope Creep Prevention Mechanismus?
+- [ ] Must-Have vs. Nice-to-Have clearly separated?
+- [ ] OUT of Scope explicitly stated?
+- [ ] Scope Creep Prevention mechanism?
 
 **✅ Technical Completeness:**
-- [ ] Functional Requirements spezifisch?
-- [ ] Non-Functional Requirements definiert? (Performance, Security, Scalability, Accessibility)
-- [ ] Dependencies identifiziert?
-- [ ] Risks mit Mitigation Plans?
+- [ ] Functional Requirements specific?
+- [ ] Non-Functional Requirements defined? (Performance, Security, Scalability, Accessibility)
+- [ ] Dependencies identified?
+- [ ] Risks with Mitigation Plans?
 
 **✅ Collaboration:**
-- [ ] Design Input eingeholt?
-- [ ] Engineering Feasibility gecheckt?
-- [ ] Stakeholder Alignment erreicht?
+- [ ] Design input gathered?
+- [ ] Engineering feasibility checked?
+- [ ] Stakeholder alignment achieved?
 
 **✅ Visuals:**
-- [ ] Wireframes/Mockups inkludiert?
-- [ ] User Flows visualisiert?
-- [ ] Screenshots mit Annotations?
+- [ ] Wireframes/Mockups included?
+- [ ] User Flows visualized?
+- [ ] Screenshots with Annotations?
 
 **✅ Living Document:**
-- [ ] Versionskontrolle aktiviert?
-- [ ] Changelog vorhanden?
-- [ ] Nächstes Review-Datum definiert?
+- [ ] Version control enabled?
+- [ ] Changelog present?
+- [ ] Next review date defined?
 
 ---
 
-## 🎨 Sprache & Formulierungen
+## 🎨 Language & Phrasing
 
-### Präzision > Ambivalenz
+### Precision > Ambivalence
 
 **❌ Ambivalent:**
-- "falls nötig"
-- "falls möglich"
-- "etwa"
-- "und so weiter"
-- "komfortabel"
-- "should" (passiv)
+- "if necessary"
+- "if possible"
+- "approximately"
+- "and so on"
+- "comfortable"
+- "should" (passive)
 
-**✅ Präzise:**
-- "immer wenn X passiert"
-- "garantiert"
-- "exakt 500ms"
-- "vollständige Liste: A, B, C"
-- "<2 Sekunden Load Time"
-- "shall" (definitiv)
+**✅ Precise:**
+- "always when X happens"
+- "guaranteed"
+- "exactly 500ms"
+- "complete list: A, B, C"
+- "<2 seconds Load Time"
+- "shall" (definitive)
 
 ---
 
-### Beispiele: Schlecht → Gut
+### Examples: Bad → Good
 
 **Performance:**
 ```
-❌ "Die App soll schnell sein"
-✅ "Page Load Time <2 Sekunden für 95% der Nutzer (4G)"
+❌ "The app should be fast"
+✅ "Page Load Time <2 seconds for 95% of users (4G)"
 ```
 
 **Usability:**
 ```
-❌ "Einfache Bedienung"
-✅ "Onboarding abgeschlossen in ≤3 Schritten ohne Hilfe (90% der Nutzer)"
+❌ "Easy to use"
+✅ "Onboarding completed in ≤3 steps without help (90% of users)"
 ```
 
 **Reliability:**
 ```
-❌ "System soll stabil laufen"
-✅ "Uptime 99.95% annually (max 4.38 Stunden Downtime/Jahr)"
+❌ "System should run stably"
+✅ "Uptime 99.95% annually (max 4.38 hours downtime/year)"
 ```
 
 **Accessibility:**
 ```
-❌ "Accessibility unterstützen"
+❌ "Support accessibility"
 ✅ "WCAG 2.1 Level AA compliant (Keyboard Navigation, Screen Reader Support)"
 ```
 
 ---
 
-## 🚨 Common Pitfalls (und wie vermeiden)
+## 🚨 Common Pitfalls (and how to avoid them)
 
-### Pitfall 1: Zu vage
+### Pitfall 1: Too vague
 
 **Problem:**
-> "Produkt sollte einfach zu bedienen sein"
+> "Product should be easy to use"
 
 **Impact:**
-- Missinterpretationen
-- Falsche Implementierungen
-- Nacharbeit
+- Misinterpretations
+- Wrong implementations
+- Rework
 
 **Solution:**
-> "Checkout in ≤3 Schritten abgeschlossen für 90% der Nutzer"
+> "Checkout completed in ≤3 steps for 90% of users"
 
 ---
 
-### Pitfall 2: Stakeholder-Überraschungen
+### Pitfall 2: Stakeholder Surprises
 
 **Problem:**
-> PM schreibt PRD allein, dann bittet um Approval
+> PM writes PRD alone, then asks for approval
 
 **Impact:**
-- Design/Marketing können Timeline nicht einhalten
+- Design/Marketing can't meet timeline
 - Late Disagreements
 - Costly Changes
 
 **Solution:**
-> Collaborative Creation von Anfang an (Design, Engineering, Product)
+> Collaborative Creation from the start (Design, Engineering, Product)
 
 ---
 
 ### Pitfall 3: Feature Overload
 
 **Problem:**
-> Alle Features als "Must-Have" behandelt
+> All features treated as "Must-Have"
 
 **Impact:**
 - Delays
-- Aufgeblähtes Produkt
-- Verwässerter Fokus
+- Bloated product
+- Diluted focus
 
 **Solution:**
-> Gnadenlose Priorisierung (MoSCoW: Must/Should/Could/Won't)
+> Ruthless prioritization (MoSCoW: Must/Should/Could/Won't)
 
 ---
 
-### Pitfall 4: Technische Details fehlen
+### Pitfall 4: Technical Details Missing
 
 **Problem:**
-> PRD zu high-level um "Stakeholders nicht zu verwirren"
+> PRD too high-level to "not confuse stakeholders"
 
 **Impact:**
 - Developer Confusion
 - Implementation Delays
-- Architektur-Probleme später
+- Architecture problems later
 
 **Solution:**
 > Include APIs, Integrations, Data Management, Security Protocols
 
 ---
 
-### Pitfall 5: Success Metrics fehlen
+### Pitfall 5: Success Metrics Missing
 
 **Problem:**
-> Vage Ziele wie "Engagement erhöhen"
+> Vague goals like "Increase engagement"
 
 **Impact:**
-- Unmöglich zu evaluieren ob erfolgreich
-- Keine Learnings
+- Impossible to evaluate if successful
+- No learnings
 
 **Solution:**
-> SMART Metrics mit Baseline → Target → Timeframe
+> SMART Metrics with Baseline → Target → Timeframe
 
 ---
 
-### Pitfall 6: Edge Cases ignoriert
+### Pitfall 6: Edge Cases Ignored
 
 **Problem:**
-> Nur "Happy Path" dokumentiert
+> Only "Happy Path" documented
 
 **Impact:**
-> Real-World Users frustriert
+> Real-World Users frustrated
 
 **Solution:**
-> Error States, Unexpected Inputs, Failure Scenarios planen
+> Plan Error States, Unexpected Inputs, Failure Scenarios
 
 ---
 
-### Pitfall 7: Statische Docs
+### Pitfall 7: Static Docs
 
 **Problem:**
-> PRD als "in Stein gemeißelt" behandelt
+> PRD treated as "set in stone"
 
 **Impact:**
-> Confusion & Nacharbeit wenn sich Requirements ändern (was sie IMMER tun)
+> Confusion & rework when requirements change (which they ALWAYS do)
 
 **Solution:**
-> Living Documents mit regelmäßigen Updates, Versionskontrolle, Quarterly Reviews
+> Living Documents with regular updates, Version Control, Quarterly Reviews
 
 ---
 
 ## 🎯 Quick Reference: PRD Types Decision Matrix
 
-| Kriterium | Lean PRD | Traditional PRD | PR/FAQ | Hybrid Agile |
+| Criterion | Lean PRD | Traditional PRD | PR/FAQ | Hybrid Agile |
 |-----------|----------|-----------------|--------|--------------|
 | **Team Size** | 2-20 | 50+ | Any | 10-50 |
 | **Methodology** | Agile/Scrum | Waterfall | Strategic | Agile + Structure |
-| **Feature Size** | 2 Wochen - 3 Monate | 3+ Monate | Major Initiative | 1-3 Monate |
+| **Feature Size** | 2 Weeks - 3 Months | 3+ Months | Major Initiative | 1-3 Months |
 | **Industry** | Tech, Startups | Finance, Healthcare | Customer-Obsessed | Scale-Ups |
-| **Length** | 1-3 Seiten | 10-30 Seiten | 5-10 Seiten | 5-10 Seiten |
-| **Creation Time** | 1-2 Tage | 2-6 Wochen | 4-8 Wochen | 1-2 Wochen |
+| **Length** | 1-3 Pages | 10-30 Pages | 5-10 Pages | 5-10 Pages |
+| **Creation Time** | 1-2 Days | 2-6 Weeks | 4-8 Weeks | 1-2 Weeks |
 | **Stakeholders** | 5-10 | 20-50+ | Executive | 10-20 |
-| **When Use** | MVP, Fast Iteration | Compliance, High Risk | Strategic Decisions | Complex Features |
+| **When to Use** | MVP, Fast Iteration | Compliance, High Risk | Strategic Decisions | Complex Features |
 
 **Default:** Lean PRD ✅ (Start Simple!)
 
@@ -667,15 +667,15 @@ Kulturelle Faktoren → People hesitant, Uncertainty zu expressen
 - Lenny's Newsletter: "AI Impact on PM Skills" (2024)
 
 **Research:**
-- Delibr Survey: 300+ PMs über PRD Practices (2024)
+- Delibr Survey: 300+ PMs on PRD Practices (2024)
 - McKinsey: "Gen AI Impact on Product Development" (2024)
 - Salesforce Ventures: "AI in Product Management Workshop" (2025)
 
 ---
 
-**Du schreibst jetzt moderne, lean, user-zentrierte PRDs. Los geht's! 🚀**
+**You're now writing modern, lean, user-centric PRDs. Let's go! 🚀**
 
 ---
 
-*PRD Best Practices Guide für Product-Toolkit*
+*PRD Best Practices Guide for Product-Toolkit*
 *Hendrik Hemken, 2025*

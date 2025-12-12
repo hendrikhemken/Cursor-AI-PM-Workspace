@@ -1,23 +1,23 @@
 # User Stories Templates
 
-Ready-to-use Templates für User Stories, EPICs, Acceptance Criteria & Technical Stories.
+Ready-to-use Templates for User Stories, EPICs, Acceptance Criteria & Technical Stories.
 
 ---
 
 ## 📝 User Story Template
 
 ```markdown
-# [Story Title - kurz & prägnant]
+# [Story Title - short & concise]
 
-**Als** [Rolle/Persona]
-**möchte ich** [Funktion/Feature]
-**um** [Nutzen/Ziel/Outcome]
+**As** [Role/Persona]
+**I want** [Feature/Function]
+**to** [Benefit/Goal/Outcome]
 
 ---
 
 ## Acceptance Criteria
 
-- [ ] **Given** [Context/Vorbedingung] **When** [Action/User-Aktion] **Then** [Expected Outcome]
+- [ ] **Given** [Context/Precondition] **When** [Action/User Action] **Then** [Expected Outcome]
 - [ ] **Given** [Context] **When** [Action] **Then** [Outcome]
 - [ ] **Given** [Context] **When** [Action] **Then** [Outcome]
 
@@ -26,40 +26,40 @@ Ready-to-use Templates für User Stories, EPICs, Acceptance Criteria & Technical
 ## Technical Notes
 
 **Frontend:**
-- Component: [z.B. UserProfileScreen.tsx]
-- UI Libraries: [z.B. React, Tailwind]
+- Component: [e.g., UserProfileScreen.tsx]
+- UI Libraries: [e.g., React, Tailwind]
 - API Calls: GET /api/users/{id}
 
 **Backend:**
 - Endpoint: POST /api/...
-- Business Logic: [Beschreibung]
+- Business Logic: [Description]
 - Database: [Tables/Collections]
 
 **Infrastructure:**
-- Deployment: [z.B. Docker, Vercel]
-- Environment Variables: [z.B. API_KEY]
+- Deployment: [e.g., Docker, Vercel]
+- Environment Variables: [e.g., API_KEY]
 
 ---
 
 ## Edge Cases & Error Handling
 
-- [ ] Was passiert bei Netzwerk-Fehler?
-- [ ] Was bei ungültigen Daten?
-- [ ] Was bei Timeout?
-- [ ] Was bei fehlenden Permissions?
+- [ ] What happens on network error?
+- [ ] What about invalid data?
+- [ ] What on timeout?
+- [ ] What if permissions are missing?
 
 ---
 
 ## Dependencies
 
 **Blocked by:**
-- [STORY-123]: [Beschreibung warum]
+- [STORY-123]: [Reason why]
 
 **Blocks:**
-- [STORY-456]: [Beschreibung warum]
+- [STORY-456]: [Reason why]
 
 **Relates to:**
-- [STORY-789]: [Beschreibung]
+- [STORY-789]: [Description]
 
 ---
 
@@ -68,9 +68,9 @@ Ready-to-use Templates für User Stories, EPICs, Acceptance Criteria & Technical
 **Estimate:** [1, 2, 3, 5, 8, 13]
 
 **Rationale:**
-- [Warum diese Schätzung?]
-- [Was ist komplex?]
-- [Welche Unknowns gibt es?]
+- [Why this estimate?]
+- [What's complex?]
+- [What unknowns exist?]
 
 ---
 
@@ -85,14 +85,14 @@ Ready-to-use Templates für User Stories, EPICs, Acceptance Criteria & Technical
 
 ## Definition of Done
 
-- [ ] Code geschrieben & reviewed
-- [ ] Unit Tests geschrieben (>80% Coverage)
-- [ ] Integration Tests (falls relevant)
-- [ ] Acceptance Criteria erfüllt
-- [ ] UI/UX reviewed (falls Frontend)
-- [ ] Performance akzeptabel (<3s Load Time)
-- [ ] Dokumentation aktualisiert
-- [ ] Deployed auf Staging
+- [ ] Code written & reviewed
+- [ ] Unit Tests written (>80% Coverage)
+- [ ] Integration Tests (if relevant)
+- [ ] Acceptance Criteria met
+- [ ] UI/UX reviewed (if Frontend)
+- [ ] Performance acceptable (<3s Load Time)
+- [ ] Documentation updated
+- [ ] Deployed to Staging
 - [ ] QA Sign-off
 - [ ] PO Acceptance
 
@@ -106,22 +106,22 @@ Ready-to-use Templates für User Stories, EPICs, Acceptance Criteria & Technical
 # [Epic Name]
 
 **Vision:**
-[Was ist das große Ziel dieses Epics? Welches Problem lösen wir?]
+[What's the big goal of this epic? What problem are we solving?]
 
 **Business Value:**
-[Warum ist das wichtig? Welche Metrics verbessern wir?]
+[Why is this important? Which metrics are we improving?]
 
 **Target Users:**
-- [Persona 1: Beschreibung]
-- [Persona 2: Beschreibung]
+- [Persona 1: Description]
+- [Persona 2: Description]
 
 ---
 
 ## Success Criteria (Outcomes)
 
-- [ ] [Metric 1: z.B. "User Engagement +20%"]
-- [ ] [Metric 2: z.B. "Conversion Rate +10%"]
-- [ ] [Metric 3: z.B. "Support Tickets -30%"]
+- [ ] [Metric 1: e.g., "User Engagement +20%"]
+- [ ] [Metric 2: e.g., "Conversion Rate +10%"]
+- [ ] [Metric 3: e.g., "Support Tickets -30%"]
 
 ---
 
@@ -133,8 +133,8 @@ Ready-to-use Templates für User Stories, EPICs, Acceptance Criteria & Technical
 - [Feature 3]
 
 **Out of Scope:**
-- [Was machen wir NICHT?]
-- [Was kommt später?]
+- [What are we NOT doing?]
+- [What comes later?]
 
 ---
 
@@ -145,7 +145,7 @@ Ready-to-use Templates für User Stories, EPICs, Acceptance Criteria & Technical
 2. System shows [Result 1]
 3. User does [Action 2]
 4. System shows [Result 2]
-5. **Outcome:** [User erreicht Ziel]
+5. **Outcome:** [User achieves goal]
 
 **Alternative Paths:**
 - [Edge Case 1]
@@ -171,16 +171,16 @@ Ready-to-use Templates für User Stories, EPICs, Acceptance Criteria & Technical
 ## Dependencies & Risks
 
 **External Dependencies:**
-- [3rd Party API: z.B. Stripe, Twilio]
-- [Other Teams: z.B. Platform Team]
+- [3rd Party API: e.g., Stripe, Twilio]
+- [Other Teams: e.g., Platform Team]
 
 **Risks:**
-- [Risk 1: z.B. "API Rate Limits"]
-- [Risk 2: z.B. "Legacy System Constraints"]
+- [Risk 1: e.g., "API Rate Limits"]
+- [Risk 2: e.g., "Legacy System Constraints"]
 
 **Mitigation:**
-- [Wie mitigieren wir Risk 1?]
-- [Wie mitigieren wir Risk 2?]
+- [How do we mitigate Risk 1?]
+- [How do we mitigate Risk 2?]
 
 ---
 
@@ -204,8 +204,8 @@ Ready-to-use Templates für User Stories, EPICs, Acceptance Criteria & Technical
 
 ## Related Epics
 
-- [EPIC-123]: [Beschreibung]
-- [EPIC-456]: [Beschreibung]
+- [EPIC-123]: [Description]
+- [EPIC-456]: [Description]
 
 ```
 
@@ -216,41 +216,41 @@ Ready-to-use Templates für User Stories, EPICs, Acceptance Criteria & Technical
 ### Standard Format
 
 ```markdown
-**Given** [Vorbedingung / Context]
-**When** [User-Aktion / Trigger]
-**Then** [Erwartetes Ergebnis / Outcome]
+**Given** [Precondition / Context]
+**When** [User Action / Trigger]
+**Then** [Expected Result / Outcome]
 ```
 
-### Beispiele
+### Examples
 
 **Good:**
 ```
-✅ Given User ist eingeloggt
-   When User klickt auf "Profil bearbeiten"
-   Then User sieht Formular mit aktuellen Daten
+✅ Given user is logged in
+   When user clicks "Edit Profile"
+   Then user sees form with current data
 
-✅ Given User hat 0 Freunde
-   When User lädt Freunde-Liste
-   Then User sieht "Noch keine Freunde" Message
+✅ Given user has 0 friends
+   When user loads friends list
+   Then user sees "No friends yet" message
 
-✅ Given API ist offline
-   When User speichert Änderungen
-   Then User sieht Error "Verbindung fehlgeschlagen" + Retry Button
+✅ Given API is offline
+   When user saves changes
+   Then user sees "Connection failed" error + Retry button
 ```
 
 **Bad:**
 ```
-❌ "Formular soll funktionieren"
-   → Zu vage! WAS soll funktionieren?
+❌ "Form should work"
+   → Too vague! WHAT should work?
 
-❌ "User kann Daten ändern"
-   → Nicht testbar! WELCHE Daten? WIE ändern?
+❌ "User can change data"
+   → Not testable! WHICH data? HOW to change?
 
-❌ "Performance soll gut sein"
-   → Nicht messbar! WAS ist "gut"? <3s? <5s?
+❌ "Performance should be good"
+   → Not measurable! WHAT is "good"? <3s? <5s?
 ```
 
-### Edge Cases explizit machen
+### Make Edge Cases Explicit
 
 ```markdown
 **Happy Path:**
@@ -267,19 +267,19 @@ Ready-to-use Templates für User Stories, EPICs, Acceptance Criteria & Technical
 
 ## 🛠️ Technical Story Template
 
-Für Stories die KEINEN direkten User Value haben (z.B. Refactoring, Tech Debt, Infrastructure).
+For stories that have NO direct User Value (e.g., Refactoring, Tech Debt, Infrastructure).
 
 ```markdown
 # [Technical Story Title]
 
 **Problem:**
-[Was ist das technische Problem?]
+[What's the technical problem?]
 
 **Solution:**
-[Was ist die Lösung?]
+[What's the solution?]
 
 **Impact:**
-[Warum ist das wichtig? Performance? Maintainability? Security?]
+[Why is this important? Performance? Maintainability? Security?]
 
 ---
 
@@ -295,10 +295,10 @@ Für Stories die KEINEN direkten User Value haben (z.B. Refactoring, Tech Debt, 
 ## Technical Details
 
 **Current State:**
-- [Beschreibung des Ist-Zustands]
+- [Description of current state]
 
 **Target State:**
-- [Beschreibung des Soll-Zustands]
+- [Description of target state]
 
 **Approach:**
 - [Step 1]
@@ -326,7 +326,7 @@ Für Stories die KEINEN direkten User Value haben (z.B. Refactoring, Tech Debt, 
 
 ## 🏷️ Labels & Components Guide
 
-### Components (System-Bereiche)
+### Components (System Areas)
 
 - `Frontend` - UI, Client-side Logic, UX
 - `Backend` - API, Business Logic, Integrations
@@ -335,7 +335,7 @@ Für Stories die KEINEN direkten User Value haben (z.B. Refactoring, Tech Debt, 
 - `QA` - Testing, E2E, Performance Tests
 - `Documentation` - Docs, API Specs, Guides
 
-### Labels (Zusätzliche Kategorisierung)
+### Labels (Additional Categorization)
 
 - `user-story` / `technical-story` / `bug` / `spike`
 - `high-priority` / `medium-priority` / `low-priority`
@@ -361,30 +361,30 @@ Für Stories die KEINEN direkten User Value haben (z.B. Refactoring, Tech Debt, 
 
 ---
 
-## 🎨 Jira-spezifische Felder
+## 🎨 Jira-specific Fields
 
-### Pflichtfelder
-- `project_key` - z.B. "PROD", "DEV", "TECH"
+### Required Fields
+- `project_key` - e.g., "PROD", "DEV", "TECH"
 - `summary` - Story Title
 - `issue_type` - "Story" / "Task" / "Bug"
 
-### Optionale Felder
-- `description` - Full Story (mit ACs, Technical Notes)
-- `assignee` - Email, Name, oder Account ID
+### Optional Fields
+- `description` - Full Story (with ACs, Technical Notes)
+- `assignee` - Email, Name, or Account ID
 - `components` - ["Frontend", "Backend"]
 - `labels` - ["user-story", "q4-2025"]
 - `priority` - {"name": "High"} / "Medium" / "Low"
-- `parent` - Epic Key (z.B. "PROD-100")
+- `parent` - Epic Key (e.g., "PROD-100")
 
 ### Custom Fields (Story Points)
-- Meist `customfield_10016` oder ähnlich
+- Usually `customfield_10016` or similar
 - Check via `jira_search_fields "story points"`
 
 ---
 
-**Diese Templates sind ready-to-use. Copy, paste, adapt!**
+**These templates are ready-to-use. Copy, paste, adapt!**
 
 ---
 
-*Templates für Product-Toolkit User Stories Skill*
+*Templates for Product-Toolkit User Stories Skill*
 *Hendrik Hemken, 2025*

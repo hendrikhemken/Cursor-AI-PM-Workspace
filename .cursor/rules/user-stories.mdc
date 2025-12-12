@@ -1,0 +1,6 @@
+---
+alwaysApply: false
+description: "Create User Stories from PRDs (Confluence, Google Docs), break down EPICs, write standalone stories, file bug tickets. Use when user mentions PRD, Requirements, Confluence, Epic, User Stories, break down, Backlog, Sprint Planning, Jira tickets, bug, create story, Acceptance Criteria, Story Points, or working with product requirements."
+---
+
+@.claude/skills/user-stories/SKILL.md

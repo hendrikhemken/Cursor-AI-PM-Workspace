@@ -139,7 +139,7 @@ Add to `## 📋 Available Skills` section:
 **✅ Good Examples:**
 
 *Example 1 - PRD Creation:*
-"Create Product Requirements Documents (PRDs) in Confluence for Features/Epics. Use when user mentions 'PRD erstellen', 'Product Requirements', 'Confluence PRD', 'Feature Document', or 'Epic dokumentieren'."
+"Create Product Requirements Documents (PRDs) in Confluence for Features/Epics. Use when user mentions 'create PRD', 'Product Requirements', 'Confluence PRD', 'Feature Document', or 'document Epic'."
 
 *Example 2 - PDF Processing:*
 "Extract text and tables from PDF files, fill forms, merge documents. Use when working with PDF files or when the user mentions PDFs, forms, or document extraction."

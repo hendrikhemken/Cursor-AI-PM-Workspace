@@ -1,0 +1,6 @@
+---
+alwaysApply: false
+description: "Creates Claude Code hooks for tool control, logging, and automation. Use ONLY when user explicitly requests create hook, add hook, block MCP tool, or hook for tool. Covers all hook types with focus on MCP tool blocking and permission control."
+---
+
+@.claude/skills/hook-creator/SKILL.md

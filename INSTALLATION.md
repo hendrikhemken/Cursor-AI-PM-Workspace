@@ -95,18 +95,17 @@ claude
 When you open the Product Toolkit for the **first time**, Claude will greet you:
 
 ```
-Hey! 👋 Willkommen im Product Toolkit!
+Hey! 👋 Welcome to the Product Toolkit!
 
-Ich bin dein Daily PM Assistant - gebaut von PMs für PMs.
+I'm your daily PM assistant — built by PMs for PMs.
 
-Bevor wir loslegen:
-Ich brauche deinen Context! Das dauert nur 5 Minuten
-und dann kann ich dich optimal unterstützen.
+Before we dive in:
+I need your context! Takes 5 minutes and unlocks full support.
 
-Soll ich den Setup starten? 🚀
+Want me to start the setup? 🚀
 ```
 
-**Just say "Yes" or "Los geht's!"**
+**Just say "Yes" or "Let's go!"**
 
 ---
 

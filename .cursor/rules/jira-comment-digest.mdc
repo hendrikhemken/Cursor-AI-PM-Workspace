@@ -1,0 +1,6 @@
+---
+alwaysApply: false
+description: "Summarizes Jira ticket comment threads and ongoing discussions. Use when user mentions Jira Comments, Comment Digest, Ticket Discussions, what's new in Jira, Jira Updates, show comments, comment summary, summarize comments, or wants to review recent Jira conversations."
+---
+
+@.claude/skills/jira-comment-digest/SKILL.md

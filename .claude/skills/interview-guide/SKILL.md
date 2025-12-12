@@ -1,6 +1,6 @@
 ---
 name: interview-guide
-description: Creates user interview guides for product research (Discovery, Validation, Usability Testing). Use when user mentions "user interview", "interview guide", "interview leitfaden", "user research", "discovery interviews", "validation interviews", "usability testing", "customer conversations", or needs to prepare research sessions with users.
+description: Creates user interview guides for product research (Discovery, Validation, Usability Testing). Use when user mentions "user interview", "interview guide", "create interview guide", "user research", "discovery interviews", "validation interviews", "usability testing", "customer conversations", or needs to prepare research sessions with users.
 ---
 
 # Interview Guide Creation
@@ -10,7 +10,7 @@ description: Creates user interview guides for product research (Discovery, Vali
 1. **Clarify Research Goal**
    - Ask: Discovery (explore problems), Validation (test concepts), or Usability (test designs)?
    - Define specific research questions (NOT vague "understand users")
-   - Example: "Warum wechseln Nutzer zu Konkurrenzprodukt X?"
+   - Example: "Why do users switch to competitor product X?"
 
 2. **Identify Target Participants**
    - Who? (Persona, role, context)
@@ -24,7 +24,7 @@ description: Creates user interview guides for product research (Discovery, Vali
 
 4. **Generate Interview Guide**
    - 4-Part Structure: Introduction → Warm-up → Main Questions → Wrap-up
-   - Story-based questions ("Erzählen Sie vom letzten Mal als...")
+   - Story-based questions ("Tell me about the last time you...")
    - Include Probes Bank
 
 5. **Add Logistics**
@@ -52,19 +52,19 @@ description: Creates user interview guides for product research (Discovery, Vali
 - Introduction (5-10 min) - Rapport, Purpose, Consent
 - Warm-up (5 min) - Background, easy questions
 - Main Questions (30-40 min) - Story-based exploration
-- Wrap-up (5 min) - "Was hätte ich noch fragen sollen?"
+- Wrap-up (5 min) - "What else should I have asked?"
 
 **Question Types:**
-- "Beschreiben Sie einen typischen Tag mit [Kontext]"
-- "Erzählen Sie vom letzten Mal, als Sie [Problem] erlebt haben"
-- "Was sind Ihre größten Frustrationen mit...?"
-- "Wenn Sie eine Sache ändern könnten, welche?"
+- "Describe a typical day with [context]"
+- "Tell me about the last time you experienced [problem]"
+- "What are your biggest frustrations with...?"
+- "If you could change one thing, what would it be?"
 
 **DON'Ts:**
-- ❌ "Welche Features wollen Sie?" (Nutzer sind schlechte Feature-Designer)
-- ❌ Solutions zeigen
-- ❌ "Würden Sie X nutzen?" (hypothetisch, unreliable)
-- ❌ Zu schnell zu Solutions springen
+- ❌ "What features do you want?" (Users are bad feature designers)
+- ❌ Show solutions
+- ❌ "Would you use X?" (hypothetical, unreliable)
+- ❌ Jump to solutions too quickly
 
 **Deliverables:** User Personas, Journey Maps, Problem Statements, Opportunity Areas
 
@@ -76,184 +76,184 @@ description: Creates user interview guides for product research (Discovery, Vali
 **Materials:** Mid-fidelity prototypes (NOT hi-fi!)
 
 **Question Types:**
-- "Gehen Sie durch, was Sie hier sehen"
-- "Welches Problem löst das Ihrer Meinung nach?"
-- "Wie vergleicht sich das zu Ihrem heutigen Vorgehen?"
-- "Was müsste sich ändern, damit Sie das adoptieren?"
-- "Bewerten Sie die Likelihood, dass das Ihre aktuelle Lösung ersetzt (1-10)"
+- "Walk me through what you see here"
+- "What problem do you think this solves?"
+- "How does this compare to your current approach?"
+- "What would need to change for you to adopt this?"
+- "Rate the likelihood that this replaces your current solution (1-10)"
 
 **DO's:**
-- ✅ Concepts im realen Workflow-Kontext zeigen
-- ✅ Mit aktuellen Solutions vergleichen lassen
-- ✅ Multiple Variationen testen
-- ✅ Auf Desirability UND Value fokussieren
+- ✅ Show concepts in real workflow context
+- ✅ Have them compare to current solutions
+- ✅ Test multiple variations
+- ✅ Focus on Desirability AND Value
 
 **DON'Ts:**
-- ❌ "Würden Sie das nutzen?" (schlechter Prädiktor)
-- ❌ Wort "validieren" gegenüber Nutzern verwenden
-- ❌ Nur ein Concept testen
-- ❌ Overdesignen vor Validation
+- ❌ "Would you use this?" (poor predictor)
+- ❌ Use the word "validate" with users
+- ❌ Test only one concept
+- ❌ Over-design before validation
 
 ---
 
 ### Usability Testing Phase (Evaluative)
-**Goal:** Assess wie gut Designs funktionieren, identify usability issues
+**Goal:** Assess how well designs work, identify usability issues
 **Duration:** 30-60 min
 **Method:** Think-Aloud Protocol
 
 **Two Variants:**
-- **Concurrent Think-Aloud (CTA):** Nutzer verbalisieren WÄHREND Task-Completion
-  - Pro: Vollständiger
-  - Con: Beeinflusst Performance
-- **Retrospective Think-Aloud (RTA):** Nutzer erklären NACH Tasks
-  - Pro: Weniger Interferenz
-  - Con: Details gehen verloren
+- **Concurrent Think-Aloud (CTA):** Users verbalize DURING task completion
+  - Pro: More complete
+  - Con: Affects performance
+- **Retrospective Think-Aloud (RTA):** Users explain AFTER tasks
+  - Pro: Less interference
+  - Con: Details get lost
 
 **Best Practices:**
-- Demo-Video zeigen vorher
-- Spezifische realistische Tasks geben
-- Häufig ans Think-Aloud erinnern
-- Bei Schweigen prompten: "Was denken Sie gerade?"
-- **NICHT** unterbrechen oder helfen
-- Speech Patterns beobachten (Zögern, Frustration)
-- Mit Post-Task-Interview kombinieren
+- Show demo video beforehand
+- Give specific realistic tasks
+- Frequently remind to think aloud
+- When silent, prompt: "What are you thinking right now?"
+- **DO NOT** interrupt or help
+- Observe speech patterns (hesitation, frustration)
+- Combine with post-task interview
 
 **DON'Ts:**
-- ❌ Zu Antworten führen
-- ❌ Flow unterbrechen
-- ❌ Urteilen oder korrigieren
-- ❌ Hypotheticals während Tasks fragen
+- ❌ Lead to answers
+- ❌ Interrupt flow
+- ❌ Judge or correct
+- ❌ Ask hypotheticals during tasks
 
 ---
 
 ## Core Frameworks
 
 ### Mom Test (Rob Fitzpatrick)
-**Die goldene Regel für unbiased Interviews**
+**The golden rule for unbiased interviews**
 
-**3 Prinzipien:**
+**3 Principles:**
 1. **Talk about their life, NOT your idea**
 2. **Ask about specifics in the PAST** (not opinions about future)
 3. **Talk less, listen more**
 
-**✅ RICHTIG:**
-- "Erzählen Sie vom letzten Mal, als Sie Netflix genutzt haben – was ist passiert?"
-- "Wie lösen Sie das Problem heute?"
-- "Welche Alternativen haben Sie probiert?"
+**✅ RIGHT:**
+- "Tell me about the last time you used Netflix – what happened?"
+- "How do you solve this problem today?"
+- "What alternatives have you tried?"
 
-**❌ FALSCH:**
-- "Würden Sie Feature X nutzen?" (hypothetisch)
-- "Wie oft nutzen Sie Netflix?" (generalisiert)
-- "Was halten Sie von dieser Idee?" (biased)
+**❌ WRONG:**
+- "Would you use Feature X?" (hypothetical)
+- "How often do you use Netflix?" (generalized)
+- "What do you think of this idea?" (biased)
 
-**Why it works:** Stories basieren auf echten Erinnerungen mit realem Kontext, nicht auf Idealisierungen oder sozial erwünschten Antworten.
+**Why it works:** Stories are based on real memories with real context, not idealizations or socially desirable answers.
 
 ---
 
 ### JTBD Framework (Jobs-to-be-Done)
-**Für Software-Adoption & Switching Behavior**
+**For Software Adoption & Switching Behavior**
 
-**Core Concept:** Nutzer "hiren" Produkte für Fortschritt zu Zielen. Fokus auf Motivationen, NICHT Features.
+**Core Concept:** Users "hire" products to make progress toward goals. Focus on motivations, NOT features.
 
-**Purchase Timeline (rückwärts mapped):**
+**Purchase Timeline (mapped backwards):**
 ```
-Kauf ← Decision ← Active Looking ← Passive Looking ← First Thought
+Purchase ← Decision ← Active Looking ← Passive Looking ← First Thought
 ```
 
 **Key Questions:**
-- "Wann haben Sie erstmals realisiert, dass Sie [Kategorie] brauchen?"
-- "Was war damals in Ihrem Leben los?"
-- "Welche Alternativen haben Sie erwogen?"
-- "Welche Parameter haben Sie verglichen?"
-- "Was war der finale Trigger für den Kauf?"
+- "When did you first realize you needed [category]?"
+- "What was going on in your life at that time?"
+- "What alternatives did you consider?"
+- "What parameters did you compare?"
+- "What was the final trigger for the purchase?"
 
-**Duration:** 60-90 min für tiefe Exploration
-**Target Participants:** Nutzer die RECENTLY started/stopped using product (nicht "wollen kaufen"!)
+**Duration:** 60-90 min for deep exploration
+**Target Participants:** Users who RECENTLY started/stopped using product (not "want to buy"!)
 
-**Focus:** Switching moments – "Was hat Sie zum Wechsel bewegt?"
+**Focus:** Switching moments – "What made you switch?"
 
 ---
 
 ### Funnel Technique
-**Strukturierte Fragestrategie: Breit → Spezifisch → Tief**
+**Structured question strategy: Broad → Specific → Deep**
 
-**4 Schritte:**
-1. **Breit starten:** "Erzählen Sie von einem typischen Arbeitstag"
-2. **Zum Thema bewegen:** "Wie managen Sie Projekte?"
-3. **Spezifisch werden:** "Was passiert bei Deadline-Änderungen?"
-4. **Tief gehen:** "Erzählen Sie mehr über diese Frustration"
+**4 Steps:**
+1. **Start broad:** "Tell me about a typical workday"
+2. **Move to topic:** "How do you manage projects?"
+3. **Get specific:** "What happens when deadlines change?"
+4. **Go deep:** "Tell me more about that frustration"
 
-**Why it works:** Etabliert Kontext bevor du tief gehst. Vermeidet "cold start" mit zu spezifischen Fragen.
+**Why it works:** Establishes context before going deep. Avoids "cold start" with overly specific questions.
 
 ---
 
 ### Five Whys Technique
-**Root Causes erreichen durch 5x "Warum?"**
+**Reach root causes through 5x "Why?"**
 
 **Best Practices:**
-- Technik VORHER erklären (sonst wirkt wie Verhör)
-- Sanftere Alternativen nutzen: "Wieso?" "Erzählen Sie mehr"
-- Zu Level 3 (Patterns) oder Level 4 (Mental Models) vordringen
+- Explain technique BEFOREHAND (otherwise feels like interrogation)
+- Use softer alternatives: "How so?" "Tell me more"
+- Drill down to Level 3 (Patterns) or Level 4 (Mental Models)
 
-**Beispiel:**
+**Example:**
 ```
-Q: "Warum nutzen Sie diese App?"
-A: "Ausgaben tracken"
+Q: "Why do you use this app?"
+A: "To track expenses"
 
-Q: "Warum tracken?"
-A: "Budget einhalten"
+Q: "Why track expenses?"
+A: "To stay on budget"
 
-Q: "Warum Budget wichtig?"
-A: "Spare für Haus"
+Q: "Why is the budget important?"
+A: "Saving for a house"
 
-Q: "Warum Haus?"
-A: "Familienstabilität"
+Q: "Why a house?"
+A: "Family stability"
 ```
-**Root Cause:** Familiensicherheit (NICHT Expense Tracking!)
+**Root Cause:** Family security (NOT expense tracking!)
 
 ---
 
 ## Probes Bank (Ready-to-Use)
 
-**Essential Probes (immer griffbereit haben!):**
-- "Erzählen Sie mehr darüber"
-- "Warum ist das wichtig für Sie?"
-- "Können Sie ein Beispiel geben?"
-- "Helfen Sie mir, das besser zu verstehen"
-- "Was meinen Sie mit [Begriff]?"
-- "Was ist danach passiert?"
-- "Wie haben Sie sich dabei gefühlt?"
+**Essential Probes (always have these ready!):**
+- "Tell me more about that"
+- "Why is that important to you?"
+- "Can you give me an example?"
+- "Help me understand this better"
+- "What do you mean by [term]?"
+- "What happened next?"
+- "How did that make you feel?"
 
-**Die kritischste Regel:**
-🔥 **10-20 Sek Schweigen aushalten nach Antworten** → Teilnehmer füllen es oft mit tieferen Insights!
+**The most critical rule:**
+🔥 **Endure 10-20 seconds of silence after answers** → Participants often fill it with deeper insights!
 
 ---
 
-## Bias Vermeidung (Top 6)
+## Bias Avoidance (Top 6)
 
 ### 1. Confirmation Bias
-**Problem:** Interpretation für Pre-Beliefs
-**Lösung:** Offener Mind, multiple Perspektiven suchen, Devil's Advocate spielen
+**Problem:** Interpreting for pre-beliefs
+**Solution:** Open mind, seek multiple perspectives, play devil's advocate
 
 ### 2. Leading Questions
-**❌ Falsch:** "Fanden Sie das nicht auch einfach?"
-**✅ Richtig:** "Wie würden Sie das auf 1-10 bewerten?"
+**❌ Wrong:** "Didn't you find that easy?"
+**✅ Right:** "How would you rate that on a scale of 1-10?"
 
 ### 3. Social Desirability Bias
-**Problem:** Nutzer antworten gefällig
-**Lösung:** "Kein richtig/falsch" explizit betonen, Purpose vage halten
+**Problem:** Users answer to please
+**Solution:** Explicitly state "no right/wrong", keep purpose vague
 
 ### 4. Politeness Bias
-**Problem:** Positive Antworten zur Konfliktvermeidung
-**Lösung:** Eigene Expertise downplayen ("Ich bin nicht der Designer"), neutrales Setting
+**Problem:** Positive answers to avoid conflict
+**Solution:** Downplay your own expertise ("I'm not the designer"), neutral setting
 
 ### 5. Framing Effect
-**Problem:** Fragewording beeinflusst Antworten
-**Lösung:** Standardisierte neutrale Formulierung, A/B-Test von Fragen im Pilot
+**Problem:** Question wording influences answers
+**Solution:** Standardized neutral phrasing, A/B-test questions in pilot
 
 ### 6. Sponsor Bias
-**Problem:** Forschungsgeber bekannt → biased Antworten
-**Lösung:** Generische Beschreibungen ("Wir untersuchen Projektmanagement" statt "Wir bauen Tool X")
+**Problem:** Research sponsor known → biased answers
+**Solution:** Generic descriptions ("We're researching project management" instead of "We're building Tool X")
 
 ---
 
@@ -264,7 +264,7 @@ Use this template for all guides:
 ```markdown
 ---
 research_goal: [Discovery/Validation/Usability]
-target_participants: [Wer wird interviewed?]
+target_participants: [Who will be interviewed?]
 session_duration: [30/45/60/90 min]
 interviewer: [Name]
 notetaker: [Name]
@@ -273,12 +273,12 @@ date: [YYYY-MM-DD]
 framework: [Mom Test / JTBD / Think-Aloud]
 ---
 
-# Interview Guide: [Titel]
+# Interview Guide: [Title]
 
 ## Research Questions
-1. [Spezifische Frage 1 - NICHT "Nutzer verstehen"]
-2. [Spezifische Frage 2]
-3. [Spezifische Frage 3]
+1. [Specific question 1 - NOT "understand users"]
+2. [Specific question 2]
+3. [Specific question 3]
 
 ## Target Participants
 - **Who:** [Persona, Role, Context]
@@ -291,47 +291,47 @@ framework: [Mom Test / JTBD / Think-Aloud]
 ## Introduction (5-10 min)
 
 ### Consent & Recording
-"Danke fürs Kommen! Diese Session hilft uns [Purpose VAGE halten, nicht Hypothesen verraten].
+"Thanks for joining! This session helps us [Purpose - keep VAGUE, don't reveal hypotheses].
 
-Darf ich aufnehmen? Ihre Daten werden anonymisiert und nur intern genutzt. Sie können jederzeit abbrechen oder Fragen überspringen.
+May I record this? Your data will be anonymized and used internally only. You can stop at any time or skip any question.
 
-[WARTEN AUF EXPLIZITES JA]"
+[WAIT FOR EXPLICIT YES]"
 
 ### Rapport Building
-"Erzählen Sie kurz von sich – was machen Sie beruflich / in Ihrer Freizeit?"
+"Tell me a bit about yourself – what do you do professionally / in your free time?"
 
-[ZIEL: 2-3 min lockeres Gespräch, bevor es ernst wird]
+[GOAL: 2-3 min casual conversation before getting serious]
 
 ---
 
 ## Warm-up (5 min)
 
-**Background Fragen (leicht zu beantworten):**
-- [Rolle/Verantwortlichkeiten klären]
-- [Kontext etablieren]
-- [Noch KEINE schwierigen/tiefen Fragen!]
+**Background Questions (easy to answer):**
+- [Clarify role/responsibilities]
+- [Establish context]
+- [No difficult/deep questions yet!]
 
-**Beispiel:**
-- "Wie lange sind Sie schon in dieser Rolle?"
-- "Wie sieht ein typischer Tag bei Ihnen aus?"
+**Example:**
+- "How long have you been in this role?"
+- "What does a typical day look like for you?"
 
 ---
 
 ## Main Questions (30-40 min)
 
-### [Thema 1: Name]
+### [Topic 1: Name]
 **Core Question (story-based!):**
-"Erzählen Sie vom letzten Mal, als [spezifischer Past Event]"
+"Tell me about the last time [specific past event]"
 
 **Probes:**
-- "Was ist danach passiert?"
-- "Warum war das wichtig für Sie?"
-- "Können Sie ein Beispiel geben?"
-- [10-20 Sek Schweigen aushalten!]
+- "What happened next?"
+- "Why was that important to you?"
+- "Can you give me an example?"
+- [Endure 10-20 seconds of silence!]
 
 ---
 
-### [Thema 2: Name]
+### [Topic 2: Name]
 **Core Question:**
 [...]
 
@@ -340,7 +340,7 @@ Darf ich aufnehmen? Ihre Daten werden anonymisiert und nur intern genutzt. Sie k
 
 ---
 
-### [Thema 3: Name]
+### [Topic 3: Name]
 **Core Question:**
 [...]
 
@@ -352,122 +352,122 @@ Darf ich aufnehmen? Ihre Daten werden anonymisiert und nur intern genutzt. Sie k
 ## Wrap-up (5 min)
 
 ### Critical Question
-"Was hätte ich noch fragen sollen? Was ist wichtig, worüber wir nicht gesprochen haben?"
+"What else should I have asked? What's important that we didn't discuss?"
 
-🔥 **→ 15-20 Sek SCHWEIGEN – sie fügen oft Wertvolles hinzu!**
+🔥 **→ Endure 15-20 seconds of SILENCE – they often add valuable insights!**
 
 ### Thank & Next Steps
-"Vielen Dank für Ihre Zeit und Offenheit! Wir melden uns in [Zeitrahmen] mit den Ergebnissen / einem Update."
+"Thank you so much for your time and openness! We'll follow up in [timeframe] with results / an update."
 
-[Incentive auszahlen wenn applicable]
+[Pay incentive if applicable]
 
 ---
 
 ## Logistics
 
-**Rollen:**
-- **Moderator:** [Name] - Führt Gespräch, stellt Fragen, macht KEINE eigenen Notizen
-- **Notetaker:** [Name] - Verbatim Transkripte, Timestamps
-- **Observers:** [Names] - Max 3 total, silent, für holistische Eindrücke
+**Roles:**
+- **Moderator:** [Name] - Leads conversation, asks questions, takes NO detailed notes themselves
+- **Notetaker:** [Name] - Verbatim transcripts, timestamps
+- **Observers:** [Names] - Max 3 total, silent, for holistic impressions
 
 **Materials Needed:**
-- [ ] Interview Guide ausgedruckt
+- [ ] Interview Guide printed
 - [ ] Consent Form
 - [ ] Recording Setup (Zoom / Audio Recorder)
 - [ ] Backup Recording Device
-- [ ] Probes Bank sichtbar vor Moderator
-- [ ] [Prototypes/Materials wenn Validation/Usability]
+- [ ] Probes Bank visible for Moderator
+- [ ] [Prototypes/Materials if Validation/Usability]
 
 **Timing:**
-- [ ] 30-min Puffer vor/nach Session
-- [ ] Max 3-4 Sessions/Tag/Moderator (Burnout vermeiden)
+- [ ] 30-min buffer before/after session
+- [ ] Max 3-4 sessions/day/moderator (avoid burnout)
 
 **Post-Session:**
-- [ ] Sofort Debrief mit Team (5-10 min)
-- [ ] Recording backup sichern
-- [ ] Notes strukturieren innerhalb 24h
+- [ ] Immediate debrief with team (5-10 min)
+- [ ] Backup recording
+- [ ] Structure notes within 24h
 ```
 
 ---
 
 ## Logistics Checklist
 
-### Vorbereitung Timeline (4-6 Wochen)
+### Preparation Timeline (4-6 weeks)
 
-**Woche 1-2: Strategie & Leitfaden**
-- [ ] Stakeholder-Interviews durchführen
-- [ ] Spezifische Forschungsfragen formulieren
-- [ ] Ersten Interview-Leitfaden erstellen
-- [ ] Mit 1-2 Personen **pilotieren** (deckt Probleme auf!)
+**Week 1-2: Strategy & Guide**
+- [ ] Conduct stakeholder interviews
+- [ ] Formulate specific research questions
+- [ ] Create first interview guide
+- [ ] **Pilot with 1-2 people** (reveals problems!)
 
-**Woche 3: Rekrutierung**
-- [ ] 30% mehr Teilnehmer buchen als benötigt (wegen No-Shows!)
-- [ ] Screener erstellen (<10 Fragen, behavior-focused)
-- [ ] Plattform wählen: User Interviews, Respondent, Ethnio
-- [ ] Incentives festlegen (B2C $50-100, B2B $100-300+)
+**Week 3: Recruitment**
+- [ ] Book 30% more participants than needed (for no-shows!)
+- [ ] Create screener (<10 questions, behavior-focused)
+- [ ] Choose platform: User Interviews, Respondent, Ethnio
+- [ ] Set incentives (B2C $50-100, B2B $100-300+)
 
-**Woche 4: Team Briefing & Materials**
-- [ ] Rollen klar zuweisen (Moderator/Notetaker/Observer)
-- [ ] Tools beschaffen & testen
-- [ ] Consent Forms vorbereiten
-- [ ] Final Leitfaden reviewen mit Team
+**Week 4: Team Briefing & Materials**
+- [ ] Clearly assign roles (Moderator/Notetaker/Observer)
+- [ ] Acquire & test tools
+- [ ] Prepare consent forms
+- [ ] Review final guide with team
 
-### Rollen (klar zuweisen!)
+### Roles (clearly assign!)
 
 **Moderator:**
-- Führt Gespräch
-- Stellt Fragen
-- Macht **KEINE** eigenen ausführlichen Notizen (spaltet Aufmerksamkeit!)
-- Erhält Rapport
-- Top 5 Fehler vermeiden (siehe unten)
+- Leads conversation
+- Asks questions
+- Takes **NO** extensive notes themselves (splits attention!)
+- Maintains rapport
+- Avoids Top 5 mistakes (see below)
 
-**Notetaker (1-2 Personen):**
-- Verbatim Transkripte
-- Timestamps für wichtige Momente
-- Paraphrasieren mit Meaning-Preservation
-- Direkte Zitate verbatim bei Impact
-- Kontext inkludieren (Notes standalone verständlich)
+**Notetaker (1-2 people):**
+- Verbatim transcripts
+- Timestamps for important moments
+- Paraphrase with meaning-preservation
+- Direct quotes verbatim when impactful
+- Include context (notes standalone understandable)
 
 **Observer (1-2 Stakeholders, MAX 3 total):**
-- Silent während Session
-- Holistische Eindrücke
-- Keine Unterbrechungen
-- Post-Session Debrief beitragen
+- Silent during session
+- Holistic impressions
+- No interruptions
+- Contribute to post-session debrief
 
 ### Materials Checklist
 
 **Essential:**
-- [ ] Interview Guide ausgedruckt
-- [ ] Probes Bank sichtbar vor Moderator
-- [ ] Recording Setup (Zoom mit Transkription / Audio Recorder)
+- [ ] Interview Guide printed
+- [ ] Probes Bank visible for Moderator
+- [ ] Recording Setup (Zoom with transcription / Audio Recorder)
 - [ ] Backup Recording Device (Smartphone)
 - [ ] Consent Form
 
-**Optional (je nach Phase):**
+**Optional (depending on phase):**
 - [ ] Prototypes (Validation/Usability)
 - [ ] Task Sheets (Usability)
 - [ ] Laptop + Screen Share Setup
-- [ ] Getränke (wenn in-person)
+- [ ] Beverages (if in-person)
 
 ### Session Best Practices
 
 **Timing:**
-- [ ] 30-min Puffer zwischen Sessions (Moderator-Refokussierung!)
-- [ ] Max 3-4 Sessions/Tag/Moderator
-- [ ] Nicht zu viele Sessions am Stück (Burnout!)
+- [ ] 30-min buffer between sessions (moderator refocus!)
+- [ ] Max 3-4 sessions/day/moderator
+- [ ] Don't schedule too many sessions in a row (burnout!)
 
-**Während Session:**
-- [ ] Recording-Permission einholen (EXPLIZIT!)
-- [ ] Schweigen aushalten (10-20 Sek nach Antworten)
-- [ ] Nicht multitasken
-- [ ] Bei Abweichung: zurück zu Leitfaden führen
-- [ ] Probes nutzen bei oberflächlichen Antworten
+**During Session:**
+- [ ] Get recording permission (EXPLICITLY!)
+- [ ] Endure silence (10-20 sec after answers)
+- [ ] Don't multitask
+- [ ] If diverging: guide back to guide
+- [ ] Use probes for superficial answers
 
 **Post-Session:**
-- [ ] Sofort 5-10 min Team-Debrief (Eindrücke fresh!)
-- [ ] Recording backup sichern
-- [ ] Notes strukturieren innerhalb 24h
-- [ ] Key Quotes & Timestamps markieren
+- [ ] Immediate 5-10 min team debrief (impressions fresh!)
+- [ ] Backup recording
+- [ ] Structure notes within 24h
+- [ ] Mark key quotes & timestamps
 
 ---
 
@@ -476,42 +476,42 @@ Darf ich aufnehmen? Ihre Daten werden anonymisiert und nur intern genutzt. Sie k
 ### B2B Interviews
 
 **Characteristics:**
-- Kleinere, schwerer erreichbare Population
-- Höhere Incentives: **$100-$300+/hour** (1.5x Stundensatz)
-- Längere Lead Times (2-4 Wochen Planung)
-- Organizational Hierarchy verstehen
-- Multi-Stakeholder Decision-Making
+- Smaller, harder to reach population
+- Higher incentives: **$100-$300+/hour** (1.5x hourly rate)
+- Longer lead times (2-4 weeks planning)
+- Understand organizational hierarchy
+- Multi-stakeholder decision-making
 
 **Interview Focus:**
-- **Rollen verstehen:** User ≠ Purchaser ≠ Decision-Maker
-- **Workflows:** Business-Process-Fit critical
-- **Buying Process:** Multi-Stakeholder, Budget-Freigaben
-- **Contextual Inquiry:** Essential (im Arbeitsumfeld!)
-- **BEIDE interviewen:** End Users AND Decision-Makers
+- **Understand roles:** User ≠ Purchaser ≠ Decision-Maker
+- **Workflows:** Business-process-fit critical
+- **Buying Process:** Multi-stakeholder, budget approvals
+- **Contextual Inquiry:** Essential (in work environment!)
+- **Interview BOTH:** End Users AND Decision-Makers
 
 **Recruitment:**
-- Sales-Team-Relationships nutzen
-- LinkedIn Outreach
-- Industry Events
-- Existing Customer Base
+- Use sales team relationships
+- LinkedIn outreach
+- Industry events
+- Existing customer base
 
 ---
 
 ### B2C Interviews
 
 **Characteristics:**
-- Größere Population
-- Einfachere Rekrutierung
-- Niedrigere Incentives: **$50-$100**
-- Individuelles Decision-Making
-- Schnellere Turnaround
+- Larger population
+- Easier recruitment
+- Lower incentives: **$50-$100**
+- Individual decision-making
+- Faster turnaround
 
 **Interview Focus:**
-- Persönliche Needs & Pain Points
-- Emotions & Motivations
-- Usage Context (wo/wann/wie)
-- Social Influences
-- Habits & Routines
+- Personal needs & pain points
+- Emotions & motivations
+- Usage context (where/when/how)
+- Social influences
+- Habits & routines
 
 **Recruitment:**
 - User Interviews Platform
@@ -521,71 +521,71 @@ Darf ich aufnehmen? Ihre Daten werden anonymisiert und nur intern genutzt. Sie k
 
 ---
 
-## Top 5 Facilitator Mistakes (Vermeiden!)
+## Top 5 Facilitator Mistakes (Avoid!)
 
-### 1. Insuffizientes Rapport-Building
-**Problem:** Kalter Start, Nutzer öffnet sich nicht
-**Solution:** 5-10 min Warm-up mandatory, persönliche Connection herstellen
+### 1. Insufficient Rapport-Building
+**Problem:** Cold start, user doesn't open up
+**Solution:** 5-10 min warm-up mandatory, establish personal connection
 
-### 2. Nicht genug Probing
-**Problem:** Oberflächliche Antworten, keine Tiefe
-**Solution:** Probes Bank sichtbar halten, 10-20 Sek Schweigen aushalten
+### 2. Not Enough Probing
+**Problem:** Superficial answers, no depth
+**Solution:** Keep Probes Bank visible, endure 10-20 sec silence
 
-### 3. Multitasking während Interview
-**Problem:** Spaltet Aufmerksamkeit, verliert Rapport
-**Solution:** Recording ODER Notetaker nutzen, NICHT beides selbst machen
+### 3. Multitasking During Interview
+**Problem:** Splits attention, loses rapport
+**Solution:** Use recording OR notetaker, NOT both yourself
 
-### 4. Schlecht gemanagte Observers
-**Problem:** Zu viele Leute, Unterbrechungen, Nutzer fühlt sich unwohl
-**Solution:** Max 3 Observers, Rollen vorher klären, Silent Rule
+### 4. Poorly Managed Observers
+**Problem:** Too many people, interruptions, user feels uncomfortable
+**Solution:** Max 3 observers, clarify roles beforehand, silent rule
 
 ### 5. Leading Questions
-**Problem:** Biased Antworten, bestätigt nur Pre-Beliefs
-**Solution:** Neutral bleiben, Purpose vage halten, "kein richtig/falsch"
+**Problem:** Biased answers, only confirms pre-beliefs
+**Solution:** Stay neutral, keep purpose vague, "no right/wrong"
 
 ---
 
 ## Remote vs. In-Person
 
 ### Remote Interviews
-**Vorteile:**
-- ✅ Niedrigere Kosten (kein Travel)
-- ✅ Geografische Flexibilität
-- ✅ Einfacheres Recording (Zoom Transkription)
-- ✅ Mehr Sessions/Tag möglich
+**Advantages:**
+- ✅ Lower costs (no travel)
+- ✅ Geographic flexibility
+- ✅ Easier recording (Zoom transcription)
+- ✅ More sessions/day possible
 
-**Nachteile:**
-- ❌ Tech-Abhängigkeit (Internet-Probleme)
-- ❌ Schwerer non-verbale Cues zu lesen
-- ❌ Weniger natürliches Rapport
-- ❌ Ablenkungen im Home Office
+**Disadvantages:**
+- ❌ Tech dependency (internet issues)
+- ❌ Harder to read non-verbal cues
+- ❌ Less natural rapport
+- ❌ Distractions in home office
 
 **Best Practices:**
-- Zoom/Teams mit eingebauter Transkription
-- Backup Recording (OBS Studio)
-- Screen Share für Prototypes
-- Kamera AN für beide Seiten
+- Zoom/Teams with built-in transcription
+- Backup recording (OBS Studio)
+- Screen share for prototypes
+- Camera ON for both sides
 
 ---
 
 ### In-Person Interviews
-**Vorteile:**
-- ✅ Besseres Rapport
-- ✅ Einfacher non-verbale Cues beobachten
-- ✅ Natürlicher Kontext (Arbeitsumfeld!)
-- ✅ Weniger Tech-Abhängigkeit
+**Advantages:**
+- ✅ Better rapport
+- ✅ Easier to observe non-verbal cues
+- ✅ Natural context (work environment!)
+- ✅ Less tech dependency
 
-**Nachteile:**
-- ❌ Höhere Kosten (Travel, Location)
-- ❌ Geografisch limitiert
-- ❌ Aufwendigeres Setup
-- ❌ Weniger Sessions/Tag
+**Disadvantages:**
+- ❌ Higher costs (travel, location)
+- ❌ Geographically limited
+- ❌ More complex setup
+- ❌ Fewer sessions/day
 
 **Best Practices:**
-- Im natürlichen Arbeitsumfeld wenn möglich
-- Audio Recorder + Backup (Smartphone)
-- Getränke bereitstellen
-- Ruhiger, neutraler Raum
+- In natural work environment if possible
+- Audio recorder + backup (smartphone)
+- Provide beverages
+- Quiet, neutral room
 
 ---
 
@@ -605,111 +605,111 @@ framework: Mom Test + JTBD
 # Interview Guide: PM Tool Pain Points Discovery
 
 ## Research Questions
-1. Was sind die größten Frustrationen von PMs in ihrer täglichen Arbeit?
-2. Welche Workarounds nutzen sie aktuell?
-3. Wo liegt der größte Time Sink?
+1. What are the biggest frustrations for PMs in their daily work?
+2. What workarounds do they currently use?
+3. Where is the biggest time sink?
 
 ## Target Participants
 - **Who:** Product Managers, Scale-ups (50-200 employees)
-- **Screener:** Arbeitet täglich mit Jira/Confluence, min. 2 Jahre PM-Erfahrung
-- **Sample Size:** 10 Interviews
-- **Incentive:** €100 (B2B)
+- **Screener:** Works daily with Jira/Confluence, min. 2 years PM experience
+- **Sample Size:** 10 interviews
+- **Incentive:** $100 (B2B)
 
 ---
 
 ## Introduction (5 min)
 
-"Danke fürs Kommen! Wir untersuchen, wie Product Manager ihre tägliche Arbeit organisieren – keine Produktidee zu verkaufen, nur lernen.
+"Thanks for joining! We're researching how Product Managers organize their daily work – nothing to sell, just learning.
 
-Darf ich aufnehmen? Alles bleibt anonym, nur für interne Analyse.
+May I record this? Everything stays anonymous, for internal analysis only.
 
-Erzähl kurz von dir – was machst du, wie lange schon PM?"
+Tell me briefly about yourself – what do you do, how long have you been a PM?"
 
 ---
 
 ## Warm-up (5 min)
 
-- "Wie groß ist dein Team?"
-- "Welche Tools nutzt ihr aktuell?"
-- "Wie lange bist du schon in dieser Rolle?"
+- "How big is your team?"
+- "What tools do you currently use?"
+- "How long have you been in this role?"
 
 ---
 
 ## Main Questions (40 min)
 
-### Typischer Workflow
+### Typical Workflow
 **Question:**
-"Beschreibe einen typischen Arbeitstag – von morgens bis abends. Was machst du?"
+"Describe a typical workday – from morning to evening. What do you do?"
 
 **Probes:**
-- "Was passiert, wenn ein dringender Bug auftaucht?"
-- "Wie koordinierst du dich mit dem Dev-Team?"
-- "Wo verbringst du die meiste Zeit?"
+- "What happens when an urgent bug comes up?"
+- "How do you coordinate with the dev team?"
+- "Where do you spend most of your time?"
 
 ---
 
-### Letzte Frustration
+### Last Frustration
 **Question:**
-"Erzähl vom letzten Mal, als du in deiner Produktarbeit richtig frustriert warst – was ist passiert?"
+"Tell me about the last time you were really frustrated in your product work – what happened?"
 
 **Probes:**
-- "Was hättest du gebraucht, um das zu vermeiden?"
-- "Wie hast du das gelöst?"
-- "Wie oft passiert sowas?"
-- [15 Sek Schweigen aushalten!]
+- "What would you have needed to avoid that?"
+- "How did you solve it?"
+- "How often does something like this happen?"
+- [Endure 15 sec silence!]
 
 ---
 
 ### Tools & Workarounds
 **Question:**
-"Erzähl vom letzten Mal, als ein Tool dich im Stich gelassen hat – was wolltest du machen, was ist passiert?"
+"Tell me about the last time a tool let you down – what were you trying to do, what happened?"
 
 **Probes:**
-- "Welche Alternativen hast du probiert?"
-- "Was macht ein Tool für dich unverzichtbar?"
-- "Welche Workarounds hast du entwickelt?"
+- "What alternatives have you tried?"
+- "What makes a tool indispensable for you?"
+- "What workarounds have you developed?"
 
 ---
 
 ### Jira Comment Chaos (Specific Pain Point)
 **Question:**
-"Wie gehst du mit Jira Comments um? Erzähl vom letzten Mal, als du wichtige Info in Comments suchen musstest."
+"How do you handle Jira comments? Tell me about the last time you had to search for important info in comments."
 
 **Probes:**
-- "Wie lange hat das gedauert?"
-- "Was war frustrierend daran?"
-- "Wie würdest du das idealerweise lösen?"
+- "How long did that take?"
+- "What was frustrating about it?"
+- "How would you ideally solve this?"
 
 ---
 
 ## Wrap-up (5 min)
 
-"Was hätte ich noch fragen sollen? Was ist wichtig für deine Produktarbeit, worüber wir nicht gesprochen haben?"
+"What else should I have asked? What's important for your product work that we didn't discuss?"
 
-[20 Sek SCHWEIGEN]
+[20 sec SILENCE]
 
-"Mega, danke für deine Offenheit! Ich melde mich in 2 Wochen mit den Insights aus allen Interviews."
+"Awesome, thanks for your openness! I'll follow up in 2 weeks with insights from all interviews."
 
 ---
 
 ## Logistics
 
-**Rollen:**
+**Roles:**
 - Moderator: Hendrik
 - Notetaker: TBD
-- Observers: None (1:1 besser für Offenheit)
+- Observers: None (1:1 better for openness)
 
 **Materials:**
-- [ ] Interview Guide ausgedruckt
-- [ ] Zoom Recording + Transkription
+- [ ] Interview Guide printed
+- [ ] Zoom Recording + Transcription
 - [ ] Backup Audio (Smartphone)
-- [ ] Probes Bank vor mir
+- [ ] Probes Bank in front of me
 - [ ] Consent Form
 
 **Post-Session:**
-- [ ] 5 min Notes Review
-- [ ] Recording sichern
-- [ ] Key Quotes extrahieren
+- [ ] 5 min notes review
+- [ ] Backup recording
+- [ ] Extract key quotes
 ```
 
 ---
@@ -751,8 +751,8 @@ focus_areas:
 ## Next Steps After Guide Creation
 
 1. **Pilot with 1-2 People**
-   - Test alle Fragen
-   - Check Timing
+   - Test all questions
+   - Check timing
    - Identify confusing wording
    - Adjust before real sessions
 
@@ -762,18 +762,18 @@ focus_areas:
    - Send confirmation 24h before
 
 3. **Brief Team**
-   - Rollen klar
-   - Observer-Regeln
-   - Tools testen
+   - Roles clear
+   - Observer rules
+   - Test tools
 
 4. **Create Interview Folders**
    - Input: `/user_context/raw/interviews/[project-name]/`
    - Output: `/outputs/interviews/[project-name]/`
 
 5. **Run Sessions**
-   - Follow guide (aber flexibel!)
-   - Probes nutzen
-   - Schweigen aushalten
+   - Follow guide (but stay flexible!)
+   - Use probes
+   - Endure silence
    - Save transcripts/notes to input folder
 
 6. **Synthesize Findings**
