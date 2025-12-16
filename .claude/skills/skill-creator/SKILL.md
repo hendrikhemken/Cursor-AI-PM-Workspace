@@ -1,54 +1,47 @@
 ---
 name: skill-creator
-description: Create new Cursor Skills efficiently. Use when user says "create a skill", "new skill for...", "skill that does...", or asks how to structure a skill. Focuses on lean, core workflow only.
+description: Create new Cursor Skills efficiently. Use when user says "create a skill", "new skill for...", "skill that does...", or asks how to structure a skill. Focuses on lean, core workflow with proper CLAUDE.md registration.
 ---
 
 # Skill Creator
-*Create focused, minimal Cursor Skills*
+
+*Create focused, minimal Cursor Skills for the AI PM Operating System*
 
 ## When to Use
+
 - User wants to create a new Skill
 - User asks "how do I create a skill for..."
 - User mentions "skill" + specific use case
 
 ---
 
-## 📚 Official Documentation
-
-**Must-Read:**
-- 🔥 **Skills Documentation:** https://docs.claude.com/en/docs/claude-code/skills.md
-- 🔥 **Best Practices Guide:** https://docs.claude.com/en/docs/agents-and-tools/agent-skills/best-practices
-
-**Read these FIRST before creating any Skill!**
-
----
-
-## 🎯 Key Learnings Summary
+## 🎯 Key Principles
 
 **Context is a Public Good:**
-- Keep SKILL.md **< 500 lines** (split into files if bigger)
+- Keep SKILL.md **< 500 lines** (split into supporting files if bigger)
 - Every token competes with conversation history
-- Only add what Claude doesn't already know
+- Only add what the LLM doesn't already know
 
 **Description is Critical:**
 - ALWAYS write in **third person** ("Processes Excel files", not "I can help...")
 - Include **what it does + when to use it**
 - List **specific trigger keywords** (file types, scenarios, terms)
 
-**Progressive Disclosure:**
-- Keep references **one level deep** from SKILL.md (no nested references!)
-- Claude reads files on-demand (no context penalty until accessed)
-- Use forward slashes in paths (Unix-style: `reference/guide.md`)
+**Supporting Documents:**
+- Split complex skills into SKILL.md + supporting files
+- **IMPORTANT:** Supporting files are NOT auto-loaded!
+- SKILL.md must explicitly instruct to read supporting files
+- Keep references **one level deep** (no nested references!)
 
 **Workflows & Examples:**
-- Complex tasks → provide **checklist** Claude can copy & check off
+- Complex tasks → provide **checklist** the LLM can copy & check off
 - Show **input → output examples** (like regular prompting)
 - Use **feedback loops** for quality-critical tasks (validate → fix → repeat)
 
 **Anti-Patterns to Avoid:**
 - ❌ Vague descriptions ("helps with stuff")
-- ❌ Windows-style paths (`scripts\helper.py`)
 - ❌ Nested references (SKILL.md → advanced.md → details.md)
+- ❌ Assuming supporting files are auto-loaded
 - ❌ Time-sensitive info ("before August 2025...")
 - ❌ Inconsistent terminology (mix "field", "box", "element")
 - ❌ Too many options without clear default
@@ -58,27 +51,42 @@ description: Create new Cursor Skills efficiently. Use when user says "create a 
 ## Core Workflow
 
 ### 1. Clarify Use Case
+
 Ask user:
 - **What's the core task?** (1 sentence)
 - **When should it trigger?** (specific keywords/scenarios)
-- **Supporting files needed?** (templates, scripts, references)
+- **Supporting files needed?** (templates, guides, references)
 - **🔒 Public or Private Skill?**
-  - **Public:** Synced to GitHub, listed in plugin.json & CLAUDE.md (shareable)
-  - **Private:** In .gitignore, NOT in plugin.json/CLAUDE.md (personal data safe)
+  - **Public:** Listed in CLAUDE.md, synced to GitHub (shareable)
+  - **Private:** In .gitignore, NOT in CLAUDE.md (personal data safe)
 
 ### 2. Design Skill Structure
+
 **Minimal by default:**
 ```
 .claude/skills/[skill-name]/
 └── SKILL.md
 ```
 
-**Add only if needed:**
-- Reference docs (if complex domain knowledge)
-- Templates (if user creates repeated structures)
-- Scripts (if external tooling required)
+**Add supporting files only if needed:**
+```
+.claude/skills/[skill-name]/
+├── SKILL.md           # Main skill file (< 500 lines)
+├── TEMPLATES.md       # Templates for outputs
+├── GUIDE.md           # Detailed how-to guide
+└── reference/         # Reference materials
+    └── best-practices.md
+```
+
+**When to split:**
+- SKILL.md exceeds 500 lines
+- Complex domain knowledge needed
+- Reusable templates exist
+- Multiple workflow variations
 
 ### 3. Create SKILL.md
+
+**Basic Structure:**
 ```yaml
 ---
 name: [skill-name]
@@ -87,8 +95,54 @@ description: [What it does + When to use it. THIRD PERSON. Specific triggers!]
 
 # [Skill Name]
 
+## When to Use
+[Specific triggers and scenarios]
+
 ## Instructions
 [Step-by-step workflow - keep it to 3-7 steps max]
+
+## Examples
+[1-2 concrete examples showing input → output]
+```
+
+**With Supporting Files Structure:**
+```yaml
+---
+name: [skill-name]
+description: [What it does + When to use it. THIRD PERSON. Specific triggers!]
+---
+
+# [Skill Name]
+
+## When to Use
+[Specific triggers and scenarios]
+
+---
+
+## 📚 Supporting Files
+
+**Read these files when needed during the workflow:**
+
+| File | Purpose | When to Read |
+|------|---------|--------------|
+| [TEMPLATES.md](TEMPLATES.md) | Output templates | Before creating deliverables |
+| [GUIDE.md](GUIDE.md) | Detailed instructions | For complex scenarios |
+| [reference/best-practices.md](reference/best-practices.md) | Domain knowledge | When applying best practices |
+
+---
+
+## Instructions
+
+### 1. [First Step]
+[Instructions...]
+
+### 2. [Step That Needs Templates]
+**→ Read [TEMPLATES.md](TEMPLATES.md) first**
+[Then proceed with...]
+
+### 3. [Step That Needs Guide]
+**→ For complex cases, read [GUIDE.md](GUIDE.md)**
+[Instructions...]
 
 ## Examples
 [1-2 concrete examples showing input → output]
@@ -100,7 +154,31 @@ description: [What it does + When to use it. THIRD PERSON. Specific triggers!]
 - ✅ **What + When** (functionality + use cases)
 - ✅ **Max 1024 chars** (concise!)
 
-### 4. Configure Public/Private Mode
+### 4. Register in CLAUDE.md (PUBLIC Skills only)
+
+**This is the critical step for skill discovery!**
+
+Add to `## 📋 Available Skills` section in `CLAUDE.md`:
+
+```markdown
+**[Skill Name]** → `.claude/skills/[skill-name]/SKILL.md`
+Use when: [trigger keywords], [scenarios], [file types], or [specific context].
+```
+
+**Example Entry:**
+```markdown
+**User Stories** → `.claude/skills/user-stories/SKILL.md`
+Use when: Writing user stories from PRDs, breaking down epics, sprint planning, backlog work, bug tickets, or acceptance criteria.
+```
+
+**With special notes (if needed):**
+```markdown
+**User Context** → `.claude/skills/user-context/SKILL.md`
+Use when: First-time setup, onboarding, updating company/team info, new job, or "configure my context."
+**Note:** This skill updates the User Context section at the bottom of this file.
+```
+
+### 5. Configure Public/Private Mode
 
 **If PRIVATE Skill:**
 1. **Add to `.gitignore`:**
@@ -108,80 +186,121 @@ description: [What it does + When to use it. THIRD PERSON. Specific triggers!]
    # Private Skills (personal data, not synced to GitHub)
    .claude/skills/[skill-name]/
    ```
-2. **DO NOT add to `plugin.json`** (skip step 5)
-3. **DO NOT add to `CLAUDE.md`** (skip step 6)
+2. **DO NOT add to `CLAUDE.md`** (skill stays local only)
 
 **If PUBLIC Skill:**
 1. **Skip .gitignore** (will be synced to GitHub)
-2. **Proceed to steps 5 & 6** (add to plugin.json & CLAUDE.md)
+2. **Add to `CLAUDE.md`** (step 4 above)
 
-### 5. Update plugin.json (PUBLIC Skills only)
-
-Add to `.claude-plugin/plugin.json` in `components.skills` array:
-```json
-{
-  "name": "[skill-name]",
-  "description": "[One-line description matching SKILL.md]"
-}
-```
-
-### 6. Update CLAUDE.md (PUBLIC Skills only)
-
-Add to `## 📋 Available Skills` section:
-```markdown
-- **`[skill-name]`** - [Brief description]
-  - Location: `.claude/skills/[skill-name]/SKILL.md`
-  - Trigger: "[keywords]", "[scenarios]", "[file types]"
-```
-
-### 7. Test Trigger Description
-
-**✅ Good Examples:**
-
-*Example 1 - PRD Creation:*
-"Create Product Requirements Documents (PRDs) in Confluence for Features/Epics. Use when user mentions 'create PRD', 'Product Requirements', 'Confluence PRD', 'Feature Document', or 'document Epic'."
-
-*Example 2 - PDF Processing:*
-"Extract text and tables from PDF files, fill forms, merge documents. Use when working with PDF files or when the user mentions PDFs, forms, or document extraction."
-
-*Example 3 - Git Commits:*
-"Generate descriptive commit messages by analyzing git diffs. Use when the user asks for help writing commit messages or reviewing staged changes."
-
-**❌ Bad Examples:**
-- "Helps with documents." (too vague)
-- "I can help you process Excel files." (first person, not third!)
-- "Processes data." (what data? when?)
-
-### 8. Validate & Iterate
+### 6. Test & Validate
 
 **Functionality Test:**
-- Test: Ask Claude a question matching the description
-- Debug: If not triggering → check description specificity
+- Test: Start a new conversation and say something matching the description
+- Check: Does the LLM recognize the skill should be used?
+- Debug: If not triggering → check description specificity in CLAUDE.md
 - Refine: Remove unnecessary steps, keep it lean
 
-**Public/Private Validation Checklist:**
+**Supporting Files Test:**
+- Test: Does the LLM read supporting files when instructed?
+- Check: Are the file paths correct (relative paths)?
+- Debug: If not reading → make the instruction more explicit in SKILL.md
+
+**Validation Checklist:**
 
 **For PRIVATE Skills:**
 - ✅ Skill folder added to `.gitignore`
-- ✅ Skill NOT listed in `.claude-plugin/plugin.json`
 - ✅ Skill NOT listed in `CLAUDE.md`
-- ✅ Skill NOT mentioned in `.claude-plugin/marketplace.json`
 
 **For PUBLIC Skills:**
 - ✅ Skill NOT in `.gitignore` (will sync to GitHub)
-- ✅ Skill added to `.claude-plugin/plugin.json` components.skills array
-- ✅ Skill added to `CLAUDE.md` Available Skills section
-- ✅ Description matches across SKILL.md, plugin.json, and CLAUDE.md
+- ✅ Skill added to `CLAUDE.md` → `## 📋 Available Skills` section
+- ✅ Description is specific with trigger keywords
+- ✅ Path to SKILL.md is correct
 
-**Quick Validation Commands:**
-```bash
-# Check if skill is private (should appear if private)
-grep "[skill-name]" .gitignore
+---
 
-# Check if skill is public (should appear if public)
-grep "[skill-name]" .claude-plugin/plugin.json
-grep "[skill-name]" CLAUDE.md
+## 📖 Supporting Files: Detailed Guide
+
+### Why Supporting Files?
+
+Skills often need more context than fits in 500 lines:
+- **Templates** for consistent outputs
+- **Guides** for complex workflows
+- **Reference materials** for domain knowledge
+- **Examples** for edge cases
+
+### Critical Rule: Explicit Loading
+
+**⚠️ Supporting files are NOT automatically loaded!**
+
+The LLM only reads SKILL.md initially. Supporting files must be:
+1. Referenced with relative paths in SKILL.md
+2. Explicitly instructed to be read at the right workflow step
+
+### Pattern 1: Read Before Starting
+
+Use when supporting files contain essential context:
+
+```markdown
+## Instructions
+
+**Before starting, read:**
+- [GUIDE.md](GUIDE.md) - Complete workflow details
+- [TEMPLATES.md](TEMPLATES.md) - Output templates
+
+### 1. [First Step]
+...
 ```
+
+### Pattern 2: Read On-Demand
+
+Use when supporting files are only needed for specific steps:
+
+```markdown
+## Instructions
+
+### 1. Gather Requirements
+[Instructions...]
+
+### 2. Create Output
+**→ Read [TEMPLATES.md](TEMPLATES.md) for the correct format**
+[Then create the output using the template...]
+
+### 3. Handle Edge Cases
+**→ If complex scenario, read [GUIDE.md](GUIDE.md) for details**
+[Instructions...]
+```
+
+### Pattern 3: Conditional Reading
+
+Use when different files apply to different scenarios:
+
+```markdown
+## Instructions
+
+### 1. Identify Workflow Type
+
+**Workflow A: PRD → User Stories**
+- Trigger: "PRD", "Requirements Document"
+- **→ Read [PRD.md](PRD.md) for this workflow**
+
+**Workflow B: Epic Breakdown**
+- Trigger: "break down epic", "EPIC-123"
+- **→ Read [BREAKDOWN.md](BREAKDOWN.md) for this workflow**
+
+### 2. [Continue with identified workflow...]
+```
+
+### File Naming Conventions
+
+| File | Purpose |
+|------|---------|
+| `SKILL.md` | Main skill file (required) |
+| `TEMPLATES.md` | Output templates |
+| `GUIDE.md` | Detailed how-to guide |
+| `WORKFLOW.md` | Multi-step workflow details |
+| `EXAMPLES.md` | Extended examples |
+| `reference/*.md` | Reference materials (subfolder) |
 
 ---
 
@@ -191,32 +310,27 @@ grep "[skill-name]" CLAUDE.md
 - **One capability per Skill** (focused scope)
 - **Third-person descriptions** with specific trigger keywords
 - **Keep SKILL.md < 500 lines** (split into files if needed)
-- **One-level-deep references** (SKILL.md → reference.md, NOT SKILL.md → advanced.md → details.md)
+- **Explicit read instructions** for supporting files
+- **One-level-deep references** (SKILL.md → reference.md, NOT SKILL.md → a.md → b.md)
 - **3-7 step workflows** (digestible, with checklists for complex tasks)
 - **Concrete input → output examples** (show don't tell)
 - **Consistent terminology** throughout (pick one term, stick with it)
-- **Unix-style paths** (`reference/guide.md`, not `reference\guide.md`)
-- **Feedback loops** for quality-critical tasks (validate → fix → repeat)
-- **Build evaluations first** (test before extensive documentation)
-- **Iterate with Claude** (use one instance to create, another to test)
+- **Test the trigger description** (does it actually match user intent?)
 
 **❌ DON'T:**
 - Bundle multiple unrelated tasks in one Skill
 - Use **first person** in descriptions ("I can help...")
 - Use **second person** in descriptions ("You can use this to...")
-- Vague descriptions ("helps with stuff")
-- 20-step workflows with edge cases everywhere
-- **Nested references** (keep one level deep from SKILL.md!)
-- **Windows-style paths** (`scripts\helper.py`)
-- **Time-sensitive information** ("before August 2025...")
-- **Inconsistent terminology** (don't mix "field", "box", "element")
-- Offer **too many options** without clear default
+- Assume supporting files are auto-loaded
+- Create vague descriptions ("helps with stuff")
+- Create 20-step workflows with edge cases everywhere
+- Create **nested references** (keep one level deep!)
 - Over-engineer before validation
 - Create supporting files "just in case"
 
 **🔒 Public/Private Decision Guide:**
 - ✅ **Make PRIVATE if:**
-  - Contains personal company data (CLAUDE.md User Context section, client names)
+  - Contains personal company data (client names, internal URLs)
   - Uses sensitive API keys or credentials
   - Includes proprietary workflows or methodologies
   - References internal tools/systems not shareable
@@ -228,9 +342,7 @@ grep "[skill-name]" CLAUDE.md
 
 ---
 
-## Template: New Skill
-
-When creating a new Skill, start with this:
+## Template: Minimal Skill
 
 ```yaml
 ---
@@ -240,11 +352,20 @@ description: [THIRD PERSON. What it does + when to use it. Specific triggers. Ma
 
 # [Title Case Name]
 
+## When to Use
+- [Trigger scenario 1]
+- [Trigger scenario 2]
+- Keywords: "[keyword1]", "[keyword2]", "[keyword3]"
+
+---
+
 ## Instructions
 
 1. [First step]
 2. [Second step]
 3. [Third step]
+
+---
 
 ## Examples
 
@@ -253,52 +374,194 @@ Input: [User request]
 Output: [What Skill produces]
 ```
 
-**Description Template:**
-```
-[What the Skill does]. Use when user mentions '[keyword 1]', '[keyword 2]',
-'[file type]', '[scenario]', or [specific context].
-```
+---
 
-**Example:**
-```
-Extract text and tables from PDF files, fill forms, merge documents.
-Use when working with PDF files or when the user mentions PDFs, forms,
-or document extraction.
+## Template: Skill with Supporting Files
+
+```yaml
+---
+name: [kebab-case-name]
+description: [THIRD PERSON. What it does + when to use it. Specific triggers. Max 1024 chars.]
+---
+
+# [Title Case Name]
+
+## When to Use
+- [Trigger scenario 1]
+- [Trigger scenario 2]
+- Keywords: "[keyword1]", "[keyword2]", "[keyword3]"
+
+---
+
+## 📚 Supporting Files
+
+**Read these files when needed during the workflow:**
+
+| File | Purpose | When to Read |
+|------|---------|--------------|
+| [TEMPLATES.md](TEMPLATES.md) | Output templates | Before creating deliverables |
+| [GUIDE.md](GUIDE.md) | Detailed instructions | For complex scenarios |
+
+---
+
+## Instructions
+
+### 1. [First Step]
+[Instructions...]
+
+### 2. [Step Needing Templates]
+**→ Read [TEMPLATES.md](TEMPLATES.md) first**
+[Then proceed with...]
+
+### 3. [Step Needing Guide]
+**→ For complex cases, read [GUIDE.md](GUIDE.md)**
+[Instructions...]
+
+---
+
+## Examples
+
+**Example 1:**
+Input: [User request]
+Output: [What Skill produces]
 ```
 
 ---
 
-## Example: Public vs. Private Skill
+## Template: CLAUDE.md Entry
 
-### Example 1: PUBLIC Skill (okr-expert)
-**Why Public?**
-- Generic OKR methodology (Wodtke + Klau)
-- No personal company data
-- Adds value to anyone using AI PM Operating System
-- Safe to share on GitHub
+Add this to `## 📋 Available Skills` section in `CLAUDE.md`:
 
-**Implementation:**
-- ✅ SKILL.md created in `.claude/skills/okr-expert/`
-- ✅ Listed in `.claude-plugin/plugin.json`
-- ✅ Listed in `CLAUDE.md`
-- ❌ NOT in `.gitignore`
+```markdown
+**[Skill Name]** → `.claude/skills/[skill-name]/SKILL.md`
+Use when: [trigger keywords], [scenarios], [file types], or [specific context].
+```
 
-### Example 2: PRIVATE Skill (client-specific automation)
+**With notes:**
+```markdown
+**[Skill Name]** → `.claude/skills/[skill-name]/SKILL.md`
+Use when: [trigger keywords], [scenarios], [file types], or [specific context].
+**Note:** [Any special behavior or considerations]
+```
+
+---
+
+## Examples
+
+### Example 1: Minimal Skill (okr-friday)
+
+**SKILL.md:**
+```yaml
+---
+name: okr-friday
+description: Weekly OKR wrap-up for Fridays. Celebrates wins, reviews progress, updates confidence scores. Use when user mentions "Friday", "weekly review", "celebrate wins", or "end of week".
+---
+
+# OKR Friday
+
+## When to Use
+- Friday / end of week
+- Weekly review / retro
+- Celebrating wins
+- Updating weekly progress
+
+## Instructions
+
+1. Ask about wins this week
+2. Review OKR progress vs. commitments
+3. Update confidence scores
+4. Celebrate achievements
+5. Note learnings for next week
+
+## Examples
+
+**Input:** "It's Friday, let's wrap up the week"
+**Output:** Guided review of wins, progress update, confidence adjustment
+```
+
+**CLAUDE.md Entry:**
+```markdown
+**OKR Friday** → `.claude/skills/okr-friday/SKILL.md`
+Use when: Friday/end of week, celebrating wins, weekly review, or reflecting on OKR progress.
+```
+
+---
+
+### Example 2: Skill with Supporting Files (user-stories)
+
+**Folder Structure:**
+```
+.claude/skills/user-stories/
+├── SKILL.md
+├── BREAKDOWN.md
+├── PRD.md
+├── TEMPLATES.md
+└── GUIDE.md
+```
+
+**SKILL.md (excerpt):**
+```yaml
+---
+name: user-stories
+description: Create User Stories from PRDs, break down EPICs, write standalone stories. Use when user mentions "PRD", "Epic", "User Stories", "break down", "Backlog", or "Sprint Planning".
+---
+
+# User Stories & Epic Breakdown
+
+## 📚 Supporting Files
+
+| File | Purpose | When to Read |
+|------|---------|--------------|
+| [PRD.md](PRD.md) | PRD → Stories workflow | When working from a PRD |
+| [BREAKDOWN.md](BREAKDOWN.md) | Epic breakdown logic | When breaking down an epic |
+| [TEMPLATES.md](TEMPLATES.md) | Story templates | Before creating stories |
+
+## Instructions
+
+### 1. Identify Workflow
+
+**Workflow A: PRD → User Stories**
+- Trigger: "PRD", "Requirements Document"
+- **→ Read [PRD.md](PRD.md) for this workflow**
+
+**Workflow B: Epic Breakdown**
+- Trigger: "break down epic", "EPIC-123"
+- **→ Read [BREAKDOWN.md](BREAKDOWN.md) for this workflow**
+
+### 2. Gather Context
+...
+
+### 3. Create Stories
+**→ Read [TEMPLATES.md](TEMPLATES.md) for story format**
+...
+```
+
+**CLAUDE.md Entry:**
+```markdown
+**User Stories** → `.claude/skills/user-stories/SKILL.md`
+Use when: Writing user stories from PRDs, breaking down epics, sprint planning, backlog work, bug tickets, or acceptance criteria.
+```
+
+---
+
+### Example 3: Private Skill
+
 **Why Private?**
-- References specific client company names
-- Uses internal tool URLs/credentials
-- Contains proprietary methodologies
-- Should NOT be on public GitHub
+- References specific client names
+- Contains internal tool URLs
+- Uses proprietary methodologies
 
 **Implementation:**
-- ✅ SKILL.md created in `.claude/skills/client-automation/`
-- ✅ Added to `.gitignore`: `.claude/skills/client-automation/`
-- ❌ NOT in `.claude-plugin/plugin.json`
-- ❌ NOT in `CLAUDE.md`
 
-**Example Private Skills:**
-- `client-automation/` - Contains client-specific workflows
-- `my-company-data/` - Contains proprietary company data
+1. Create `.claude/skills/client-automation/SKILL.md`
+2. Add to `.gitignore`:
+   ```
+   # Private Skills
+   .claude/skills/client-automation/
+   ```
+3. **DO NOT** add to `CLAUDE.md`
+
+The skill works locally but won't sync to GitHub or be discoverable by others.
 
 ---
 
@@ -309,19 +572,9 @@ or document extraction.
 - 🎯 Add complexity ONLY when proven need
 - 🎯 One focused task per Skill
 - 🎯 No over-engineering
+- 🎯 Files over configuration (portable across setups)
 
 ---
 
-## References
-
-**Official Anthropic Docs:**
-- 🔥 [Claude Code Skills Documentation](https://docs.claude.com/en/docs/claude-code/skills.md)
-- 🔥 [Skill Authoring Best Practices](https://docs.claude.com/en/docs/agents-and-tools/agent-skills/best-practices)
-
-**Project-Specific:**
-- `/CLAUDE.md` (Minimalismus-Prinzip)
-- `.claude/skills/` (existing Skills for examples)
-
----
-
-*Created with Cursor AI PM Operating System*
+*Skill Creator for Cursor AI PM Operating System*
+*Beyond 7, 2025*

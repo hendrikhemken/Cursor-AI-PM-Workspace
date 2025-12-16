@@ -7,6 +7,10 @@ description: Guides users through setting up or updating company, product, and t
 
 Guides Product Managers through collecting comprehensive context about their company, product, and team. This context enables all other AI PM Operating System skills (OKRs, PRDs, User Stories, etc.) to provide tailored recommendations.
 
+**⚠️ CRITICAL:** This skill updates the **User Context section at the bottom of `CLAUDE.md`**. This is the single source of truth for all context - every other skill reads from here!
+
+---
+
 ## When to Use
 
 **Init Mode (New User):**
@@ -20,17 +24,26 @@ Guides Product Managers through collecting comprehensive context about their com
 - Generic update requests: "update my info", "refresh data", "change context"
 - Existing context needs updating
 
+---
+
 ## Instructions
 
 ### 1. Detect Mode
 
-Check `CLAUDE.md` → "📋 USER CONTEXT" section (starting around line 455):
-- **If placeholders or empty:** Init Mode (collect all context)
-- **If populated:** Update Mode (ask what changed, update specific sections)
+**Read `CLAUDE.md` and find the `# 📋 USER CONTEXT` section** (near the bottom of the file).
+
+Look for the `⚙️ Context Status` code block:
+```yaml
+company_name: Your Company Name
+last_updated: YYYY-MM-DD
+```
+
+- **If placeholders present** (e.g., "Your Company Name", "YYYY-MM-DD"): → **Init Mode** (collect all context)
+- **If populated with real data:** → **Update Mode** (ask what changed, update specific sections)
 
 ### 2. Progressive Question Flow
 
-Ask questions ONE AT A TIME in conversational style. Guide the user through the process. Don't overwhelm the user with too many questions at once.
+Ask questions **ONE AT A TIME** in conversational style. Guide the user through the process. Don't overwhelm the user with too many questions at once.
 
 **Core Questions (Must-Have):**
 
@@ -120,20 +133,35 @@ After collecting all info:
 - Ask: "Does this look correct? Anything to adjust?"
 - Give user chance to correct before writing to file
 
-### 4. Write to File
+### 4. Write to CLAUDE.md
 
-Update `CLAUDE.md` → "📋 USER CONTEXT" section:
+**Update the `# 📋 USER CONTEXT` section in `CLAUDE.md`:**
+
 - **Init Mode:** Fill in all sections (🏢 Company Overview, 👨‍💼 Team Structure, 🛠️ Product & Tech, etc.)
 - **Update Mode:** Update only changed sections, preserve rest
 - **Language Preference:** Update "💡 User Preferences" section with chosen language (en/de)
-- **Team Members:** If collected in Step 9.5, update "👨‍💼 Team Structure" section in CLAUDE.md
+- **Team Members:** If collected in Step 9.5, update "👨‍💼 Team Structure" section
+
+**Sections to Update:**
+
+| Section | What Goes There |
+|---------|-----------------|
+| `⚙️ Context Status` | company_name, industry, company_type, team_size, etc. (YAML block) |
+| `🏢 Company Overview` | Vision, Mission, Value Proposition, Stage |
+| `🎯 Product Strategy` | Product Vision, Portfolio, Differentiators, Current Focus |
+| `👥 Target Audience` | Customer Segment, ICP, Pain Points, Sales Process |
+| `🛠️ Product & Tech` | Product Type, Tech Stack, PM Tools, Development Stage |
+| `👨‍💼 Team Structure` | Team Size, Decision-Making Style, Team Members |
+| `📊 Business Context` | Business Model, Revenue Stage |
+| `🎯 Strategic Context` | North Star Metric, Current Quarter Focus, Constraints |
+| `🏆 Competitors & Market` | Direct/Indirect Competitors, Competitive Advantages |
+| `💡 User Preferences` | Preferred Language, Communication Style |
 
 **Important:**
-- Update `last_updated` field to current date
+- Update `last_updated` field to current date (format: YYYY-MM-DD)
 - Keep existing content that wasn't changed (Update Mode)
-- Follow the existing section structure in CLAUDE.md's User Context area
-- Team members go in "👨‍💼 Team Structure" section in CLAUDE.md
-- Language preference goes in "💡 User Preferences" section in CLAUDE.md
+- Follow the existing section structure in CLAUDE.md
+- Don't create new sections - use the existing template structure
 
 **Team Members Format:**
 ```markdown
@@ -156,6 +184,8 @@ After writing:
   - "Want to create your first OKRs?" (if no OKRs exist)
   - "Ready to create a PRD?" (if context complete)
   - "Need help with anything else?"
+
+---
 
 ## Examples
 
@@ -208,7 +238,7 @@ Does this look correct?"
 
 User: "Yes!"
 
-Claude: "✅ Context saved to CLAUDE.md (User Context section)!
+Claude: "✅ Context saved to CLAUDE.md!
 
 You're all set up. 🎉
 
@@ -240,6 +270,8 @@ Claude: "✅ Updated! Your context now reflects:
 Since you're now at a larger company, you might want to switch from weekly to quarterly OKR rhythm (Klau approach). Want help with that?"
 ```
 
+---
+
 ## Edge Cases
 
 **User doesn't know something:**
@@ -255,6 +287,33 @@ Since you're now at a larger company, you might want to switch from weekly to qu
 - Ask about portfolio structure
 - Keep it simple - freetext description of products
 - Don't overcomplicate with nested structures
+
+**Placeholders in CLAUDE.md:**
+If you see values like:
+- `Your Company Name`
+- `YYYY-MM-DD`
+- `[What's your company's 1-2 year vision?]`
+
+These are placeholders → Treat as Init Mode and collect all context.
+
+---
+
+## Why This Matters
+
+**This context powers EVERYTHING:**
+- **OKR Expert:** Uses company type to recommend Wodtke vs. Klau approach
+- **User Stories:** Uses dev team structure for story breakdown
+- **PRD Creator:** Uses product context for requirements
+- **Jira Comment Digest:** Uses team member mapping for role context
+
+**Without good context:**
+- Recommendations will be generic
+- Skills won't adapt to company size/type
+- OKR approach might be wrong for your stage
+
+**Worth taking 5 minutes to set up properly!**
+
+---
 
 ## Notes
 
@@ -279,3 +338,4 @@ Since you're now at a larger company, you might want to switch from weekly to qu
 ---
 
 *Part of Cursor AI PM Operating System - Your daily PM assistant*
+*Beyond 7, 2025*
