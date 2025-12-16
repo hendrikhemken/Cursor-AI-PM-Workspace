@@ -11,19 +11,28 @@ Facilitate a **15-minute** Monday morning check-in to set commitments for the we
 
 ## Instructions
 
-### 1. Identify Current Week
-- What's today's date?
-- Which week are we in? (Calculate from Q4 start date)
+### 1. Identify Active OKR File
+**First, read:** `/outputs/okrs/CURRENT_WEEK.md`
 
-### 2. Read Current OKRs
-**Load:** `/outputs/okrs/Q4-2025-OKRs.md`
+**Extract from front matter:**
+- `quarter:` field (e.g., `Q1 2026`, `Q4 2025`)
+- Convert to filename: `Q1-2026-OKRs.md`, `Q4-2025-OKRs.md`
+
+**Main OKR file:** `/outputs/okrs/[QX-YYYY]-OKRs.md`
+
+### 2. Identify Current Week
+- What's today's date?
+- Which week are we in? (Calculate from quarter start date in CURRENT_WEEK.md)
+
+### 3. Read Current OKRs
+**Load:** `/outputs/okrs/[QX-YYYY]-OKRs.md` (from Step 1)
 
 **Find:**
 - All Key Results
 - Current progress
 - Last week's commitments
 
-### 3. Ask For Each KR
+### 4. Ask For Each KR
 For **EACH** Key Result:
 - "What's your confidence NOW (0-10) for hitting [KR target] by [end date]?"
 - "What are 1-2 CONCRETE actions you'll do THIS WEEK?"
@@ -32,8 +41,8 @@ For **EACH** Key Result:
 - ❌ "Work on client stuff" → Too vague!
 - ✅ "Send proposal to Client A's CTO" → Specific!
 
-### 4. Update OKR File
-Update `/outputs/okrs/Q4-2025-OKRs.md` for current week:
+### 5. Update OKR File
+Update `/outputs/okrs/[QX-YYYY]-OKRs.md` (the active OKR file from Step 1) for current week:
 
 ```markdown
 ### Week X (Date Range)
@@ -49,7 +58,7 @@ Update `/outputs/okrs/Q4-2025-OKRs.md` for current week:
 - KRN: X/10
 ```
 
-### 5. Update CURRENT_WEEK.md
+### 6. Update CURRENT_WEEK.md
 **IMPORTANT:** Always update `/outputs/okrs/CURRENT_WEEK.md` with:
 
 - Week number & period
@@ -60,7 +69,7 @@ Update `/outputs/okrs/Q4-2025-OKRs.md` for current week:
 
 **This is the Single Source of Truth for the current week!**
 
-### 6. Summarize & Close
+### 7. Summarize & Close
 **Provide:**
 - This week's focus (4-8 key actions)
 - Any confidence drops or blockers flagged
@@ -114,8 +123,12 @@ See you Friday! 🎉
 
 ## File Reference
 
+**Determine active OKR file:**
+1. Read `CURRENT_WEEK.md` → extract `quarter:` from front matter
+2. Construct filename: `Q1 2026` → `Q1-2026-OKRs.md`
+
 **Update (2 files!):**
-1. `/outputs/okrs/Q4-2025-OKRs.md` (main OKR file - archive of all weeks)
+1. `/outputs/okrs/[QX-YYYY]-OKRs.md` (main OKR file - archive of all weeks)
 2. `/outputs/okrs/CURRENT_WEEK.md` (current week only - Single Source of Truth!)
 
 **CRITICAL:** Both files must be updated every Monday!

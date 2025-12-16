@@ -11,24 +11,33 @@ Facilitate a **15-minute** Friday afternoon check-in to celebrate wins and captu
 
 ## Instructions
 
-### 1. Identify Current Week
-- What's today's date?
-- Which week are we closing? (Calculate from Q4 start date)
+### 1. Identify Active OKR File
+**First, read:** `/outputs/okrs/CURRENT_WEEK.md`
 
-### 2. Read Current OKRs & Monday Commitments
-**Load:** `/outputs/okrs/Q4-2025-OKRs.md`
+**Extract from front matter:**
+- `quarter:` field (e.g., `Q1 2026`, `Q4 2025`)
+- Convert to filename: `Q1-2026-OKRs.md`, `Q4-2025-OKRs.md`
+
+**Main OKR file:** `/outputs/okrs/[QX-YYYY]-OKRs.md`
+
+### 2. Identify Current Week
+- What's today's date?
+- Which week are we closing? (Calculate from quarter start date in CURRENT_WEEK.md)
+
+### 3. Read Current OKRs & Monday Commitments
+**Load:** `/outputs/okrs/[QX-YYYY]-OKRs.md` (from Step 1)
 
 **Find:**
 - This week's Monday Commitments
 - All Key Results (current scores)
 - Confidence levels from Monday
 
-### 3. Check What Got Done
+### 4. Check What Got Done
 - "Let's look at what you committed to Monday..."
 - "Which did you complete? Which didn't happen?"
 - Mark checkboxes: `[ ]` → `[x]` for completed
 
-### 4. Celebrate & Learn
+### 5. Celebrate & Learn
 **Ask:**
 - "What are you celebrating this week?" (big & small wins!)
 - "What worked this week?"
@@ -40,13 +49,13 @@ Facilitate a **15-minute** Friday afternoon check-in to celebrate wins and captu
 - Progress (even 5%)
 - Learning ("X doesn't work" is a win!)
 
-### 5. Update Progress
+### 6. Update Progress
 **For EACH KR:**
 - "Did this KR move forward this week? By how much?"
 - Update "Current" values in the file
 
-### 6. Update OKR File
-Update `/outputs/okrs/Q4-2025-OKRs.md`:
+### 7. Update OKR File
+Update `/outputs/okrs/[QX-YYYY]-OKRs.md` (the active OKR file from Step 1):
 
 **Weekly section:**
 ```markdown
@@ -69,7 +78,7 @@ Update `/outputs/okrs/Q4-2025-OKRs.md`:
 **KR section (top of file):**
 - Update "Current" values for each KR
 
-### 7. Update CURRENT_WEEK.md
+### 8. Update CURRENT_WEEK.md
 **IMPORTANT:** Update `/outputs/okrs/CURRENT_WEEK.md` with:
 
 - Mark completed checkboxes [x]
@@ -78,7 +87,7 @@ Update `/outputs/okrs/Q4-2025-OKRs.md`:
 
 **This keeps the current week view accurate!**
 
-### 8. Summarize & Close
+### 9. Summarize & Close
 **Provide:**
 - 2-3 key wins highlighted
 - 1-2 key learnings captured
@@ -147,8 +156,12 @@ Enjoy your weekend - see you Monday! 🚀
 
 ## File Reference
 
+**Determine active OKR file:**
+1. Read `CURRENT_WEEK.md` → extract `quarter:` from front matter
+2. Construct filename: `Q1 2026` → `Q1-2026-OKRs.md`
+
 **Update (2 files!):**
-1. `/outputs/okrs/Q4-2025-OKRs.md` (main OKR file - archive of all weeks)
+1. `/outputs/okrs/[QX-YYYY]-OKRs.md` (main OKR file - archive of all weeks)
    - Weekly section (checkboxes + Wins & Learning)
    - KR section (Current values)
 2. `/outputs/okrs/CURRENT_WEEK.md` (current week only - Single Source of Truth!)

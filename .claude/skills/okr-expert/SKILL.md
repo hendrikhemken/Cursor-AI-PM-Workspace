@@ -70,17 +70,23 @@ Ask these questions before finalizing:
 
 **Create 2 files when OKRs are finalized:**
 
-**1. Main OKR File:** `/outputs/okrs/Q4-2025-OKRs.md`
-- Full quarter structure (all 10 weeks)
+**1. Determine the Quarter:**
+- Calculate from current date: Q1 (Jan-Mar), Q2 (Apr-Jun), Q3 (Jul-Sep), Q4 (Oct-Dec)
+- Format: `QX-YYYY` (e.g., `Q1-2026`, `Q4-2025`)
+
+**2. Main OKR File:** `/outputs/okrs/[QX-YYYY]-OKRs.md`
+- Naming convention: `Q1-2026-OKRs.md`, `Q4-2025-OKRs.md`, etc.
+- Full quarter structure (all weeks for that quarter)
 - Complete OKR details
 - Weekly tracking sections (empty, to be filled)
 - See [TEMPLATES.md](TEMPLATES.md) for full template
 
-**2. Current Week File:** `/outputs/okrs/CURRENT_WEEK.md`
+**3. Current Week File:** `/outputs/okrs/CURRENT_WEEK.md`
 - Lightweight view (Week 1 initialized)
 - This week's commitments (from Step 4)
 - Current progress for each KR
 - Focus statement
+- **CRITICAL:** The `quarter:` field in front matter links to the main OKR file!
 - See [TEMPLATES.md](TEMPLATES.md) for template
 
 **Critical:** Both files must be created! CURRENT_WEEK.md is auto-loaded via `@import` in CLAUDE.md.
@@ -126,7 +132,7 @@ Ask these questions before finalizing:
 **Cadence:** Weekly (Monday commitments, Friday wins)
 
 **Files Created:**
-1. `/outputs/okrs/Q4-2025-OKRs.md` (full quarter, all weeks)
+1. `/outputs/okrs/[QX-YYYY]-OKRs.md` (full quarter, all weeks – e.g., `Q4-2025-OKRs.md`)
 2. `/outputs/okrs/CURRENT_WEEK.md` (Week 1 initialized with first commitments)
 
 ---
@@ -187,7 +193,7 @@ Ask these questions before finalizing:
 
 **Load these files when you need deep details:**
 
-- **[TEMPLATES.md](TEMPLATES.md)** - Full templates for Q4-2025-OKRs.md and CURRENT_WEEK.md (load when creating OKRs!)
+- **[TEMPLATES.md](TEMPLATES.md)** - Full templates for [QX-YYYY]-OKRs.md and CURRENT_WEEK.md (load when creating OKRs!)
 - **[cagan-critical-perspective.md](cagan-critical-perspective.md)** - Prerequisites check, Feature vs Product Teams, when OKRs fail
 - **[wodtke-approach.md](wodtke-approach.md)** - Weekly rhythm, 5/10 confidence, startup approach
 - **[klau-approach.md](klau-approach.md)** - Quarterly grading, transparency, enterprise approach
@@ -197,7 +203,7 @@ Ask these questions before finalizing:
 **Always load TEMPLATES.md when:**
 - Creating new OKRs for the first time
 - User asks "how do I structure OKRs?"
-- Need to create Q4-2025-OKRs.md or CURRENT_WEEK.md
+- Need to create the main OKR file or CURRENT_WEEK.md
 
 **Load methodology files when:**
 - User asks for methodology deep-dive

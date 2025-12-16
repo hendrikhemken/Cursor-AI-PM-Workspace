@@ -4,15 +4,17 @@ Ready-to-use templates for OKR creation and tracking.
 
 ---
 
-## Q4-2025-OKRs.md (Main OKR File)
+## [QX-YYYY]-OKRs.md (Main OKR File)
 
 This is the **main archive** containing all weeks and full OKR details.
 
+**Naming Convention:** `Q1-2026-OKRs.md`, `Q4-2025-OKRs.md`, etc.
+
 ```markdown
 ---
-quarter: Q4 2025
-period: Oct 21 - Dec 31, 2025
-duration: 10 weeks
+quarter: [QX YYYY]  # e.g., Q1 2026, Q4 2025
+period: [Start Date] - [End Date]
+duration: [X] weeks
 type: company
 owner: [Name]
 approach: Wodtke (Weekly Rhythm) / Klau (Quarterly Grading)
@@ -22,7 +24,7 @@ created: YYYY-MM-DD
 last_updated: YYYY-MM-DD
 ---
 
-# Q4 2025 OKRs - [Company Name]
+# [QX YYYY] OKRs - [Company Name]
 *[Duration] weeks to [Goal]*
 
 ---
@@ -192,7 +194,7 @@ This is the **Single Source of Truth for the current week** - automatically load
 ---
 week: [number]
 period: [date range]
-quarter: [Q4 2025]
+quarter: [QX YYYY]  # CRITICAL: This links to the main OKR file!
 owner: [Name]
 updated: YYYY-MM-DD
 ---
@@ -242,7 +244,7 @@ updated: YYYY-MM-DD
 ---
 
 *Updated every Monday (Commitments) & Friday (Wins/Learning)*
-*Full OKRs: /outputs/okrs/Q4-2025-OKRs.md*
+*Full OKRs: /outputs/okrs/[QX-YYYY]-OKRs.md*
 ```
 
 ---
@@ -252,19 +254,19 @@ updated: YYYY-MM-DD
 ### When okr-expert Creates OKRs
 
 **Creates 2 files:**
-1. `/outputs/okrs/Q4-2025-OKRs.md` (main archive, all 10 weeks)
-2. `/outputs/okrs/CURRENT_WEEK.md` (Week 1 initialized)
+1. `/outputs/okrs/[QX-YYYY]-OKRs.md` (main archive, all weeks – e.g., `Q1-2026-OKRs.md`)
+2. `/outputs/okrs/CURRENT_WEEK.md` (Week 1 initialized, `quarter:` field links to main file)
 
 ### When okr-monday Updates (Every Monday)
 
-**Updates 2 files:**
-1. `/outputs/okrs/Q4-2025-OKRs.md` (Week X section)
+**Determines active file from CURRENT_WEEK.md, then updates 2 files:**
+1. `/outputs/okrs/[QX-YYYY]-OKRs.md` (Week X section)
 2. `/outputs/okrs/CURRENT_WEEK.md` (new commitments, move to Week X+1)
 
 ### When okr-friday Updates (Every Friday)
 
-**Updates 2 files:**
-1. `/outputs/okrs/Q4-2025-OKRs.md` (mark checkboxes, add wins/learning)
+**Determines active file from CURRENT_WEEK.md, then updates 2 files:**
+1. `/outputs/okrs/[QX-YYYY]-OKRs.md` (mark checkboxes, add wins/learning)
 2. `/outputs/okrs/CURRENT_WEEK.md` (mark checkboxes, update progress)
 
 ---
@@ -272,9 +274,9 @@ updated: YYYY-MM-DD
 ## File Relationship
 
 ```
-Q4-2025-OKRs.md (Archive)
+[QX-YYYY]-OKRs.md (Archive)     ← e.g., Q1-2026-OKRs.md
     ↓
-CURRENT_WEEK.md (View)
+CURRENT_WEEK.md (View)          ← quarter: field points to active file
     ↓
 Claude's Context (@import in CLAUDE.md)
     ↓
@@ -282,8 +284,9 @@ Proactive OKR-Awareness in Sessions
 ```
 
 **Key Principle:** Single Source of Truth
-- Main data lives in Q4-2025-OKRs.md
+- Main data lives in `[QX-YYYY]-OKRs.md` (named by quarter)
 - CURRENT_WEEK.md is a **derived view** (current week only)
+- `quarter:` field in CURRENT_WEEK.md determines which main file is active
 - Both updated in sync by Skills (Monday/Friday)
 
 ---
