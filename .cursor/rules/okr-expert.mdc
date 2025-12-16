@@ -1,6 +1,0 @@
----
-alwaysApply: false
-description: "Apply OKR best practices from Christina Wodtke and Rick Klau when creating, reviewing, or discussing OKRs. Use when user mentions OKRs, objectives, key results, quarterly planning, goal setting, performance metrics, North Star goals, company strategy alignment, or team targets."
----
-
-@.claude/skills/okr-expert/SKILL.md

@@ -1,6 +1,0 @@
----
-alwaysApply: false
-description: "Guides users through setting up or updating company, product, and team context via interactive questions. Use when user mentions getting started, setup, onboarding, initialize, update context, new job, team changed, configure my context, update my info, or change context."
----
-
-@.claude/skills/user-context/SKILL.md

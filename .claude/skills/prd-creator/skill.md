@@ -51,7 +51,7 @@ The PRD Creator helps Product Managers create modern, lean PRDs in Confluence th
 3. **PRD Drafting** - Create AI-assisted 80% draft
    - Use selected template from [TEMPLATES.md](TEMPLATES.md)
    - Follow best practices from [GUIDE.md](GUIDE.md)
-   - Incorporate company context
+   - Incorporate company context from CLAUDE.md (User Context section)
 
 4. **Refinement & Review** - Iterate with PM
    - Content review (problem, personas, metrics, scope)

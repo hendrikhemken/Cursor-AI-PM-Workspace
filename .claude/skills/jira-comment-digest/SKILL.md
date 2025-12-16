@@ -67,14 +67,14 @@ Without it, comments won't be returned even if `comment_limit` is set.
 
 ### 3.5 Load Team Member Mapping (Optional but Awesome!)
 
-**Check for:** `/user_context/COMPANY_CONTEXT.md` → "Team Members & Jira Roles" section
+**Check for:** `CLAUDE.md` → User Context → "👨‍💼 Team Structure" section
 
-If section exists in COMPANY_CONTEXT.md:
+If section exists in CLAUDE.md:
 - Parse team member info from Body (NOT YAML!)
 - Use in comment summaries: "Botti (Frontend Dev) suggested..."
 - Adds context who is who!
 
-**Format expected in COMPANY_CONTEXT.md:**
+**Format expected in CLAUDE.md (Team Structure section):**
 ```markdown
 ### Team Members & Jira Roles
 *For Jira Comment Digest context mapping*

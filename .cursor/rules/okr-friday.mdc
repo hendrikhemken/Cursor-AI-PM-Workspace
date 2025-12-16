@@ -1,6 +1,0 @@
----
-alwaysApply: false
-description: "Weekly Friday Celebration check-in for OKRs. Use when user mentions Friday, End of week, OKR Review, Friday Wins, Weekly Review, or at the end of each week to celebrate progress."
----
-
-@.claude/skills/okr-friday/SKILL.md

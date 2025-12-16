@@ -121,11 +121,11 @@ Want to proceed anyway? (Yes/No)"
 
 7. **Confluence & Jira Setup:**
    - **Confluence Space:**
-     - Check COMPANY_CONTEXT.md → "Tools & Workflow" → "Confluence Spaces"
+     - Check CLAUDE.md → User Context → "🛠️ Product & Tech" → "PM Tools" for Confluence Spaces
      - If found: Use listed spaces (ask which one if multiple)
      - If empty: Ask "Which Confluence Space? (e.g., 'PROD', 'DEV')"
    - **Jira Project:**
-     - Check COMPANY_CONTEXT.md → "Tools & Workflow" → "Jira Projects"
+     - Check CLAUDE.md → User Context → "🛠️ Product & Tech" → "PM Tools" for Jira Projects
      - If found: Use listed projects (ask which one if multiple)
      - If empty: Ask "Jira Project Key? (e.g., 'PROD', 'DEV')"
    - **Parent Page:** (Optional) "Parent Page? (if part of a larger initiative)"
@@ -195,7 +195,7 @@ What do you think?"
 1. **Gathered information** from Phase 1
 2. **Chosen Template** from Phase 2
 3. **Best Practices** from [GUIDE.md](GUIDE.md)
-4. **Company Context** from `/user_context/COMPANY_CONTEXT.md`
+4. **Company Context** from `CLAUDE.md` (User Context section)
 
 **Structure (for Lean PRD - most common case):**
 

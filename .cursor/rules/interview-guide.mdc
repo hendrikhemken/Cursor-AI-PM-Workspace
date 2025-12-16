@@ -1,6 +1,0 @@
----
-alwaysApply: false
-description: "Creates user interview guides for product research (Discovery, Validation, Usability Testing). Use when user mentions user interview, interview guide, user research, discovery interviews, validation interviews, usability testing, customer conversations, or needs to prepare research sessions with users."
----
-
-@.claude/skills/interview-guide/SKILL.md

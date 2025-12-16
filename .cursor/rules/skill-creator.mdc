@@ -1,6 +1,0 @@
----
-alwaysApply: false
-description: "Create new Claude Code Skills efficiently. Use when user says create a skill, new skill for, skill that does, or asks how to structure a skill. Focuses on lean, core workflow only."
----
-
-@.claude/skills/skill-creator/SKILL.md

@@ -84,7 +84,7 @@ claude
 
    **First session:** Claude auto-detects you're new and guides you through context setup (5 min).
 
-   **Alternative (Manual):** Copy `user_context/COMPANY_CONTEXT.template.md` to `user_context/COMPANY_CONTEXT.md` and edit manually.
+   **Alternative (Manual):** Edit the **User Context** section at the bottom of `CLAUDE.md` directly.
 
 **Done! Continue to [First-Time Setup](#-first-time-setup)**
 
@@ -127,7 +127,7 @@ The `user-context` skill will guide you through an interactive setup:
 - Everything is personalized to YOUR workflow
 
 **Your data stays local!**
-- Context is saved to `user_context/COMPANY_CONTEXT.md` (gitignored)
+- Context is saved in the **User Context** section of `CLAUDE.md`
 - Never shared, never uploaded
 - Update anytime by editing the file or saying "Update my context"
 
@@ -156,7 +156,7 @@ Claude: "Great! What's the problem this feature solves?"
 ```
 You: "Show me my company context"
 
-Claude: [Displays your COMPANY_CONTEXT.md]
+Claude: [Displays your User Context from CLAUDE.md]
 ```
 
 **All working? 🎉 You're ready to go!**
@@ -202,7 +202,7 @@ git pull origin main
 # Restart Claude Code
 ```
 
-**Your COMPANY_CONTEXT.md is safe!** (It's gitignored and won't be overwritten)
+**Your User Context in CLAUDE.md is safe!** (Won't be overwritten by updates)
 
 ---
 
@@ -210,7 +210,7 @@ git pull origin main
 
 1. Download the [latest release](https://github.com/hendrikhemken/product-ai-toolkit/releases/latest)
 2. Extract the new ZIP
-3. **IMPORTANT:** Copy your `user_context/COMPANY_CONTEXT.md` from the old folder to the new one
+3. **IMPORTANT:** Copy your **User Context** section from the old `CLAUDE.md` to the new one
 4. Delete the old folder, use the new one
 
 **Pro Tip:** Consider switching to Git Clone for easier updates!
@@ -241,7 +241,7 @@ git pull origin main
 
 **Solution:**
 - Manually trigger: Say "Setup my context" or "Getting started"
-- Or edit `user_context/COMPANY_CONTEXT.md` directly
+- Or edit the **User Context** section in `CLAUDE.md` directly
 
 ---
 

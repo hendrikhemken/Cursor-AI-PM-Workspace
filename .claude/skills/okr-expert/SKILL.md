@@ -26,7 +26,7 @@ Follow this workflow for every OKR request:
 **Details:** See [cagan-critical-perspective.md](cagan-critical-perspective.md)
 
 ### 2. Load Company Context (Adaptive Approach)
-**Check `/user_context/COMPANY_CONTEXT.md` for:**
+**Check `CLAUDE.md` → "📋 USER CONTEXT" section for:**
 - **Company Type** → Determines approach
   - Startup (5-50): Wodtke's Weekly Rhythm
   - Corporate (200+): Klau's Quarterly Grading
@@ -60,7 +60,7 @@ Ask these questions before finalizing:
 2. **What are we NOT doing?** (Explicit NOs stated?)
 3. **Can we actually measure these?** (Data available? Tracking setup?)
 4. **Are we 5/10 confident?** (Not sandbagging 10/10, not unrealistic 2/10)
-5. **Does this align with Strategy?** (Check COMPANY_CONTEXT.md)
+5. **Does this align with Strategy?** (Check CLAUDE.md → User Context section)
 
 **If gameable → Add quality gates!**
 - ❌ "Launch 5 features" → Could be junk
@@ -113,7 +113,7 @@ Ask these questions before finalizing:
 **User Request:** "Let's create OKRs for Q4 2025"
 
 **Process:**
-1. Check COMPANY_CONTEXT → Solo Consultant / Service Business → Wodtke Approach
+1. Check CLAUDE.md User Context → Solo Consultant / Service Business → Wodtke Approach
 2. Prerequisites OK? → Product work (not feature factory) ✅
 3. Identify North Star → "Monthly Recurring Revenue from Retainer Clients"
 4. Draft Objective + KRs

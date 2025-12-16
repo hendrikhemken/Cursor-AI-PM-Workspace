@@ -173,11 +173,6 @@ product-ai-toolkit/
 │       ├── user-context/        # Interactive context setup
 │       ├── skill-creator/       # Create new Claude Code skills
 │       └── hook-creator/        # Create Claude Code hooks
-├── user_context/
-│   ├── COMPANY_CONTEXT.template.md  # Template for setup (reference)
-│   ├── COMPANY_CONTEXT.md           # Your personalized context (gitignored)
-│   ├── raw/                         # Drop your raw research files here (gitignored)
-│   └── README.md                    # User context structure guide
 ├── examples/                    # Best practice examples
 │   └── okrs/                    # Example OKRs from real companies (anonymized)
 ├── best-practices/              # Deep-dive guides & workflows
@@ -207,7 +202,7 @@ product-ai-toolkit/
 ```
 You: "Let's create my Q4 2025 OKRs"
 
-Claude: "Cool! I see you're a Solo Consultant (from COMPANY_CONTEXT).
+Claude: "Cool! I see you're a Solo Consultant (from your User Context).
          I'll use Wodtke's Weekly Rhythm approach.
 
          What's your North Star for Q4?"

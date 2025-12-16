@@ -281,7 +281,7 @@ Prove Product-Market Fit for Mid-Market Teams
 
 **Internal Resources:**
 - OKR Expert Skill: `.claude/skills/okr-expert/` - Complete methodology & best practices
-- Company Context: `/user_context/COMPANY_CONTEXT.md` - Strategy alignment
+- Company Context: `CLAUDE.md` (User Context section) - Strategy alignment
 - Weekly Check-in Skills: `.claude/skills/okr-monday/` & `.claude/skills/okr-friday/`
 
 **Key Insight:**

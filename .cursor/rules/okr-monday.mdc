@@ -1,6 +1,0 @@
----
-alwaysApply: false
-description: "Weekly Monday Commitment check-in for OKRs. Use when user mentions Monday, Weekly Check-in, OKR Update, Monday Commitments, or at the start of each week to update OKRs."
----
-
-@.claude/skills/okr-monday/SKILL.md

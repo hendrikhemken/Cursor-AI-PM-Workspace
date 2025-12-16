@@ -51,7 +51,7 @@ A complete OKR set for a fictional B2B SaaS startup proving Product-Market Fit.
 
 **Ready to create your own?**
 
-1. Fill out `/user_context/COMPANY_CONTEXT.md` (copy from template)
+1. Fill out the **User Context** section in `CLAUDE.md`
 2. Say: "Let's create my Q4 2025 OKRs"
 3. The `okr-expert` skill activates automatically
 4. OKRs are saved to `/outputs/okrs/YOUR-OKRs.md`

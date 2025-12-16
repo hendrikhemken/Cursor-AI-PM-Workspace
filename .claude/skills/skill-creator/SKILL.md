@@ -216,7 +216,7 @@ grep "[skill-name]" CLAUDE.md
 
 **🔒 Public/Private Decision Guide:**
 - ✅ **Make PRIVATE if:**
-  - Contains personal company data (COMPANY_CONTEXT.md, client names)
+  - Contains personal company data (CLAUDE.md User Context section, client names)
   - Uses sensitive API keys or credentials
   - Includes proprietary workflows or methodologies
   - References internal tools/systems not shareable

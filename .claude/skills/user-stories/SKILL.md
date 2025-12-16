@@ -34,7 +34,7 @@ Follow this workflow for every User Story request:
 ### 2. Gather Context
 **Collect context before writing stories:**
 
-**Check `COMPANY_CONTEXT.md` → Team & Tech Context:**
+**Check `CLAUDE.md` → User Context section → Team & Tech Context:**
 - Product Components (Frontend, Backend, Mobile, etc.)
 - Platform Separation (separate tickets for iOS/Android/Web?)
 - Team Structure (Frontend/Backend separate teams?)
@@ -45,7 +45,7 @@ Follow this workflow for every User Story request:
 - "What is the expected value/outcome?"
 - "Are there technical constraints?"
 - **Jira Project:**
-  - Check COMPANY_CONTEXT.md → "Tools & Workflow" → "Jira Projects"
+  - Check CLAUDE.md → User Context → "🛠️ Product & Tech" → "PM Tools" for Jira Projects
   - If found: Use listed projects (ask which one if multiple)
   - If empty: Ask "Which Jira Project? (e.g., 'PROD', 'DEV')"
 

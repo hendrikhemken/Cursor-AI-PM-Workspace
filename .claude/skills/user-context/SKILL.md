@@ -12,7 +12,7 @@ Guides Product Managers through collecting comprehensive context about their com
 **Init Mode (New User):**
 - User is new to Product-Toolkit
 - Mentions: "getting started", "setup", "onboarding", "initialize"
-- No existing COMPANY_CONTEXT.md or context is incomplete
+- User Context section in CLAUDE.md is empty or contains only placeholders
 
 **Update Mode (Context Refresh):**
 - User has changed companies, roles, or teams
@@ -24,9 +24,9 @@ Guides Product Managers through collecting comprehensive context about their com
 
 ### 1. Detect Mode
 
-Check if `/user_context/COMPANY_CONTEXT.md` exists and has content:
-- **If empty or missing:** Init Mode (collect all context)
-- **If exists:** Update Mode (ask what changed, update specific sections)
+Check `CLAUDE.md` → "📋 USER CONTEXT" section (starting around line 455):
+- **If placeholders or empty:** Init Mode (collect all context)
+- **If populated:** Update Mode (ask what changed, update specific sections)
 
 ### 2. Progressive Question Flow
 
@@ -37,7 +37,7 @@ Ask questions ONE AT A TIME in conversational style. Guide the user through the 
 0. **Language Preference** (FIRST QUESTION - always in English)
    - "Language preference? (en/de)"
    - User answers → Switch to chosen language for all following questions
-   - Write to COMPANY_CONTEXT.md "User Preferences" section
+   - Write to CLAUDE.md → "💡 User Preferences" section
    - Important: All future Claude responses must be in this language!
 
 1. **Company Name & Industry**
@@ -84,7 +84,7 @@ Ask questions ONE AT A TIME in conversational style. Guide the user through the 
      - Extract unique comment authors from tickets
      - For each team member: Ask "What does [Name] do?" (role/function)
      - Example roles: "Frontend Dev", "Product Designer", "Engineering Lead"
-     - Write to COMPANY_CONTEXT.md "Team Members & Jira Roles" section
+     - Write to CLAUDE.md → "👨‍💼 Team Structure" section
    - If no Jira access or user skips: Continue without blocking
    - Solo users: Offer to add just themselves
 
@@ -96,7 +96,7 @@ Ask questions ONE AT A TIME in conversational style. Guide the user through the 
    - **Confluence Spaces:** Ask for space keys, comma-separated
      - Example: "TEAM, PROD, DEV"
      - Explain: "These are the space keys where you store PRDs & docs"
-   - Write to COMPANY_CONTEXT.md "Tools & Workflow" section
+   - Write to CLAUDE.md → "🛠️ Product & Tech" → "PM Tools" section
    - If user doesn't know or skips: Continue without blocking
 
 10. **Portfolio Structure** (Optional - ask ONLY if Head of Product or managing multiple products)
@@ -122,18 +122,18 @@ After collecting all info:
 
 ### 4. Write to File
 
-Update `/user_context/COMPANY_CONTEXT.md`:
-- **Init Mode:** Fill in all sections based on template
+Update `CLAUDE.md` → "📋 USER CONTEXT" section:
+- **Init Mode:** Fill in all sections (🏢 Company Overview, 👨‍💼 Team Structure, 🛠️ Product & Tech, etc.)
 - **Update Mode:** Update only changed sections, preserve rest
-- **Language Preference:** Update "User Preferences" section with chosen language (en/de)
-- **Team Members:** If collected in Step 9.5, update "Team Members & Jira Roles" section in COMPANY_CONTEXT.md
+- **Language Preference:** Update "💡 User Preferences" section with chosen language (en/de)
+- **Team Members:** If collected in Step 9.5, update "👨‍💼 Team Structure" section in CLAUDE.md
 
 **Important:**
 - Update `last_updated` field to current date
 - Keep existing content that wasn't changed (Update Mode)
-- Follow template structure from `.claude/skills/user-context/TEMPLATE.md`
-- Team members go in Body (NOT YAML front matter!) under "## Team Structure" section
-- Language preference goes in "User Preferences" section (NOT YAML front matter!)
+- Follow the existing section structure in CLAUDE.md's User Context area
+- Team members go in "👨‍💼 Team Structure" section in CLAUDE.md
+- Language preference goes in "💡 User Preferences" section in CLAUDE.md
 
 **Team Members Format:**
 ```markdown
@@ -208,7 +208,7 @@ Does this look correct?"
 
 User: "Yes!"
 
-Claude: "✅ Context saved to /user_context/COMPANY_CONTEXT.md!
+Claude: "✅ Context saved to CLAUDE.md (User Context section)!
 
 You're all set up. 🎉
 
