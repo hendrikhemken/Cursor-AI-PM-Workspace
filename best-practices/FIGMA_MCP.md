@@ -1,5 +1,5 @@
 # FIGMA_MCP.md - Figma MCP Server Best Practices
-*Best practices for using the Figma MCP Server in Claude Code*
+*Best practices for using the Figma MCP Server in Cursor*
 
 ---
 
@@ -291,4 +291,4 @@ Before marking Figma-driven work as complete:
 ---
 
 *Best Practices from Figma MCP Server Documentation*
-*Adapted for Product-Toolkit · Beyond 7 · Claude Code*
+*Adapted for Cursor AI PM Operating System · Beyond 7*

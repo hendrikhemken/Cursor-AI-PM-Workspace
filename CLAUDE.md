@@ -1,11 +1,13 @@
-# CLAUDE.md – Product Toolkit
-*Instructions for Cursor – Product Manager Toolkit*
+# CLAUDE.md – Cursor AI PM Operating System
+*Instructions for Cursor – Your Daily PM Assistant*
+
+*Live Workshop System by Beyond 7 for the Live Conference*
 
 ---
 
-## 🎯 What Is the Product Toolkit?
+## 🎯 What Is the AI PM Operating System?
 
-A **lean, Cursor-based toolkit** for product managers:
+A **lean, Cursor-based system** for product managers:
 - Create OKRs (with Wodtke + Klau best practices)
 - Write user stories & break down epics
 - Sprint planning
@@ -255,7 +257,7 @@ status: active
 ## 📁 Folder Structure
 
 ```
-Product-Toolkit/
+Cursor-AI-PM-Workspace/
 ├── CLAUDE.md                     # 🔥 This file - instructions + User Context
 ├── best-practices/               # Best practice guides
 │   └── FIGMA_MCP.md              # Figma MCP server workflow & rules
@@ -794,5 +796,5 @@ last_updated: YYYY-MM-DD
 
 ---
 
-*Product-Toolkit by [Hendrik Hemken](https://linkedin.com/in/hendrikhemken)
-*Open Source PM Toolkit – 2025*
+*Cursor AI PM Operating System by [Beyond 7](https://beyond7.ai)*
+*Live Workshop System for the Live Conference – 2025*

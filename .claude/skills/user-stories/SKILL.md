@@ -375,5 +375,5 @@ Let's go - tell me about the epic!"
 
 ---
 
-*User Stories Skill for Product-Toolkit*
-*Hendrik Hemken, 2025*
+*User Stories Skill for Cursor AI PM Operating System*
+*Beyond 7, 2025*

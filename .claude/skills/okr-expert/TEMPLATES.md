@@ -291,5 +291,5 @@ Proactive OKR-Awareness in Sessions
 
 ---
 
-*OKR Templates - Product-Toolkit*
+*OKR Templates - Cursor AI PM Operating System*
 *Based on Wodtke & Klau Best Practices*

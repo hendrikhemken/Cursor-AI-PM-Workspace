@@ -1129,10 +1129,10 @@ From 15 years of OKRs:
 
 ---
 
-**Research compiled by:** Claude (Product-Toolkit Research Synthesizer)
+**Research compiled by:** Claude (AI PM Operating System Research Synthesizer)
 **Date:** October 17, 2025
 **Sources verified:** eleganthack.com, cwodtke.com, Lenny's Podcast, Maven, Medium, Stanford profiles
-**Status:** Active reference document for OKR creation in Product-Toolkit
+**Status:** Active reference document for OKR creation in Cursor AI PM Operating System
 
 ---
 

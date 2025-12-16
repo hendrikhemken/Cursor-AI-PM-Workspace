@@ -1,6 +1,6 @@
 # Examples
 
-This folder contains **best practice examples** to help you get started with the Product-Toolkit.
+This folder contains **best practice examples** to help you get started with the Cursor AI PM Operating System.
 
 **Important:** These are **examples only** - they're here for inspiration and learning, not for direct use.
 
@@ -102,5 +102,5 @@ A complete OKR set for a fictional B2B SaaS startup proving Product-Market Fit.
 
 ---
 
-*Product-Toolkit Examples*
-*By Hendrik Hemken | Beyond 7*
+*Cursor AI PM Operating System Examples*
+*By Beyond 7 | Live Workshop System*

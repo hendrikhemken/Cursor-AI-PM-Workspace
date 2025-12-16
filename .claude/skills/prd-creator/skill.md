@@ -246,5 +246,5 @@ Let's go - tell me about the problem!"
 
 ---
 
-*PRD Creator Skill for Product-Toolkit*
-*Hendrik Hemken, 2025*
+*PRD Creator Skill for Cursor AI PM Operating System*
+*Beyond 7, 2025*

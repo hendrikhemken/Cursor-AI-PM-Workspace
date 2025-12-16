@@ -219,7 +219,7 @@ Team leans toward Plausible.io. Waiting for budget approval from Hendrik.
 
 ---
 
-## BW-5: Claude Code Skill Implementation
+## BW-5: Cursor Skill Implementation
 **Status:** In Review | **Assignee:** Hendrik
 
 **Conversation:**
@@ -359,4 +359,4 @@ Hendrik commented: 'Let me check budget.'"
 ---
 
 *Jira Comment Digest Skill*
-*Part of Product-Toolkit by Beyond 7*
+*Part of Cursor AI PM Operating System by Beyond 7*

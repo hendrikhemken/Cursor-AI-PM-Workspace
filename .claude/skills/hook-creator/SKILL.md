@@ -1,10 +1,10 @@
 ---
 name: hook-creator
-description: Creates Claude Code hooks for tool control, logging, and automation. Use ONLY when user explicitly requests 'create hook', 'new hook', 'block MCP tool', or 'hook for [tool]'. Covers all hook types (PreToolUse, PostToolUse, UserPromptSubmit, SessionStart, Stop, etc.) with focus on MCP tool blocking and permission control. NOT for general use - requires explicit user request.
+description: Creates Cursor hooks for tool control, logging, and automation. Use ONLY when user explicitly requests 'create hook', 'new hook', 'block MCP tool', or 'hook for [tool]'. Covers all hook types (PreToolUse, PostToolUse, UserPromptSubmit, SessionStart, Stop, etc.) with focus on MCP tool blocking and permission control. NOT for general use - requires explicit user request.
 ---
 
 # Hook Creator
-*Create Claude Code Hooks for Tool Control & Automation*
+*Create Cursor Hooks for Tool Control & Automation*
 
 ---
 
@@ -695,5 +695,5 @@ Before finalizing:
 
 ---
 
-*Hook Creator Skill - Product-Toolkit*
-*For internal use only - not part of public toolkit*
+*Hook Creator Skill - Cursor AI PM Operating System*
+*For internal use only - not part of public system*

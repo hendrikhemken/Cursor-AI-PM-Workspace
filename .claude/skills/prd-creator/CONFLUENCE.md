@@ -692,5 +692,5 @@ query: 'space="PROD" AND label="prd" AND label="q2-2025"'
 
 ---
 
-*Confluence Workflows for Product-Toolkit*
-*Hendrik Hemken, 2025*
+*Confluence Workflows for Cursor AI PM Operating System*
+*Beyond 7, 2025*

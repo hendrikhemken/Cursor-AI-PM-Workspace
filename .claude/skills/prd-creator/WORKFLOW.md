@@ -483,4 +483,4 @@ Next Steps:
 ---
 
 *Detailed PRD Workflow for PRD Creator Skill*
-*Part of Product-Toolkit*
+*Part of Cursor AI PM Operating System*

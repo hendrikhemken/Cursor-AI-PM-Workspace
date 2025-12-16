@@ -744,5 +744,5 @@ Should I get started? 🚀"
 
 ---
 
-*PRD Workflow for Product-Toolkit User Stories Skill*
-*Hendrik Hemken, 2025*
+*PRD Workflow for Cursor AI PM Operating System User Stories Skill*
+*Beyond 7, 2025*

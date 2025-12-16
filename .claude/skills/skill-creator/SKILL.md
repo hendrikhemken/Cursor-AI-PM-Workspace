@@ -1,10 +1,10 @@
 ---
 name: skill-creator
-description: Create new Claude Code Skills efficiently. Use when user says "create a skill", "new skill for...", "skill that does...", or asks how to structure a skill. Focuses on lean, core workflow only.
+description: Create new Cursor Skills efficiently. Use when user says "create a skill", "new skill for...", "skill that does...", or asks how to structure a skill. Focuses on lean, core workflow only.
 ---
 
 # Skill Creator
-*Create focused, minimal Claude Code Skills*
+*Create focused, minimal Cursor Skills*
 
 ## When to Use
 - User wants to create a new Skill
@@ -223,7 +223,7 @@ grep "[skill-name]" CLAUDE.md
 - ✅ **Make PUBLIC if:**
   - Generic workflow applicable to anyone
   - No personal/sensitive data dependencies
-  - Adds value to Product-Toolkit for others
+  - Adds value to AI PM Operating System for others
   - Safe to share on GitHub publicly
 
 ---
@@ -274,7 +274,7 @@ or document extraction.
 **Why Public?**
 - Generic OKR methodology (Wodtke + Klau)
 - No personal company data
-- Adds value to anyone using Product-Toolkit
+- Adds value to anyone using AI PM Operating System
 - Safe to share on GitHub
 
 **Implementation:**
@@ -304,7 +304,7 @@ or document extraction.
 
 ## Project Context
 
-**Aligned with Product-Toolkit CLAUDE.md:**
+**Aligned with AI PM Operating System CLAUDE.md:**
 - 🎯 START SIMPLE Principle (minimal by default)
 - 🎯 Add complexity ONLY when proven need
 - 🎯 One focused task per Skill
@@ -324,4 +324,4 @@ or document extraction.
 
 ---
 
-*Created with Product-Toolkit*
+*Created with Cursor AI PM Operating System*

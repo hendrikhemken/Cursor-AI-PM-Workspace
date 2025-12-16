@@ -1,8 +1,10 @@
-# Installation Guide - Product Toolkit
+# Installation Guide - Cursor AI PM Operating System
 
 **Get started in 5 minutes!**
 
-Created by the **Product Brothers** - [Hendrik Hemken](https://linkedin.com/in/hendrikhemken) & [Sören von Sebelin](https://linkedin.com/in/soeren-von-sebelin)
+*Live Workshop System for the [Live Conference](https://liveconference.co/) by [Brick Institute](https://bfrominstitute.com/)*
+
+Created by **[Beyond 7](https://beyond7.ai)** - [Hendrik Hemken](https://linkedin.com/in/hendrikhemken) & [Sören von Sebelin](https://linkedin.com/in/soeren-von-sebelin)
 
 ---
 
@@ -12,8 +14,6 @@ After installation, you'll have:
 - ✅ OKR creation & weekly check-ins (Wodtke + Klau best practices)
 - ✅ PRD writing assistance (Confluence integration)
 - ✅ User Story breakdown (Jira integration)
-- ✅ Interview guides & analysis
-- ✅ LinkedIn content creation
 - ✅ Your personal PM assistant that knows YOUR context
 
 ---
@@ -21,8 +21,8 @@ After installation, you'll have:
 ## 📋 Prerequisites
 
 **Required:**
-- [Claude Code](https://docs.claude.com/en/docs/claude-code) installed
-- macOS, Linux, or Windows with WSL
+- [Cursor](https://cursor.com) installed
+- macOS, Linux, or Windows
 
 **Optional (but recommended):**
 - Git (for easy updates)
@@ -34,20 +34,20 @@ After installation, you'll have:
 
 Choose the option that works best for you:
 
-### **Option A: Git Clone** (Recommended for Developers)
+### **Option A: Git Clone** (Recommended)
 
 **Pros:** Easy updates via `git pull`, full version control
 **Cons:** Requires Git knowledge
 
 ```bash
 # 1. Clone the repository
-git clone https://github.com/hendrikhemken/product-ai-toolkit.git
+git clone https://github.com/hendrikhemken/Cursor-AI-PM-Workspace.git
 
 # 2. Navigate into the directory
-cd product-ai-toolkit
+cd Cursor-AI-PM-Workspace
 
-# 3. Open in Claude Code
-claude
+# 3. Open in Cursor
+cursor .
 ```
 
 **Done! Skip to [First-Time Setup](#-first-time-setup)**
@@ -62,25 +62,24 @@ claude
 **Steps:**
 
 1. **Download the latest release:**
-   - Go to [GitHub Releases](https://github.com/hendrikhemken/product-ai-toolkit/releases/latest)
+   - Go to [GitHub Releases](https://github.com/hendrikhemken/Cursor-AI-PM-Workspace/releases/latest)
    - Click **"Download ZIP"** or **"Source code (zip)"**
 
 2. **Extract the ZIP file:**
    - macOS: Double-click the ZIP file
    - Windows: Right-click → Extract All
-   - Linux: `unzip product-ai-toolkit.zip`
+   - Linux: `unzip Cursor-AI-PM-Workspace.zip`
 
 3. **Move to a permanent location:**
    ```bash
    # Example (adjust to your preference):
-   mv product-ai-toolkit ~/Documents/Product-Toolkit
-   cd ~/Documents/Product-Toolkit
+   mv Cursor-AI-PM-Workspace ~/Documents/AI-PM-Workspace
+   cd ~/Documents/AI-PM-Workspace
    ```
 
-4. **Open in Claude Code:**
-   ```bash
-   claude
-   ```
+4. **Open in Cursor:**
+   - Open Cursor
+   - File → Open Folder → Select the extracted folder
 
    **First session:** Claude auto-detects you're new and guides you through context setup (5 min).
 
@@ -92,10 +91,10 @@ claude
 
 ## 🎬 First-Time Setup
 
-When you open the Product Toolkit for the **first time**, Claude will greet you:
+When you open the AI PM Operating System for the **first time**, Claude will greet you:
 
 ```
-Hey! 👋 Welcome to the Product Toolkit!
+Hey! 👋 Welcome to the AI PM Operating System!
 
 I'm your daily PM assistant — built by PMs for PMs.
 
@@ -173,9 +172,8 @@ For **full functionality** (Confluence PRDs, Jira tickets, Figma imports), set u
 # Install mcp_docker server
 # Full guide: https://github.com/QuantGeekDev/mcp-atlassian
 
-# Add to your Claude Code MCP config:
-# ~/.config/claude-code/mcp.json (macOS/Linux)
-# %APPDATA%\claude-code\mcp.json (Windows)
+# Add to your Cursor MCP config:
+# Settings → MCP Servers → Add Server
 ```
 
 **What you get:**
@@ -188,18 +186,18 @@ For **full functionality** (Confluence PRDs, Jira tickets, Figma imports), set u
 
 ---
 
-## 🔄 Updating the Toolkit
+## 🔄 Updating the System
 
 ### **If you used Git Clone (Option A):**
 
 ```bash
-# Navigate to your toolkit directory
-cd ~/path/to/product-ai-toolkit
+# Navigate to your workspace directory
+cd ~/path/to/Cursor-AI-PM-Workspace
 
 # Pull latest changes
 git pull origin main
 
-# Restart Claude Code
+# Restart Cursor
 ```
 
 **Your User Context in CLAUDE.md is safe!** (Won't be overwritten by updates)
@@ -208,7 +206,7 @@ git pull origin main
 
 ### **If you used ZIP Download (Option B):**
 
-1. Download the [latest release](https://github.com/hendrikhemken/product-ai-toolkit/releases/latest)
+1. Download the [latest release](https://github.com/hendrikhemken/Cursor-AI-PM-Workspace/releases/latest)
 2. Extract the new ZIP
 3. **IMPORTANT:** Copy your **User Context** section from the old `CLAUDE.md` to the new one
 4. Delete the old folder, use the new one
@@ -219,12 +217,12 @@ git pull origin main
 
 ## 🆘 Troubleshooting
 
-### **"Claude doesn't recognize the toolkit"**
+### **"Cursor doesn't recognize the system"**
 
 **Solution:**
-- Make sure you opened Claude Code **in the toolkit directory**
-- Run `pwd` (macOS/Linux) or `cd` (Windows) to verify location
-- Should show: `/path/to/product-ai-toolkit`
+- Make sure you opened Cursor **in the workspace directory**
+- Check that the folder contains `CLAUDE.md` at the root level
+- Try closing and reopening Cursor
 
 ---
 
@@ -248,8 +246,8 @@ git pull origin main
 ### **"MCP servers not working"**
 
 **Solution:**
-- Verify MCP config: `~/.config/claude-code/mcp.json`
-- Restart Claude Code after adding MCP servers
+- Verify MCP config in Cursor Settings
+- Restart Cursor after adding MCP servers
 - Check MCP server logs for errors
 - See our [MCP Setup Guide](./best-practices/FIGMA_MCP.md) for details
 
@@ -260,10 +258,10 @@ git pull origin main
 **Solution:**
 ```bash
 # If using HTTPS (recommended):
-git remote set-url origin https://github.com/hendrikhemken/product-ai-toolkit.git
+git remote set-url origin https://github.com/hendrikhemken/Cursor-AI-PM-Workspace.git
 
 # If using SSH (requires SSH key setup):
-git remote set-url origin git@github.com:hendrikhemken/product-ai-toolkit.git
+git remote set-url origin git@github.com:hendrikhemken/Cursor-AI-PM-Workspace.git
 ```
 
 ---
@@ -292,12 +290,12 @@ git remote set-url origin git@github.com:hendrikhemken/product-ai-toolkit.git
 
 **Got stuck? We're here!**
 
-- **Issues:** [GitHub Issues](https://github.com/hendrikhemken/product-ai-toolkit/issues)
-- **Discussions:** [GitHub Discussions](https://github.com/hendrikhemken/product-ai-toolkit/discussions)
+- **Issues:** [GitHub Issues](https://github.com/hendrikhemken/Cursor-AI-PM-Workspace/issues)
+- **Discussions:** [GitHub Discussions](https://github.com/hendrikhemken/Cursor-AI-PM-Workspace/discussions)
 - **LinkedIn:** [Hendrik](https://linkedin.com/in/hendrikhemken) | [Sören](https://linkedin.com/in/soeren-von-sebelin)
 
 **Want personalized setup?**
-- Claude Code workshops for PM teams
+- Cursor workshops for PM teams
 - Custom skill development
 - MCP server configuration & debugging
 
@@ -305,10 +303,18 @@ git remote set-url origin git@github.com:hendrikhemken/product-ai-toolkit.git
 
 ---
 
-## 🎉 Welcome to the Product Toolkit!
+## 🎪 Live Workshop System
+
+**This guide is part of the Live Conference workshop by Brick Institute.**
+
+During the workshop, we'll walk through this installation together. If you're reading this later, follow the steps above and reach out if you get stuck!
+
+---
+
+## 🎉 Welcome to the AI PM Operating System!
 
 **You're now part of the PM community building better tools together.**
 
-*Created by the Product Brothers - Because PMs deserve better tools.*
+*Created by Beyond 7 - Because PMs deserve better tools.*
 
 **Now go create some amazing OKRs! 🚀**

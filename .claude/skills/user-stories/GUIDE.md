@@ -598,5 +598,5 @@ If NO to any point → Revise the story!
 
 ---
 
-*User Stories Best Practices Guide for Product-Toolkit*
-*Hendrik Hemken, 2025*
+*User Stories Best Practices Guide for Cursor AI PM Operating System*
+*Beyond 7, 2025*

@@ -1489,5 +1489,5 @@ START → Small Team (<10)?
 
 ---
 
-*PRD Templates for Product-Toolkit*
-*Hendrik Hemken, 2025*
+*PRD Templates for Cursor AI PM Operating System*
+*Beyond 7, 2025*

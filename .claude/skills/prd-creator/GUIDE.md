@@ -366,7 +366,7 @@ Cultural factors → People hesitant to express uncertainty
 - ChatPRD
 - Zeda.io
 - WriteMyPRD
-- Claude Code (hey, that's me! 👋)
+- Cursor AI (hey, that's me! 👋)
 
 **Impact:**
 - ⚡ 30% faster Task Completion
@@ -677,5 +677,5 @@ Cultural factors → People hesitant to express uncertainty
 
 ---
 
-*PRD Best Practices Guide for Product-Toolkit*
-*Hendrik Hemken, 2025*
+*PRD Best Practices Guide for Cursor AI PM Operating System*
+*Beyond 7, 2025*

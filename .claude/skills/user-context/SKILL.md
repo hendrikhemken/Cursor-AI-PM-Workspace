@@ -5,12 +5,12 @@ description: Guides users through setting up or updating company, product, and t
 
 # User Context Setup
 
-Guides Product Managers through collecting comprehensive context about their company, product, and team. This context enables all other Product-Toolkit skills (OKRs, PRDs, User Stories, etc.) to provide tailored recommendations.
+Guides Product Managers through collecting comprehensive context about their company, product, and team. This context enables all other AI PM Operating System skills (OKRs, PRDs, User Stories, etc.) to provide tailored recommendations.
 
 ## When to Use
 
 **Init Mode (New User):**
-- User is new to Product-Toolkit
+- User is new to AI PM Operating System
 - Mentions: "getting started", "setup", "onboarding", "initialize"
 - User Context section in CLAUDE.md is empty or contains only placeholders
 
@@ -164,7 +164,7 @@ After writing:
 ```
 User: "I'm new here, how do I get started?"
 
-Claude: "Welcome to Product-Toolkit! 🎯
+Claude: "Welcome to the AI PM Operating System! 🎯
 
 I'll help you set up your context so I can give you tailored recommendations. This takes about 5 minutes.
 
@@ -278,4 +278,4 @@ Since you're now at a larger company, you might want to switch from weekly to qu
 
 ---
 
-*Part of Product-Toolkit - Your daily PM assistant*
+*Part of Cursor AI PM Operating System - Your daily PM assistant*

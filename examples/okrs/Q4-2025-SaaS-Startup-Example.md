@@ -307,6 +307,6 @@ Prove Product-Market Fit for Mid-Market Teams
 
 ---
 
-*Example OKR created with Product-Toolkit*
+*Example OKR created with Cursor AI PM Operating System*
 *Based on Wodtke's "Radical Focus" Weekly Rhythm*
 *For educational purposes - adapt to your context!*

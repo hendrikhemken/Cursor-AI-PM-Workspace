@@ -1,28 +1,10 @@
 # Best Practices Guides
 
-This directory contains best practices guides for Claude Code features and patterns used in Product-Toolkit.
+This directory contains best practices guides for Cursor features and patterns used in the AI PM Operating System.
 
 ---
 
 ## Available Guides
-
-### Claude Code Plugins Development
-- **CLAUDE_CODE_PLUGINS.md** - Comprehensive analysis (844 lines)
-  - Complete directory structures
-  - Plugin metadata specifications
-  - Command and agent patterns
-  - Hooks implementation details
-  - Official plugins breakdown
-  - Real-world complexity patterns
-  - Production readiness checklist
-  - Best practices and naming conventions
-
-- **CLAUDE_CODE_PLUGINS_QUICK_REFERENCE.md** - Quick lookup (518 lines)
-  - Copy-paste ready templates
-  - Quick reference tables
-  - Common patterns summarized
-  - FAQ section
-  - Testing guidance
 
 ### MCP Server Integration
 - **FIGMA_MCP.md** - Figma MCP Server integration
@@ -34,68 +16,40 @@ This directory contains best practices guides for Claude Code features and patte
 
 ## Quick Start
 
-### For Plugin Development
+### For AI PM Operating System Skills
 
-**Start here:**
-1. Read: `CLAUDE_CODE_PLUGINS_QUICK_REFERENCE.md` (10 mins)
-2. Reference: `CLAUDE_CODE_PLUGINS.md` (sections as needed)
-3. Copy templates from Quick Reference
-4. Follow naming conventions and patterns
-
-**Key Templates Available:**
-- plugin.json structure
-- Command (.md) template
-- Agent (.md) template
-- Hooks configuration (hooks.json)
-- Hook implementation script (Python)
-- marketplace.json structure
-
-### For Product-Toolkit Skills
-
-Your current implementation uses Agent Skills (in `.claude/skills/`), which is simpler than full plugins:
+Your current implementation uses Agent Skills (in `.claude/skills/`):
 - SKILL.md = Combined agent definition + system prompt
-- No plugin.json needed yet
 - Triggers on keyword patterns
 
-**When to consider moving to plugin structure:**
-- Combining multiple related features
-- Creating marketplace distribution
-- Adding commands alongside agents
-- Implementing hooks for validation
+**Key Templates Available in Skills:**
+- OKR templates (`okr-expert/TEMPLATES.md`)
+- PRD templates (`prd-creator/TEMPLATES.md`)
+- User Story templates (`user-stories/TEMPLATES.md`)
 
 ---
 
 ## Key Insights
 
-### Plugin Architecture
-- **Flexible**: Use only the components you need (commands, agents, hooks)
-- **Composable**: Agents are reusable across commands
-- **Safe**: Explicit tool restrictions and hook validation
+### Skill Architecture
 - **Simple**: YAML front matter + Markdown format
+- **Composable**: Skills can reference other skill files
+- **Context-Aware**: Adapts based on user context in CLAUDE.md
 
 ### Component Breakdown
-| Component | Purpose | Optional |
+| Component | Purpose | Location |
 |-----------|---------|----------|
-| Commands | Slash commands (e.g., `/feature-dev`) | Yes |
-| Agents | Specialized workers for specific tasks | Yes |
-| Hooks | Validation before tool execution | Yes |
-| Metadata | plugin.json + marketplace.json | No |
-
-### Real-World Examples from Anthropic
-- **feature-dev**: 7-phase feature development (1 command + 3 agents)
-- **agent-sdk-dev**: SDK scaffolding (1 command + 2 agents)
-- **pr-review-toolkit**: Code review (1 command + 6 agents)
-- **commit-commands**: Git automation (3 commands, 0 agents)
-- **security-guidance**: Security validation (0 commands + hooks)
+| Skills | Specialized agents for PM tasks | `.claude/skills/` |
+| Templates | Reusable formats for outputs | Inside skill folders |
+| Best Practices | Deep-dive methodology guides | Inside skill folders |
+| Examples | Real-world anonymized examples | `examples/` |
 
 ### Best Practices Summary
-1. Single responsibility per agent/command
+1. Single responsibility per skill
 2. Detailed output specifications
-3. Explicit tool declarations
-4. Comprehensive documentation
-5. Clear naming conventions (kebab-case)
-6. Context injection in commands
-7. Model selection (sonnet default)
+3. Comprehensive documentation
+4. Clear naming conventions (kebab-case)
+5. Context injection from CLAUDE.md
 
 ---
 
@@ -104,70 +58,45 @@ Your current implementation uses Agent Skills (in `.claude/skills/`), which is s
 ```
 /best-practices/
 ├── README.md (this file)
-├── CLAUDE_CODE_PLUGINS.md (comprehensive analysis)
-├── CLAUDE_CODE_PLUGINS_QUICK_REFERENCE.md (quick lookup)
 └── FIGMA_MCP.md (MCP integration guide)
 ```
 
 ---
 
-## Source Repository
-
-All plugin analysis based on official Anthropic examples:
-- Repository: https://github.com/anthropics/claude-code
-- Plugins Directory: https://github.com/anthropics/claude-code/tree/main/plugins
-- Official Docs: https://docs.claude.com/en/docs/claude-code/plugins
-
----
-
-## Next Steps for Product-Toolkit
+## Next Steps for AI PM Operating System
 
 ### Current State
-- Skills in `.claude/skills/` (4 agents + 2 commands)
+- Skills in `.claude/skills/` (9 skills)
 - SKILL.md format (self-contained)
 - Keyword-based triggers
 
-### Future Enhancement Options
+### Available Skills
 
-**Option 1: Keep Current Setup (Recommended for MVP)**
-- Continue with `.claude/skills/`
-- Add more SKILL.md files as needed
-- Simple, focused, no overhead
-
-**Option 2: Migrate to Plugin Structure (when scaling)**
-- Move to `.claude-plugin/plugin.json` structure
-- Add marketplace.json for distribution
-- Enable community plugins
-- Professional distribution
-
-**Option 3: Hybrid Approach**
-- Keep core skills simple in `.claude/skills/`
-- Create formal plugins for distribution
-- Best of both worlds
-
----
-
-## Document Versions
-
-| File | Lines | Last Updated | Purpose |
-|------|-------|--------------|---------|
-| CLAUDE_CODE_PLUGINS.md | 844 | 2025-10-23 | Comprehensive reference |
-| CLAUDE_CODE_PLUGINS_QUICK_REFERENCE.md | 518 | 2025-10-23 | Quick templates & lookup |
-| FIGMA_MCP.md | 120+ | 2025-10-21 | MCP integration |
+| Skill | Purpose |
+|-------|---------|
+| `okr-expert` | OKR creation with Wodtke + Klau best practices |
+| `okr-monday` | Monday commitment check-ins |
+| `okr-friday` | Friday celebration check-ins |
+| `prd-creator` | PRD creation in Confluence |
+| `user-stories` | Epic breakdown & User Story creation |
+| `jira-comment-digest` | Summarize Jira ticket discussions |
+| `user-context` | Interactive context setup |
+| `skill-creator` | Create new custom skills |
+| `hook-creator` | Create automation hooks |
 
 ---
 
 ## Tips
 
-- Use Quick Reference for templates
-- Use Comprehensive guide for deep understanding
-- Copy template code directly
-- Follow naming conventions strictly
+- Use skill templates for consistent outputs
+- Follow existing patterns in skill files
 - Document output formats thoroughly
-- Test locally before publishing
+- Test skills with different contexts
 
 ---
 
-**Maintained for:** Product-Toolkit PM Assistant
-**Updated:** 2025-10-23
+**Maintained for:** Cursor AI PM Operating System
+**Updated:** 2025-12
 **Status:** Production Ready
+
+*Live Workshop System by Beyond 7*

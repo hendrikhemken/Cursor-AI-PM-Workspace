@@ -1,20 +1,21 @@
-# Product-Toolkit
+# Cursor AI PM Operating System
 
-**AI-Powered Product Management Assistant for Claude Code**
+**Build Your Personal AI-Powered PM Workspace**
 
-*Created by the **Product Brothers** - [Hendrik Hemken](https://linkedin.com/in/hendrikhemken) & [Sören von Sebelin](https://linkedin.com/in/soeren-von-sebelin)*
+*Live Workshop System for the [Live Conference](https://liveconference.co/) by [Brick Institute](https://bfrominstitute.com/)*
+
+Created by **[Beyond 7](https://beyond7.ai)** - [Hendrik Hemken](https://linkedin.com/in/hendrikhemken) & [Sören von Sebelin](https://linkedin.com/in/soeren-von-sebelin)
 
 ---
 
-A lean, Claude Code-based toolkit that helps Product Managers with their daily work:
+A hands-on workshop system that helps Product Managers build their own AI operating system in Cursor:
 - Create OKRs (with best practices from Wodtke + Klau)
 - Write PRDs in Confluence with Jira Epic linking
 - Break down EPICs into User Stories
-- Run user interviews & analyze insights
 - Weekly OKR check-ins (Monday commitments, Friday celebrations)
 - Summarize Jira comment threads
 
-**Target Audience:** Solo PMs & PM Teams in Startups, Scale-ups & Corporates
+**Target Audience:** Product Managers at Startups, Scale-ups & Corporates
 
 ---
 
@@ -22,29 +23,29 @@ A lean, Claude Code-based toolkit that helps Product Managers with their daily w
 
 **1. Prerequisites**
 
-- [Claude Code](https://docs.claude.com/en/docs/claude-code) installed
+- [Cursor](https://cursor.com) installed
 - MCP Servers configured (Confluence, Jira - optional but recommended)
 
 **2. Setup**
 
 ```bash
 # Clone this repo
-git clone https://github.com/hendrikhemken/product-ai-toolkit.git
-cd product-ai-toolkit
+git clone https://github.com/hendrikhemken/Cursor-AI-PM-Workspace.git
+cd Cursor-AI-PM-Workspace
 
-# Open in Claude Code
-claude
+# Open in Cursor
+cursor .
 
 # On first session, Claude will auto-detect and guide you
 # through context setup (5 min interactive questionnaire)
 ```
 
 **Alternative (Skip Setup):**
-If you prefer to dive right in, just run `claude` - you can set up context later by saying "Setup my context".
+If you prefer to dive right in, just open the folder in Cursor - you can set up context later by saying "Setup my context".
 
 **3. Start Using**
 
-The toolkit activates automatically when you mention relevant keywords:
+The system activates automatically when you mention relevant keywords:
 
 - **OKRs:** "Let's create my Q4 OKRs" → `okr-expert` skill activates
 - **User Stories:** "Break down this EPIC" → `user-stories` skill activates
@@ -72,16 +73,10 @@ The toolkit activates automatically when you mention relevant keywords:
 - **Direct publishing** - Creates pages in Confluence via MCP
 - **Jira Epic linking** - Bidirectional PRD ↔ Epic links
 
-### 🎤 User Research
-- **Interview guides** - Discovery, Validation, Usability Testing templates
-- **Interview analysis** - Extract insights from transcripts, identify patterns
-- **Research synthesis** - Map findings to original research goals
-
 ### 🔧 Productivity Tools
 - **Context setup** - Interactive company/product/team context collection
 - **Jira comment digest** - Summarize ticket discussions & ongoing threads
-- **Skill creator** - Meta-skill for building custom Claude Code skills
-- **Hook creator** - Create Claude Code hooks for tool control & automation
+- **Skill creator** - Meta-skill for building custom Cursor skills
 
 ---
 
@@ -89,14 +84,14 @@ The toolkit activates automatically when you mention relevant keywords:
 
 **For full functionality, configure these MCP servers:**
 
-### Confluence & Jira MCP (mcp_docker)
+### Confluence & Jira MCP
 
-The toolkit integrates with Confluence (PRDs) and Jira (User Stories) via the `mcp_docker` MCP server.
+The system integrates with Confluence (PRDs) and Jira (User Stories) via MCP servers.
 
 **Setup:**
-1. Follow [MCP Docker installation guide](https://github.com/QuantGeekDev/mcp-atlassian)
+1. Follow [MCP Atlassian installation guide](https://github.com/QuantGeekDev/mcp-atlassian)
 2. Configure with your Atlassian credentials
-3. Restart Claude Code
+3. Restart Cursor
 
 **What you get:**
 - ✅ Create PRDs directly in Confluence
@@ -110,7 +105,7 @@ The toolkit integrates with Confluence (PRDs) and Jira (User Stories) via the `m
 
 ## 📚 Credits & Inspiration
 
-This toolkit teaches best practices from industry leaders:
+This system teaches best practices from industry leaders:
 
 ### OKR Methodology
 - **Christina Wodtke** - "Radical Focus" (Weekly cadence, 5/10 confidence, Monday/Friday rhythm)
@@ -130,16 +125,16 @@ This toolkit teaches best practices from industry leaders:
 
 **Want to learn these frameworks properly? Buy their books - they're amazing!**
 
-*This toolkit does NOT replace their work - it helps you APPLY it.*
+*This system does NOT replace their work - it helps you APPLY it.*
 
 ---
 
 ## 🎓 Need Help?
 
-This toolkit is **free & open source** - use it however you want!
+This system is **free & open source** - use it however you want!
 
 **Want personalized setup for your team?**
-- Claude Code workshops for PMs
+- Cursor workshops for PMs
 - MCP Server configuration & debugging
 - Custom skill development for your workflows
 - Team-specific adaptation (Startup vs Corporate)
@@ -152,14 +147,12 @@ This toolkit is **free & open source** - use it however you want!
 ## 📂 Repository Structure
 
 ```
-product-ai-toolkit/
+Cursor-AI-PM-Workspace/
 ├── README.md                    # You are here
-├── CLAUDE.md                    # Main instructions for Claude Code
+├── CLAUDE.md                    # Main instructions for Cursor (Claude reads this)
+├── INSTALLATION.md              # Detailed setup guide
 ├── LICENSE                      # MIT License
 ├── .gitignore                   # Protects your personal data
-├── .claude-plugin/              # Plugin manifests for distribution
-│   ├── marketplace.json         # Product-Toolkit Marketplace
-│   └── plugin.json              # Plugin metadata
 ├── .claude/
 │   └── skills/                  # Agent skills (auto-activate on keywords)
 │       ├── okr-expert/          # OKR creation & review (Wodtke + Klau)
@@ -167,20 +160,16 @@ product-ai-toolkit/
 │       ├── okr-friday/          # Friday celebration check-ins
 │       ├── prd-creator/         # PRD creation in Confluence + Jira Epic linking
 │       ├── user-stories/        # Epic breakdown & User Story creation
-│       ├── interview-guide/     # User research interview guide creation
-│       ├── interview-analysis/  # Research synthesis & insight extraction
 │       ├── jira-comment-digest/ # Jira comment thread summarization
 │       ├── user-context/        # Interactive context setup
-│       ├── skill-creator/       # Create new Claude Code skills
-│       └── hook-creator/        # Create Claude Code hooks
+│       ├── skill-creator/       # Create new Cursor skills
+│       └── hook-creator/        # Create Cursor hooks
 ├── examples/                    # Best practice examples
-│   └── okrs/                    # Example OKRs from real companies (anonymized)
+│   └── okrs/                    # Example OKRs (anonymized)
 ├── best-practices/              # Deep-dive guides & workflows
-│   ├── CLAUDE_CODE_PLUGINS.md   # Plugin development guide
 │   └── FIGMA_MCP.md             # Figma MCP Server workflow
 └── outputs/                     # Your generated deliverables (gitignored)
     ├── okrs/                    # Your OKR files
-    │   └── CURRENT_WEEK.md      # Weekly OKR tracking (auto-loaded)
     ├── prd/                     # Your PRD drafts
     └── meeting-notes/           # Meeting notes & summaries
 ```
@@ -189,7 +178,7 @@ product-ai-toolkit/
 
 ## 📖 How It Works
 
-**The Product-Toolkit is your Daily PM Assistant:**
+**The AI PM Operating System is your Daily PM Assistant:**
 
 1. **Context-Aware:** Adapts to your company type (Startup vs Corporate), customer type (B2C vs B2B), team size
 2. **Skill-Based:** Skills activate automatically when you mention keywords (no manual invocation)
@@ -229,7 +218,7 @@ Claude: "✅ Updated. Confidence level 5/10?
 
 Found a bug? Have a feature request? Want to add a new skill?
 
-- **Issues:** [github.com/hendrikhemken/product-ai-toolkit/issues](https://github.com/hendrikhemken/product-ai-toolkit/issues)
+- **Issues:** [github.com/hendrikhemken/Cursor-AI-PM-Workspace/issues](https://github.com/hendrikhemken/Cursor-AI-PM-Workspace/issues)
 - **Discussions:** Share your workflows, ask questions, help others
 - **Pull Requests:** Welcome! Please follow the existing structure
 
@@ -237,12 +226,12 @@ Found a bug? Have a feature request? Want to add a new skill?
 
 ## 📜 License
 
-MIT License - Copyright (c) 2025 Hendrik Hemken
+MIT License - Copyright (c) 2025 Hendrik Hemken & Sören von Sebelin
 
 See [LICENSE](LICENSE) for details.
 
 **You are free to:**
-- ✅ Use this toolkit commercially
+- ✅ Use this system commercially
 - ✅ Modify and distribute
 - ✅ Use privately or for your team
 - ✅ Fork and build on top of it
@@ -254,30 +243,46 @@ See [LICENSE](LICENSE) for details.
 ## 🙏 Acknowledgments
 
 Built with:
-- [Claude Code](https://claude.com/claude-code) by Anthropic
-- [MCP Servers](https://docs.claude.com/en/docs/build-with-claude/mcp) for Confluence, Jira, Figma integration
+- [Cursor](https://cursor.com) - AI-powered code editor
+- [MCP Servers](https://modelcontextprotocol.io/) for Confluence, Jira, Figma integration
 - Wisdom from Wodtke, Klau, Cagan, Cohn & the PM community
 
 **Special Thanks:**
 - Christina Wodtke for making OKRs actually work (Weekly rhythm FTW!)
 - Rick Klau for demystifying Google's OKR process
 - Marty Cagan for the Product Teams critique (saved us from cargo cult OKRs)
+- [Brick Institute](https://bfrominstitute.com/) & [Live Conference](https://liveconference.co/) for the workshop opportunity
 - All the PMs who gave feedback during development
 
 ---
 
-## 👨‍👨‍💼 Created by the Product Brothers
+## 🎪 Live Workshop System
+
+**This repository was created for the Live Conference by Brick Institute.**
+
+The Live Workshop System is designed to be hands-on and practical - you'll leave with a working AI PM Operating System tailored to YOUR context.
+
+**Workshop Goals:**
+- ✅ Set up your personal AI PM workspace in Cursor
+- ✅ Configure your company/product context
+- ✅ Create your first OKRs with AI assistance
+- ✅ Understand how to extend the system with custom skills
+
+---
+
+## 👨‍💻 Created by Beyond 7
 
 **Hendrik Hemken** & **Sören von Sebelin** - Two Product Managers who got tired of context-switching between 47 different tools.
 
-This toolkit is our answer: **One AI assistant that actually understands PM work.**
+This system is our answer: **One AI assistant that actually understands PM work.**
 
 *Connect with us:*
 - 👉 [Hendrik on LinkedIn](https://linkedin.com/in/hendrikhemken)
 - 👉 [Sören on LinkedIn](https://linkedin.com/in/soeren-von-sebelin)
-
-*Open Source PM Toolkit - Help PMs leverage AI for better product work*
+- 🌐 [Beyond 7](https://beyond7.ai)
 
 ---
 
-**Product-Toolkit - Because PMs deserve better tools.**
+**Cursor AI PM Operating System - Because PMs deserve better tools.**
+
+*Live Workshop System for the Live Conference by Brick Institute*

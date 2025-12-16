@@ -618,5 +618,5 @@ Total: 34 Story Points (~2 Sprints for 1 Dev)
 
 ---
 
-*Epic Breakdown Guide for Product-Toolkit*
-*Hendrik Hemken, 2025*
+*Epic Breakdown Guide for Cursor AI PM Operating System*
+*Beyond 7, 2025*

@@ -386,5 +386,5 @@ For stories that have NO direct User Value (e.g., Refactoring, Tech Debt, Infras
 
 ---
 
-*Templates for Product-Toolkit User Stories Skill*
-*Hendrik Hemken, 2025*
+*Templates for Cursor AI PM Operating System User Stories Skill*
+*Beyond 7, 2025*
