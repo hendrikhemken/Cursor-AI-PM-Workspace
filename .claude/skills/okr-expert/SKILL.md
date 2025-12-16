@@ -189,27 +189,22 @@ Ask these questions before finalizing:
 
 ---
 
-## When to Use Supporting Files
+## Context-Aware File Loading
 
-**Load these files when you need deep details:**
+**Load methodology files based on User Context (CLAUDE.md → company_type):**
 
-- **[TEMPLATES.md](TEMPLATES.md)** - Full templates for [QX-YYYY]-OKRs.md and CURRENT_WEEK.md (load when creating OKRs!)
-- **[cagan-critical-perspective.md](cagan-critical-perspective.md)** - Prerequisites check, Feature vs Product Teams, when OKRs fail
-- **[wodtke-approach.md](wodtke-approach.md)** - Weekly rhythm, 5/10 confidence, startup approach
-- **[klau-approach.md](klau-approach.md)** - Quarterly grading, transparency, enterprise approach
-- **[comparison.md](comparison.md)** - Wodtke vs Klau decision guide
-- **[best-practices.md](best-practices.md)** - Complete anti-patterns, common mistakes, solutions
+| Company Type | Load These Files |
+|-------------|-----------------|
+| **Startup (5-50)** | `wodtke-approach.md`, `wodtke-comprehensive.md`, `wodtke-advanced-topics.md`, `wodtke-prerequisites.md` |
+| **Corporate (200+)** | `klau-approach.md`, `klau-comprehensive.md` |
+| **Scale-up (50-200)** | `comparison.md` + relevant methodology based on preference |
 
-**Always load TEMPLATES.md when:**
-- Creating new OKRs for the first time
-- User asks "how do I structure OKRs?"
-- Need to create the main OKR file or CURRENT_WEEK.md
+**Always load:**
+- **[TEMPLATES.md](TEMPLATES.md)** - When creating OKRs
+- **[best-practices.md](best-practices.md)** - For quality checks
+- **[cagan-critical-perspective.md](cagan-critical-perspective.md)** - For prerequisites check
 
-**Load methodology files when:**
-- User asks for methodology deep-dive
-- Implementing OKRs for first time
-- Troubleshooting OKR problems
-- Need specific examples
+**Do NOT wait for user to ask for "deep-dive" — load methodology files immediately based on context!**
 
 ---
 
