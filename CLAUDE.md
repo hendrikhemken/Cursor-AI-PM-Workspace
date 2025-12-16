@@ -261,15 +261,11 @@ status: active
 
 ```
 Product-Toolkit/
-├── .claude-plugin/               # 🔌 Plugin manifests
-│   ├── marketplace.json          # Product Toolkit marketplace
-│   └── plugin.json               # Plugin metadata
 ├── user_context/
 │   ├── raw/                      # User drops EVERYTHING here
 │   └── COMPANY_CONTEXT.md        # 🔥 Single source of truth
 ├── best-practices/               # Best practice guides
-│   ├── FIGMA_MCP.md              # Figma MCP server workflow & rules
-│   └── CLAUDE_CODE_PLUGINS.md    # Plugin development guide
+│   └── FIGMA_MCP.md              # Figma MCP server workflow & rules
 ├── outputs/                      # Finished deliverables
 │   ├── okrs/
 │   ├── prd/
@@ -277,12 +273,6 @@ Product-Toolkit/
 ├── examples/                     # Example OKRs, PRDs, etc.
 └── .claude/
     └── skills/                   # Agent skills (model-invoked)
-        ├── okr-expert/           # OKR creation & review skill
-        ├── okr-monday/           # Monday commitment weekly check-in
-        ├── okr-friday/           # Friday celebration weekly check-in
-        ├── prd-creator/          # PRD creation skill
-        ├── user-stories/         # User stories & epic breakdown skill
-        └── skill-creator/        # Create new skills
 ```
 
 ---
@@ -387,17 +377,54 @@ Want me to start the setup? 🚀
 
 ## 📋 Available Skills
 
-Skills activate **automatically** based on keywords — you decide when to trigger them.
+When a skill matches, read the file and follow its workflow.
 
-**Currently available:**
-- **OKRs:** `okr-expert`, `okr-monday`, `okr-friday`
-- **PRDs & user stories:** `prd-creator`, `user-stories`
-- **User research:** `interview-guide`, `interview-analysis`
-- **Utilities:** `user-context`, `jira-comment-digest`, `skill-creator`, `hook-creator`
+### OKRs
 
-Users do NOT need to name the skill — matching happens automatically.
+**OKR Expert** → `.claude/skills/okr-expert/SKILL.md`
+Use when: Creating/reviewing OKRs, quarterly planning, goal setting, discussing objectives & key results, or OKR best practices (Wodtke/Klau).
 
-**If a user asks “What can you do?”** → Show the feature list from the README (OKRs, PRDs, user stories, research, etc.), not the internal skill names.
+**OKR Monday** → `.claude/skills/okr-monday/SKILL.md`
+Use when: Monday/start of week, weekly check-in, planning commitments, or updating OKR progress.
+
+**OKR Friday** → `.claude/skills/okr-friday/SKILL.md`
+Use when: Friday/end of week, celebrating wins, weekly review, or reflecting on OKR progress.
+
+### Product Documentation
+
+**PRD Creator** → `.claude/skills/prd-creator/skill.md`
+Use when: Creating PRDs, product requirements, feature specs, epic documentation, or Confluence docs with Jira linking.
+
+**User Stories** → `.claude/skills/user-stories/SKILL.md`
+Use when: Writing user stories from PRDs, breaking down epics, sprint planning, backlog work, bug tickets, or acceptance criteria.
+
+### User Research
+
+**Interview Guide** → `.claude/skills/interview-guide/SKILL.md`
+Use when: Preparing user interviews — discovery, validation, or usability testing. Creating interview scripts or research session plans.
+
+**Interview Analysis** → `.claude/skills/interview-analysis/SKILL.md`
+Use when: Analyzing completed interviews, extracting insights from transcripts, identifying patterns, or synthesizing research findings.
+
+### Utilities
+
+**User Context** → `.claude/skills/user-context/SKILL.md`
+Use when: First-time setup, onboarding, updating company/team info, new job, or "configure my context."
+
+**Jira Comment Digest** → `.claude/skills/jira-comment-digest/SKILL.md`
+Use when: Reviewing Jira ticket discussions, summarizing comments, or catching up on what's new in Jira.
+
+**Skill Creator** → `.claude/skills/skill-creator/SKILL.md`
+Use when: User explicitly asks to create a new skill or asks how to structure skills.
+
+**Hook Creator** → `.claude/skills/hook-creator/SKILL.md`
+Use when: User explicitly requests hooks — "create hook", "block MCP tool", or tool permission control.
+
+---
+
+Users don't need to name skills — matching happens automatically.
+
+**If asked "What can you do?"** → Show features (OKRs, PRDs, user stories, etc.), not skill names.
 
 ---
 
